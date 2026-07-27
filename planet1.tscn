@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ccxalu8ix4bst"]
+
+[ext_resource type="Script" uid="uid://dgu7t01pqtt1v" path="res://planet_1.gd" id="1_1aa74"]
+[ext_resource type="Texture2D" uid="uid://ogvi8sup57jx" path="res://icon.svg" id="1_u6yjq"]
+
+[node name="Planet" type="Node2D" unique_id=218000153]
+script = ExtResource("1_1aa74")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1218103896]
+offset_left = 246.0
+offset_top = 319.0
+offset_right = 286.0
+offset_bottom = 359.0
+texture_normal = ExtResource("1_u6yjq")
+texture_pressed = ExtResource("1_u6yjq")
+texture_hover = ExtResource("1_u6yjq")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_button1_pressed"]
