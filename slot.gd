@@ -28,12 +28,14 @@ func pick_from_slot():
 	remove_child(item)
 	var inventory_node = find_parent("Inventory")
 	inventory_node.add_child(item)
+	item.scale = get_parent().scale
 	item = null
 	refresh_style()
 
 func put_into_slot(new_item):
 	item = new_item
-	item.position = Vector2(1, 1)
+	item.scale = Vector2.ONE
+	item.position = Vector2.ZERO
 	var inventory_node = find_parent("Inventory")
 	inventory_node.remove_child(item)
 	add_child(item)
