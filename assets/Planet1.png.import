@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp7iiccf5tmdc"
-path="res://.godot/imported/EmptySlotBG.png-6c6adde4ea7c22d4410c8f101034d27f.ctex"
+uid="uid://d0t1k3idvgcwn"
+path="res://.godot/imported/Planet1.png-62127ab6e39a00a035871b277cf18068.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EmptySlotBG.png"
-dest_files=["res://.godot/imported/EmptySlotBG.png-6c6adde4ea7c22d4410c8f101034d27f.ctex"]
+source_file="res://assets/Planet1.png"
+dest_files=["res://.godot/imported/Planet1.png-62127ab6e39a00a035871b277cf18068.ctex"]
 
 [params]
 

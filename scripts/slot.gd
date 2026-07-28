@@ -1,9 +1,9 @@
 extends Panel
 
-var ItemClass = preload("res://item.tscn")
+var ItemClass = preload("res://scenes/item.tscn")
 var item = null
-var filled_slot = preload("res://SlotBG.png")
-var empty_slot = preload("res://EmptySlotBG.png")
+var filled_slot = preload("res://assets/SlotBG.png")
+var empty_slot = preload("res://assets/EmptySlotBG.png")
 var filled_style: StyleBoxTexture = null
 var empty_style: StyleBoxTexture = null
 

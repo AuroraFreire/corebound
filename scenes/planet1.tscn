@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://ccxalu8ix4bst"]
 
-[ext_resource type="Script" uid="uid://dgu7t01pqtt1v" path="res://planet_1.gd" id="1_1aa74"]
-[ext_resource type="Texture2D" uid="uid://d0t1k3idvgcwn" path="res://Planet1.png" id="2_1aa74"]
+[ext_resource type="Script" uid="uid://dgu7t01pqtt1v" path="res://scripts/planet_1.gd" id="1_rghbl"]
+[ext_resource type="Texture2D" uid="uid://d0t1k3idvgcwn" path="res://assets/Planet1.png" id="2_3mkt7"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1aa74"]
 load_path = "res://.godot/imported/Planet1.png-75e05112fd2206073b9c8764bd9ac4eb.ctex"
 
 [node name="Planet" type="Node2D" unique_id=218000153]
-script = ExtResource("1_1aa74")
+script = ExtResource("1_rghbl")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1218103896]
 offset_left = 47.999992
@@ -15,7 +15,7 @@ offset_top = 83.0
 offset_right = 176.0
 offset_bottom = 211.0
 scale = Vector2(3.5, 3.5)
-texture_normal = ExtResource("2_1aa74")
+texture_normal = ExtResource("2_3mkt7")
 texture_pressed = SubResource("CompressedTexture2D_1aa74")
 texture_hover = SubResource("CompressedTexture2D_1aa74")
 

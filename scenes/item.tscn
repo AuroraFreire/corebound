@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://onvuqq0t70sy"]
+
+[ext_resource type="Script" uid="uid://ceyn5cc35ymvx" path="res://scenes/item.gd" id="1_6muww"]
+[ext_resource type="Texture2D" uid="uid://bpa4kuxg5180f" path="res://item_icons/PureWater.png" id="2_vljjh"]
+[ext_resource type="Script" uid="uid://cbc4oudt64nfq" path="res://scenes/texture_rect.gd" id="3_ro5b8"]
+
+[node name="Item" type="Node2D" unique_id=1364359043]
+z_index = 1
+script = ExtResource("1_6muww")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1970051913]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 8.0
+offset_bottom = 10.0
+texture = ExtResource("2_vljjh")
+script = ExtResource("3_ro5b8")

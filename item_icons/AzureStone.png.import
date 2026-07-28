@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0t1k3idvgcwn"
-path="res://.godot/imported/Planet1.png-75e05112fd2206073b9c8764bd9ac4eb.ctex"
+uid="uid://vajsurd432ix"
+path="res://.godot/imported/AzureStone.png-ea291fd94e3595e84b47aaac81836803.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Planet1.png"
-dest_files=["res://.godot/imported/Planet1.png-75e05112fd2206073b9c8764bd9ac4eb.ctex"]
+source_file="res://item_icons/AzureStone.png"
+dest_files=["res://.godot/imported/AzureStone.png-ea291fd94e3595e84b47aaac81836803.ctex"]
 
 [params]
 

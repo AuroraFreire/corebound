@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpa4kuxg5180f"
-path="res://.godot/imported/PureWater.png-669de55e0298bc17a45dead68ef6ffe3.ctex"
+uid="uid://b44kjhffaatc2"
+path="res://.godot/imported/InvBG.png-d6caea326d0c60bf1647bbefc3ace56d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PureWater.png"
-dest_files=["res://.godot/imported/PureWater.png-669de55e0298bc17a45dead68ef6ffe3.ctex"]
+source_file="res://assets/InvBG.png"
+dest_files=["res://.godot/imported/InvBG.png-d6caea326d0c60bf1647bbefc3ace56d.ctex"]
 
 [params]
 

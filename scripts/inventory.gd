@@ -1,6 +1,6 @@
 extends Node2D
 
-const SLOT_CLASS = preload("res://slot.gd")
+const SLOT_CLASS = preload("res://scripts/slot.gd")
 @onready var inventory_slots = $GridContainer
 var holding_item = null
 

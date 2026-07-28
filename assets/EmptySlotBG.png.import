@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b44kjhffaatc2"
-path="res://.godot/imported/InvBG.png-1710e819c8b54198a42370ee4ab9798a.ctex"
+uid="uid://cp7iiccf5tmdc"
+path="res://.godot/imported/EmptySlotBG.png-6bb11c295978f2a64e121b9810854d25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://InvBG.png"
-dest_files=["res://.godot/imported/InvBG.png-1710e819c8b54198a42370ee4ab9798a.ctex"]
+source_file="res://assets/EmptySlotBG.png"
+dest_files=["res://.godot/imported/EmptySlotBG.png-6bb11c295978f2a64e121b9810854d25.ctex"]
 
 [params]
 
