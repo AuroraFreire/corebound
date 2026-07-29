@@ -10,9 +10,9 @@ load_path = "res://.godot/imported/Planet1.png-75e05112fd2206073b9c8764bd9ac4eb.
 script = ExtResource("1_rghbl")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1218103896]
-offset_left = 47.999992
-offset_top = 83.0
-offset_right = 176.0
+offset_left = 39.000004
+offset_top = 83.00001
+offset_right = 167.0
 offset_bottom = 211.0
 scale = Vector2(3.5, 3.5)
 texture_normal = ExtResource("2_3mkt7")

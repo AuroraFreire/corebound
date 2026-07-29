@@ -12,6 +12,7 @@ func _ready() -> void:
 	empty_style = StyleBoxTexture.new()
 	filled_style.texture = filled_slot
 	empty_style.texture = empty_slot
+	refresh_style()
 
 func refresh_style():
 	if item != null:

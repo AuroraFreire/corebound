@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://oja1cqpfer8m"]
+
+[ext_resource type="Texture2D" uid="uid://ceknihybkn4r8" path="res://assets/HotbarBG.png" id="1_yj1xu"]
+[ext_resource type="Texture2D" uid="uid://dbk2jsw07hgat" path="res://assets/SlotHotbarBG.png" id="2_4qkdb"]
+[ext_resource type="Script" uid="uid://btfa0o18ru1vq" path="res://scripts/slot.gd" id="3_xrqkv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ffxw"]
+texture = ExtResource("2_4qkdb")
+
+[node name="Hotbar" type="Node2D" unique_id=9287926]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=670437600]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 335.0
+offset_top = 547.0
+offset_right = 818.0
+offset_bottom = 622.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yj1xu")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=935130438]
+offset_left = 366.0
+offset_top = 556.0
+offset_right = 791.0
+offset_bottom = 616.0
+theme_override_constants/h_separation = 13
+columns = 7
+
+[node name="HotbarSlot1" type="Panel" parent="GridContainer" unique_id=1860783674]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8ffxw")
+script = ExtResource("3_xrqkv")
+
+[node name="HotbarSlot2" type="Panel" parent="GridContainer" unique_id=1902137376]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8ffxw")
+script = ExtResource("3_xrqkv")
+
+[node name="HotbarSlot3" type="Panel" parent="GridContainer" unique_id=758904723]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8ffxw")
+script = ExtResource("3_xrqkv")
+
+[node name="HotbarSlot4" type="Panel" parent="GridContainer" unique_id=1874038545]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8ffxw")
+script = ExtResource("3_xrqkv")
+
+[node name="HotbarSlot5" type="Panel" parent="GridContainer" unique_id=1916840055]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8ffxw")
+script = ExtResource("3_xrqkv")
+
+[node name="HotbarSlot6" type="Panel" parent="GridContainer" unique_id=890121164]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8ffxw")
+script = ExtResource("3_xrqkv")

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ccxalu8ix4bst" path="res://scenes/planet1.tscn" id="3_gt337"]
 [ext_resource type="PackedScene" uid="uid://bc3knpexdaql6" path="res://scenes/inventory.tscn" id="4_o24d1"]
 [ext_resource type="Script" uid="uid://k1n102ul0i0c" path="res://scenes/user_interface.gd" id="4_x368c"]
+[ext_resource type="PackedScene" uid="uid://oja1cqpfer8m" path="res://scenes/hotbar.tscn" id="6_gt337"]
 
 [node name="World1" type="Node2D" unique_id=456265745]
 script = ExtResource("1_6u51x")
@@ -17,3 +18,5 @@ script = ExtResource("1_6u51x")
 script = ExtResource("4_x368c")
 
 [node name="Inventory" parent="UserInterface" unique_id=1111874109 instance=ExtResource("4_o24d1")]
+
+[node name="Hotbar" parent="UserInterface" unique_id=9287926 instance=ExtResource("6_gt337")]
