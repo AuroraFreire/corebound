@@ -9,6 +9,8 @@ func initialize(n, q):
 	$TextureRect.texture = load("res://item_icons/" + item_name + ".png")
 	if item_name == "AzureStone":
 		$TextureRect.scale = Vector2(0.35, 0.35)
+	elif item_name == "AzureMoss":
+		$TextureRect.scale = Vector2(0.6, 0.6)
 	$Label.visible = int(JsonData.item_data[item_name]["StackSize"]) > 1
 	$Label.text = str(item_quantity)
 	
