@@ -1,13 +1,13 @@
 {
-    "Pure Water": {
+    "PureWater": {
         "ItemCategory": "Resource",
-        "Stack Size": 999999,
+        "StackSize": 999,
         "Price": 4,
         "Description": "A single drop of untained water, used in crafting."
-    }
-    "Azure Stone": {
+    },
+    "AzureStone": {
         "ItemCategory": "Resource",
-        "Stack Size": 999999,
+        "StackSize": 999,
         "Price": 2,
         "Description": "A sturdy blue stone used for crafting."
     }
