@@ -19,8 +19,9 @@ func refresh_style():
 	else:
 		add_theme_stylebox_override("panel", empty_style)
 
-func add_item() -> void:
+func add_item(item_name, item_quantity) -> void:
 	item = ItemClass.instantiate()
+	item.initialize(item_name, item_quantity)
 	add_child(item)
 	refresh_style()
 

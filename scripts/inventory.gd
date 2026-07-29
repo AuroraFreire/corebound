@@ -41,9 +41,15 @@ func _input(event):
 	if holding_item:
 		holding_item.global_position = get_global_mouse_position()
 
-func add_item() -> bool:
-	for slot in $GridContainer.get_children():
-		if slot.item == null:
-			slot.add_item()
-			return true
-	return false
+func add_item(item_name, quantity):
+	var stack = int(JsonData.item_data[item_name]["StackSize"])
+	for slot in inventory_slots.get_children():
+		if quantity > 0 and slot.item and slot.item.item_name == item_name:
+			var n = min(stack - slot.item.item_quantity, quantity)
+			slot.item.add_item_quantity(n)
+			quantity -= n
+	for slot in inventory_slots.get_children():
+		if quantity > 0 and not slot.item:
+			var n = min(stack, quantity)
+			slot.add_item(item_name, n)
+			quantity -= n

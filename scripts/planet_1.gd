@@ -7,7 +7,7 @@ func _ready() -> void:
 		$"../Inventory".visible = false
 
 func _on_button1_pressed() -> void:
-	get_node("../Inventory").add_item()
+	$"../Inventory".add_item(["PureWater", "AzureStone"].pick_random(), randi_range(1, 4))
 
 func _input(event: InputEvent) -> void:
 	close_game(event)
