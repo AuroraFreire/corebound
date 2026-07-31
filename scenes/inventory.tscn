@@ -2,10 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bypdm5cfrplxp" path="res://scripts/inventory.gd" id="1_ty45s"]
 [ext_resource type="Texture2D" uid="uid://cp7iiccf5tmdc" path="res://assets/EmptySlotBG.png" id="2_53g1v"]
+[ext_resource type="Texture2D" uid="uid://424spte00jhw" path="res://assets/InvBG.png" id="2_yyk2a"]
 [ext_resource type="Script" uid="uid://btfa0o18ru1vq" path="res://scripts/slot.gd" id="3_53g1v"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pohso"]
-load_path = "res://.godot/imported/InvBG.png-1710e819c8b54198a42370ee4ab9798a.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pw07k"]
 texture = ExtResource("2_53g1v")
@@ -28,7 +26,7 @@ offset_bottom = 268.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(3, 3)
-texture = SubResource("CompressedTexture2D_pohso")
+texture = ExtResource("2_yyk2a")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=228397107]
 offset_left = 467.0

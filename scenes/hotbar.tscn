@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ceknihybkn4r8" path="res://assets/HotbarBG.png" id="1_yj1xu"]
 [ext_resource type="Texture2D" uid="uid://dbk2jsw07hgat" path="res://assets/SlotHotbarBG.png" id="2_4qkdb"]
 [ext_resource type="Script" uid="uid://btfa0o18ru1vq" path="res://scripts/slot.gd" id="3_xrqkv"]
+[ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="5_vu8xs"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ffxw"]
 texture = ExtResource("2_4qkdb")
@@ -68,3 +69,13 @@ custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_8ffxw")
 script = ExtResource("3_xrqkv")
+
+[node name="ActiveItemLabel" type="RichTextLabel" parent="." unique_id=1139573268]
+offset_left = 352.0
+offset_top = 520.0
+offset_right = 505.0
+offset_bottom = 545.0
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = ExtResource("5_vu8xs")
+theme_override_font_sizes/normal_font_size = 23
+text = "Placeholder"
