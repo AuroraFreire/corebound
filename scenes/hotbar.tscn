@@ -83,8 +83,9 @@ theme_override_fonts/normal_font = ExtResource("5_vu8xs")
 theme_override_font_sizes/normal_font_size = 23
 text = "Starter Drill"
 
-[node name="Cooldown" type="TextureProgressBar" parent="." unique_id=1624936689]
+[node name="CooldownDrill" type="TextureProgressBar" parent="." unique_id=1624936689]
 visible = false
+z_index = 2
 offset_left = 363.0
 offset_top = 602.0
 offset_right = 395.0
@@ -94,3 +95,58 @@ step = 0.01
 texture_under = ExtResource("6_wceku")
 texture_over = ExtResource("7_iapdy")
 texture_progress = ExtResource("8_i62wn")
+
+[node name="CooldownMedkit" type="TextureProgressBar" parent="." unique_id=1860104669]
+visible = false
+z_index = 2
+offset_left = 437.0
+offset_top = 602.0
+offset_right = 469.0
+offset_bottom = 610.0
+scale = Vector2(2, 2)
+step = 0.01
+texture_under = ExtResource("6_wceku")
+texture_over = ExtResource("7_iapdy")
+texture_progress = ExtResource("8_i62wn")
+
+[node name="CooldownOxygen" type="TextureProgressBar" parent="." unique_id=248137614]
+visible = false
+z_index = 2
+offset_left = 510.0
+offset_top = 602.0
+offset_right = 542.0
+offset_bottom = 610.0
+scale = Vector2(2, 2)
+step = 0.01
+texture_under = ExtResource("6_wceku")
+texture_over = ExtResource("7_iapdy")
+texture_progress = ExtResource("8_i62wn")
+
+[node name="CooldownOverdrive" type="TextureProgressBar" parent="." unique_id=1642918092]
+visible = false
+z_index = 2
+offset_left = 583.0
+offset_top = 602.0
+offset_right = 615.0
+offset_bottom = 610.0
+scale = Vector2(2, 2)
+step = 0.01
+texture_under = ExtResource("6_wceku")
+texture_over = ExtResource("7_iapdy")
+texture_progress = ExtResource("8_i62wn")
+
+[node name="Timer" type="Timer" parent="." unique_id=1977804912]
+wait_time = 15.0
+one_shot = true
+
+[node name="OverdriveCountdown" type="Label" parent="." unique_id=1794700865]
+offset_left = 286.0
+offset_top = 567.0
+offset_right = 324.0
+offset_bottom = 606.8125
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("5_vu8xs")
+theme_override_font_sizes/font_size = 39
+text = "15"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
