@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://dbk2jsw07hgat" path="res://assets/SlotHotbarBG.png" id="2_4qkdb"]
 [ext_resource type="Script" uid="uid://btfa0o18ru1vq" path="res://scripts/slot.gd" id="3_xrqkv"]
 [ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="5_vu8xs"]
+[ext_resource type="Texture2D" uid="uid://cmqhvd7kdn17k" path="res://assets/cooldown_under.png" id="6_wceku"]
+[ext_resource type="Texture2D" uid="uid://cgcfyt3ag05ux" path="res://assets/cooldown_over.png" id="7_iapdy"]
+[ext_resource type="Texture2D" uid="uid://b8pr27aubivv5" path="res://assets/cooldown_progress.png" id="8_i62wn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ffxw"]
 texture = ExtResource("2_4qkdb")
@@ -79,3 +82,15 @@ theme_override_constants/outline_size = 6
 theme_override_fonts/normal_font = ExtResource("5_vu8xs")
 theme_override_font_sizes/normal_font_size = 23
 text = "Starter Drill"
+
+[node name="Cooldown" type="TextureProgressBar" parent="." unique_id=1624936689]
+visible = false
+offset_left = 363.0
+offset_top = 602.0
+offset_right = 395.0
+offset_bottom = 610.0
+scale = Vector2(2, 2)
+step = 0.01
+texture_under = ExtResource("6_wceku")
+texture_over = ExtResource("7_iapdy")
+texture_progress = ExtResource("8_i62wn")
