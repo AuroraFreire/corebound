@@ -9,7 +9,7 @@ got it?
 
 ##did I use ai?
 
-~~yes, just not yet,~~~
+~~yes, just not yet,~~
 
 ~~im going to use AI right now to make the crafting system since im not suicidal enough to do it alo~~
 
