@@ -4,18 +4,31 @@ var ItemClass = preload("res://scenes/item.tscn")
 var item = null
 var filled_slot = preload("res://assets/SlotBG.png")
 var empty_slot = preload("res://assets/EmptySlotBG.png")
+var selected_slot = preload("res://assets/SlotHotbarBG.png")
 var filled_style: StyleBoxTexture = null
 var empty_style: StyleBoxTexture = null
+var selected_style: StyleBoxTexture = null
+var slot_index
+var slot_type
+
+enum SlotType {
+	HOTBAR = 0,
+	INVENTORY,
+}
 
 func _ready() -> void:
 	filled_style = StyleBoxTexture.new()
 	empty_style = StyleBoxTexture.new()
+	selected_style = StyleBoxTexture.new()
 	filled_style.texture = filled_slot
 	empty_style.texture = empty_slot
+	selected_style.texture = selected_slot
 	refresh_style()
 
 func refresh_style():
-	if item != null:
+	if SlotType.HOTBAR == slot_type and PlayerInventory.active_item_slot == slot_index:
+		add_theme_stylebox_override("panel", selected_style)
+	elif item != null:
 		add_theme_stylebox_override("panel", filled_style)
 	else:
 		add_theme_stylebox_override("panel", empty_style)

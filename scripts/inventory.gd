@@ -7,6 +7,7 @@ var holding_item = null
 func _ready() -> void:
 	for inv_slot in inventory_slots.get_children():
 		inv_slot.gui_input.connect(slot_gui_input.bind(inv_slot))
+		inv_slot.slot_type = SLOT_CLASS.SlotType.INVENTORY
 
 func slot_gui_input(event: InputEvent, slot: SLOT_CLASS):
 	if event is InputEventMouseButton:
