@@ -107,3 +107,75 @@ custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
 script = ExtResource("3_53g1v")
+
+[node name="CraftingGrid" type="GridContainer" parent="."]
+offset_left = 300.0
+offset_top = 222.0
+offset_right = 338.0
+offset_bottom = 260.0
+scale = Vector2(4.8, 4.8)
+columns = 3
+
+[node name="CSlot1" type="Panel" parent="CraftingGrid"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+script = ExtResource("3_53g1v")
+
+[node name="CSlot2" type="Panel" parent="CraftingGrid"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+script = ExtResource("3_53g1v")
+
+[node name="CSlot3" type="Panel" parent="CraftingGrid"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+script = ExtResource("3_53g1v")
+
+[node name="CSlot4" type="Panel" parent="CraftingGrid"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+script = ExtResource("3_53g1v")
+
+[node name="CSlot5" type="Panel" parent="CraftingGrid"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+script = ExtResource("3_53g1v")
+
+[node name="CSlot6" type="Panel" parent="CraftingGrid"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+script = ExtResource("3_53g1v")
+
+[node name="CSlot7" type="Panel" parent="CraftingGrid"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+script = ExtResource("3_53g1v")
+
+[node name="CSlot8" type="Panel" parent="CraftingGrid"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+script = ExtResource("3_53g1v")
+
+[node name="CSlot9" type="Panel" parent="CraftingGrid"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+script = ExtResource("3_53g1v")
+
+[node name="OutputSlot" type="Panel" parent="."]
+custom_minimum_size = Vector2(10, 10)
+offset_left = 364.0
+offset_top = 418.0
+offset_right = 374.0
+offset_bottom = 428.0
+scale = Vector2(5.5, 5.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+script = ExtResource("3_53g1v")

@@ -1,0 +1,40 @@
+[
+	{
+		"Result": "Medkit",
+		"Count": 1,
+		"Type": "Shapeless",
+		"Ingredients": {
+			"AzureMoss": 2,
+			"PureWater": 1
+		}
+	},
+	{
+		"Result": "AzureCrystal",
+		"Count": 1,
+		"Type": "Shaped",
+		"Pattern": [
+			["AzureMoss", "PureWater", "AzureMoss"],
+			["PureWater", "AzureStone", "PureWater"],
+			["AzureMoss", "PureWater", "AzureMoss"]
+		]
+	},
+	{
+		"Result": "OxygenTank",
+		"Count": 1,
+		"Type": "Shaped",
+		"Pattern": [
+			["AzureStone", "AzureStone", "AzureStone"],
+			["AzureStone", "PureWater", "AzureStone"],
+			["AzureStone", "AzureStone", "AzureStone"]
+		]
+	},
+	{
+		"Result": "Overdrive",
+		"Count": 1,
+		"Type": "Shapeless",
+		"Ingredients": {
+			"AzureCrystal": 3,
+			"PureWater": 1
+		}
+	}
+]
