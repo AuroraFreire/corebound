@@ -73,9 +73,9 @@ script = ExtResource("3_xrqkv")
 [node name="ActiveItemLabel" type="RichTextLabel" parent="." unique_id=1139573268]
 offset_left = 352.0
 offset_top = 520.0
-offset_right = 505.0
+offset_right = 843.0
 offset_bottom = 545.0
 theme_override_constants/outline_size = 6
 theme_override_fonts/normal_font = ExtResource("5_vu8xs")
 theme_override_font_sizes/normal_font_size = 23
-text = "Placeholder"
+text = "Starter Drill"

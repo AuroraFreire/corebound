@@ -5,6 +5,8 @@ extends Node2D
 const SLOT_CLASS = preload("res://scripts/slot.gd")
 const STARTNG_ITEMS = ["StarterDrill", "Medkit"]
 
+var count = 0
+
 func _ready() -> void:
 	update_active_item_label()
 	PlayerInventory.active_item_updated.connect(self.update_active_item_label)
@@ -22,5 +24,8 @@ func update_active_item_label():
 			$ActiveItemLabel.text = "Starter Drill"
 		elif slots[PlayerInventory.active_item_slot].item.item_name == "Medkit":
 			$ActiveItemLabel.text = "Medkit"
-		else:
-			$ActiveItemLabel.text = "nothing to see here"
+	elif count == 0:
+		$ActiveItemLabel.text = "Starter Drill"
+		count += 1
+	else:
+		$ActiveItemLabel.text = ""

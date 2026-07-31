@@ -2,7 +2,7 @@ extends Node2D
 
 signal active_item_updated
 
-const NUM_HOTBAR_SLOTS = 8
+const NUM_HOTBAR_SLOTS = 6
 
 var active_item_slot = 0
 
