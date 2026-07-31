@@ -31,8 +31,8 @@
         "ItemCategory": "Tool",
         "StackSize": 1,
         "Price": 0,
-        "Description": ".",
-        "Cooldown": 1,
+        "Description": "",
+        "Cooldown": 2.5,
         "IconScale": 2,
         "IconOffset": [-21, 5]
     },
@@ -40,8 +40,27 @@
         "ItemCategory": "Tool",
         "StackSize": 1,
         "Price": 0,
-        "Description": ".",
+        "Description": "",
         "Cooldown": 30,
-        "IconScale": 3.05
+        "IconScale": 2.9,
+        "IconOffset": [2, 3]
+    },
+    "OxygenTank": {
+        "ItemCategory": "Tool",
+        "StackSize": 1,
+        "Price": 0,
+        "Description": "",
+        "Cooldown": 30,
+        "IconScale": 2,
+        "IconOffset": [17, -5]
+    },
+    "Overdrive": {
+        "ItemCategory": "Tool",
+        "StackSize": 1,
+        "Price": 0,
+        "Description": ".",
+        "Cooldown": 60,
+        "IconScale": 3.1,
+        "IconOffset": [8, 5]
     }
 }
