@@ -7,17 +7,9 @@ func initialize(n, q):
 	item_name = n
 	item_quantity = q
 	$TextureRect.texture = load("res://item_icons/" + item_name + ".png")
-	if item_name == "AzureStone":
-		$TextureRect.scale = Vector2(0.35, 0.35)
-	elif item_name == "AzureMoss":
-		$TextureRect.scale = Vector2(0.6, 0.6)
-	elif item_name == "AzureCrystal":
-		$TextureRect.scale = Vector2(0.45, 0.45)
-	elif item_name == "Medkit":
-		$TextureRect.scale = Vector2(3.05, 3.05)
-	elif item_name == "StarterDrill":
-		$TextureRect.scale = Vector2(2, 2)
-		$TextureRect.position += Vector2(-21, 5)
+	$TextureRect.scale = Vector2.ONE * float(JsonData.item_data[item_name].get("IconScale", 1))
+	var off = JsonData.item_data[item_name].get("IconOffset", [0, 0])
+	$TextureRect.position += Vector2(off[0], off[1])
 	$Label.visible = int(JsonData.item_data[item_name]["StackSize"]) > 1
 	$Label.text = str(item_quantity)
 	
