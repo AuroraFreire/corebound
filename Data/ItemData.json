@@ -15,6 +15,26 @@
         "ItemCategory": "Resource",
         "StackSize": 999,
         "Price": 1,
-        "Description": "A bioluminescent moss used in crafting"
+        "Description": "A bioluminescent moss used in crafting."
+    },
+    "AzureCrystal": {
+        "ItemCategory": "Resource",
+        "StackSize": 999,
+        "Price": 10,
+        "Description": "A glowing crystal that stores natural energy."
+    },
+    "StarterDrill": {
+        "ItemCategory": "Tool",
+        "StackSize": 1,
+        "Price": 0,
+        "Description": ".",
+        "Cooldown": 1
+    },
+    "Medkit": {
+        "ItemCategory": "Tool",
+        "StackSize": 1,
+        "Price": 0,
+        "Description": ".",
+        "Cooldown": 30
     }
 }

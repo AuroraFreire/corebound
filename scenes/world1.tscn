@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://oneuixjxr0kx"]
 
-[ext_resource type="Script" uid="uid://cqs0j1jsyu3kd" path="res://scenes/world1.gd" id="1_6u51x"]
+[ext_resource type="Script" uid="uid://cqs0j1jsyu3kd" path="res://scripts/world1.gd" id="1_6u51x"]
 [ext_resource type="PackedScene" uid="uid://doimvcvg4bx6n" path="res://scenes/player.tscn" id="2_x368c"]
 [ext_resource type="PackedScene" uid="uid://ccxalu8ix4bst" path="res://scenes/planet1.tscn" id="3_gt337"]
 [ext_resource type="PackedScene" uid="uid://bc3knpexdaql6" path="res://scenes/inventory.tscn" id="4_o24d1"]
-[ext_resource type="Script" uid="uid://k1n102ul0i0c" path="res://scenes/user_interface.gd" id="4_x368c"]
+[ext_resource type="Script" uid="uid://k1n102ul0i0c" path="res://scripts/user_interface.gd" id="4_x368c"]
 [ext_resource type="PackedScene" uid="uid://oja1cqpfer8m" path="res://scenes/hotbar.tscn" id="6_gt337"]
 
 [node name="World1" type="Node2D" unique_id=456265745]

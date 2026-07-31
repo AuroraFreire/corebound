@@ -11,6 +11,13 @@ func initialize(n, q):
 		$TextureRect.scale = Vector2(0.35, 0.35)
 	elif item_name == "AzureMoss":
 		$TextureRect.scale = Vector2(0.6, 0.6)
+	elif item_name == "AzureCrystal":
+		$TextureRect.scale = Vector2(0.45, 0.45)
+	elif item_name == "Medkit":
+		$TextureRect.scale = Vector2(3.05, 3.05)
+	elif item_name == "StarterDrill":
+		$TextureRect.scale = Vector2(2, 2)
+		$TextureRect.position += Vector2(-21, 5)
 	$Label.visible = int(JsonData.item_data[item_name]["StackSize"]) > 1
 	$Label.text = str(item_quantity)
 	

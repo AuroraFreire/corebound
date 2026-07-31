@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://oja1cqpfer8m"]
 
+[ext_resource type="Script" uid="uid://cl6au0nhqh30y" path="res://scripts/hotbar.gd" id="1_2n1yv"]
 [ext_resource type="Texture2D" uid="uid://ceknihybkn4r8" path="res://assets/HotbarBG.png" id="1_yj1xu"]
 [ext_resource type="Texture2D" uid="uid://dbk2jsw07hgat" path="res://assets/SlotHotbarBG.png" id="2_4qkdb"]
 [ext_resource type="Script" uid="uid://btfa0o18ru1vq" path="res://scripts/slot.gd" id="3_xrqkv"]
@@ -8,6 +9,7 @@
 texture = ExtResource("2_4qkdb")
 
 [node name="Hotbar" type="Node2D" unique_id=9287926]
+script = ExtResource("1_2n1yv")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=670437600]
 anchors_preset = 8
