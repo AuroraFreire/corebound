@@ -1,13 +1,14 @@
-#COREBOUND!
+# COREBOUND!
 
 the most amazing game you're ever going to play (trust me)
 
-##what is it about?
+## what is it about?
 
 you basically click on planets, get items, craft more stuff to click on even more planets even faster and craft even more stuff to click on even more planets even fasterjhehefwinw AAAHHHHHH
+
 got it?
 
-##did I use ai?
+## did I use ai?
 
 yes, just not yet,
 
