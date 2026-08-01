@@ -2,12 +2,12 @@ extends Node2D
 
 const SLOT_CLASS = preload("res://scripts/slot.gd")
 const ItemClass = preload("res://scenes/item.tscn")
-# scale items are drawn at while floating on the cursor, matches the inventory grid
 const HELD_SCALE = Vector2(6.8, 6.8)
 
 @onready var inventory_slots = $GridContainer
 @onready var crafting_slots = $CraftingGrid
 @onready var output_slot = $OutputSlot
+@onready var delete_slot = $Delete
 var holding_item = null
 var active_recipe = null
 
@@ -20,6 +20,7 @@ func _ready() -> void:
 		craft_slot.slot_type = SLOT_CLASS.SlotType.CRAFTING_INPUT
 	output_slot.gui_input.connect(slot_gui_input.bind(output_slot))
 	output_slot.slot_type = SLOT_CLASS.SlotType.CRAFTING_OUTPUT
+	delete_slot.gui_input.connect(delete_gui_input)
 
 func slot_gui_input(event: InputEvent, slot: SLOT_CLASS):
 	if event is InputEventMouseButton and event.pressed:
@@ -62,7 +63,6 @@ func left_click_slot(event, slot):
 	if slot.slot_type == SLOT_CLASS.SlotType.CRAFTING_INPUT:
 		update_crafting_output()
 
-# right click: holding items drops one into the slot, empty hand grabs half the stack
 func right_click_slot(slot):
 	if slot.slot_type == SLOT_CLASS.SlotType.CRAFTING_OUTPUT:
 		return
@@ -136,7 +136,6 @@ func consume_crafting_ingredients():
 	if active_recipe == null:
 		return
 	if active_recipe["Type"] == "Shapeless":
-		# take exactly the recipe amounts, pulling from whichever cells hold that item
 		for item_name in active_recipe["Ingredients"]:
 			var to_remove = int(active_recipe["Ingredients"][item_name])
 			for craft_slot in crafting_slots.get_children():
@@ -147,7 +146,6 @@ func consume_crafting_ingredients():
 					remove_from_slot(craft_slot, n)
 					to_remove -= n
 	else:
-		# shaped: one item from every filled cell
 		for craft_slot in crafting_slots.get_children():
 			if craft_slot.item:
 				remove_from_slot(craft_slot, 1)
@@ -193,8 +191,6 @@ func find_matching_recipe():
 			return recipe
 	return null
 
-# cut the grid down to the smallest rectangle containing items,
-# so shaped recipes match anywhere in the 3x3
 func trim_pattern(rows):
 	var min_r = rows.size()
 	var max_r = -1
@@ -229,16 +225,13 @@ func shaped_matches(trimmed, pattern):
 		return false
 	if trimmed == cleaned:
 		return true
-	# mirrored recipes count too, like minecraft
 	var mirrored = []
 	for row in cleaned:
 		var flipped = row.duplicate()
 		flipped.reverse()
 		mirrored.append(flipped)
 	return trimmed == mirrored
-
-# item types must match the recipe exactly, but stack sizes only need to
-# cover the required amounts - 91 moss in one cell still counts as "2 moss"
+	
 func shapeless_matches(totals, ingredients):
 	if totals.size() != ingredients.size():
 		return false
@@ -246,3 +239,9 @@ func shapeless_matches(totals, ingredients):
 		if totals.get(item_name, 0) < int(ingredients[item_name]):
 			return false
 	return true
+
+func delete_gui_input(event: InputEvent):
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if holding_item != null:
+			holding_item.queue_free()
+			holding_item = null
