@@ -136,8 +136,7 @@ texture_over = ExtResource("7_iapdy")
 texture_progress = ExtResource("8_i62wn")
 
 [node name="Timer" type="Timer" parent="." unique_id=1977804912]
-wait_time = 60.0
-one_shot = true
+wait_time = 10.0
 
 [node name="OverdriveCountdown" type="Label" parent="." unique_id=1794700865]
 offset_left = 286.0

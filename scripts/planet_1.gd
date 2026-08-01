@@ -27,7 +27,7 @@ func _on_button1_pressed() -> void:
 func try_spawn_clumps():
 	if randi_range(1, 500) == 1:
 		spawn_clump("AzureCrystalClump")
-	if randi_range(1, 250) % 2 == 0:
+	if randi_range(1, 250) == 1:
 		var commons = []
 		for item_name in JsonData.item_data:
 			if JsonData.item_data[item_name]["ItemCategory"] == "Node" and item_name != "AzureCrystalClump":
