@@ -6,6 +6,18 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1aa74"]
 load_path = "res://.godot/imported/Planet1.png-75e05112fd2206073b9c8764bd9ac4eb.ctex"
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_pw07k"]
+radius = 14.165529
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ffxw"]
+size = Vector2(14.523333, 19.443974)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmc1n"]
+radius = 46.043457
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmc1n"]
+size = Vector2(20, 37.791138)
+
 [node name="Planet" type="Node2D" unique_id=218000153]
 script = ExtResource("1_rghbl")
 
@@ -18,5 +30,209 @@ scale = Vector2(3.5, 3.5)
 texture_normal = ExtResource("2_3mkt7")
 texture_pressed = SubResource("CompressedTexture2D_1aa74")
 texture_hover = SubResource("CompressedTexture2D_1aa74")
+metadata/_edit_use_anchors_ = true
+
+[node name="PureWaterClump" type="Node2D" parent="." unique_id=1110763153]
+
+[node name="Marker2D" type="Marker2D" parent="PureWaterClump" unique_id=1913713896]
+position = Vector2(214, 182)
+
+[node name="Area2D" type="Area2D" parent="PureWaterClump/Marker2D" unique_id=2075682146]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PureWaterClump/Marker2D/Area2D" unique_id=70625842]
+position = Vector2(1.9999999, 0.99999994)
+rotation = -0.23155019
+scale = Vector2(6.920432, 3.3622172)
+shape = SubResource("CircleShape2D_pw07k")
+
+[node name="Marker2D2" type="Marker2D" parent="PureWaterClump" unique_id=1024502322]
+position = Vector2(358, 392)
+
+[node name="Area2D" type="Area2D" parent="PureWaterClump/Marker2D2" unique_id=331265341]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PureWaterClump/Marker2D2/Area2D" unique_id=816608211]
+position = Vector2(1.9999999, 0.99999994)
+rotation = -0.23155019
+scale = Vector2(6.920432, 3.3622172)
+shape = SubResource("CircleShape2D_pw07k")
+
+[node name="Marker2D3" type="Marker2D" parent="PureWaterClump" unique_id=612926233]
+position = Vector2(148, 339)
+
+[node name="Area2D" type="Area2D" parent="PureWaterClump/Marker2D3" unique_id=1435413564]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PureWaterClump/Marker2D3/Area2D" unique_id=2082172839]
+position = Vector2(1.9999999, 0.99999994)
+rotation = -0.23155019
+scale = Vector2(6.920432, 3.3622172)
+shape = SubResource("CircleShape2D_pw07k")
+
+[node name="AzureCrystalClump" type="Node2D" parent="." unique_id=68574831]
+
+[node name="Marker2D" type="Marker2D" parent="AzureCrystalClump" unique_id=241084683]
+position = Vector2(262, 102)
+
+[node name="Area2D" type="Area2D" parent="AzureCrystalClump/Marker2D" unique_id=2048675079]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureCrystalClump/Marker2D/Area2D" unique_id=356923237]
+position = Vector2(-3.384735, 1.4888687)
+rotation = 2.9100425
+scale = Vector2(6.1781163, -4.8575716)
+shape = SubResource("RectangleShape2D_8ffxw")
+
+[node name="Marker2D2" type="Marker2D" parent="AzureCrystalClump" unique_id=767390131]
+position = Vector2(405, 231)
+
+[node name="Area2D" type="Area2D" parent="AzureCrystalClump/Marker2D2" unique_id=1327062218]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureCrystalClump/Marker2D2/Area2D" unique_id=457275101]
+position = Vector2(-3.384735, 1.4888687)
+rotation = 2.9100425
+scale = Vector2(6.1781163, -4.8575716)
+shape = SubResource("RectangleShape2D_8ffxw")
+
+[node name="Marker2D3" type="Marker2D" parent="AzureCrystalClump" unique_id=1742880519]
+position = Vector2(161, 415)
+
+[node name="Area2D" type="Area2D" parent="AzureCrystalClump/Marker2D3" unique_id=1826221397]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureCrystalClump/Marker2D3/Area2D" unique_id=1776454030]
+position = Vector2(-3.384735, 1.4888687)
+rotation = 2.9100425
+scale = Vector2(6.1781163, -4.8575716)
+shape = SubResource("RectangleShape2D_8ffxw")
+
+[node name="Marker2D4" type="Marker2D" parent="AzureCrystalClump" unique_id=1745352019]
+position = Vector2(408, 350)
+
+[node name="Area2D" type="Area2D" parent="AzureCrystalClump/Marker2D4" unique_id=2065093537]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureCrystalClump/Marker2D4/Area2D" unique_id=1148697714]
+position = Vector2(-3.384735, 1.4888687)
+rotation = 2.9100425
+scale = Vector2(6.1781163, -4.8575716)
+shape = SubResource("RectangleShape2D_8ffxw")
+
+[node name="AzureMossClump" type="Node2D" parent="." unique_id=614357889]
+
+[node name="Marker2D" type="Marker2D" parent="AzureMossClump" unique_id=1980691906]
+position = Vector2(332, 141)
+
+[node name="Area2D" type="Area2D" parent="AzureMossClump/Marker2D" unique_id=634052489]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureMossClump/Marker2D/Area2D" unique_id=583742966]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_wmc1n")
+
+[node name="Marker2D2" type="Marker2D" parent="AzureMossClump" unique_id=326102566]
+position = Vector2(125, 201)
+
+[node name="Area2D" type="Area2D" parent="AzureMossClump/Marker2D2" unique_id=1612504066]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureMossClump/Marker2D2/Area2D" unique_id=1338580065]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_wmc1n")
+
+[node name="Marker2D3" type="Marker2D" parent="AzureMossClump" unique_id=1186351700]
+position = Vector2(256, 478)
+
+[node name="Area2D" type="Area2D" parent="AzureMossClump/Marker2D3" unique_id=2055230521]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureMossClump/Marker2D3/Area2D" unique_id=1390495206]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_wmc1n")
+
+[node name="Marker2D4" type="Marker2D" parent="AzureMossClump" unique_id=1349704710]
+position = Vector2(327, 347)
+
+[node name="Area2D" type="Area2D" parent="AzureMossClump/Marker2D4" unique_id=527996318]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureMossClump/Marker2D4/Area2D" unique_id=911447208]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_wmc1n")
+
+[node name="Marker2D5" type="Marker2D" parent="AzureMossClump" unique_id=2086733687]
+position = Vector2(121, 384)
+
+[node name="Area2D" type="Area2D" parent="AzureMossClump/Marker2D5" unique_id=716896602]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureMossClump/Marker2D5/Area2D" unique_id=173395973]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_wmc1n")
+
+[node name="AzureStoneClump" type="Node2D" parent="." unique_id=425615613]
+
+[node name="Marker2D" type="Marker2D" parent="AzureStoneClump" unique_id=2070915956]
+position = Vector2(207, 85)
+
+[node name="Area2D" type="Area2D" parent="AzureStoneClump/Marker2D" unique_id=186543498]
+scale = Vector2(1.0024095, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureStoneClump/Marker2D/Area2D" unique_id=490005895]
+position = Vector2(0, 0.6828308)
+rotation = 3.1415927
+scale = Vector2(4.628689, -2.3453732)
+shape = SubResource("RectangleShape2D_wmc1n")
+
+[node name="Marker2D2" type="Marker2D" parent="AzureStoneClump" unique_id=554501546]
+position = Vector2(392, 135)
+
+[node name="Area2D" type="Area2D" parent="AzureStoneClump/Marker2D2" unique_id=1452619379]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureStoneClump/Marker2D2/Area2D" unique_id=506234568]
+position = Vector2(0, 0.6828308)
+rotation = 3.1415927
+scale = Vector2(4.628689, -2.3453732)
+shape = SubResource("RectangleShape2D_wmc1n")
+
+[node name="Marker2D3" type="Marker2D" parent="AzureStoneClump" unique_id=1089111275]
+position = Vector2(250, 301)
+
+[node name="Area2D" type="Area2D" parent="AzureStoneClump/Marker2D3" unique_id=597511657]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureStoneClump/Marker2D3/Area2D" unique_id=1542749560]
+position = Vector2(0, 0.6828308)
+rotation = 3.1415927
+scale = Vector2(4.628689, -2.3453732)
+shape = SubResource("RectangleShape2D_wmc1n")
+
+[node name="Marker2D4" type="Marker2D" parent="AzureStoneClump" unique_id=1847573291]
+position = Vector2(399, 381)
+
+[node name="Area2D" type="Area2D" parent="AzureStoneClump/Marker2D4" unique_id=1201369323]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureStoneClump/Marker2D4/Area2D" unique_id=2000306274]
+position = Vector2(0, 0.6828308)
+rotation = 3.1415927
+scale = Vector2(4.628689, -2.3453732)
+shape = SubResource("RectangleShape2D_wmc1n")
+
+[node name="Marker2D5" type="Marker2D" parent="AzureStoneClump" unique_id=1783687988]
+position = Vector2(269, 487)
+
+[node name="Area2D" type="Area2D" parent="AzureStoneClump/Marker2D5" unique_id=1165892857]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AzureStoneClump/Marker2D5/Area2D" unique_id=457545259]
+position = Vector2(0, 0.6828308)
+rotation = 3.1415927
+scale = Vector2(4.628689, -2.3453732)
+shape = SubResource("RectangleShape2D_wmc1n")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_button1_pressed"]
+[connection signal="input_event" from="PureWaterClump/Marker2D/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="PureWaterClump/Marker2D2/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="PureWaterClump/Marker2D3/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureCrystalClump/Marker2D/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureCrystalClump/Marker2D2/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureCrystalClump/Marker2D3/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureCrystalClump/Marker2D4/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureMossClump/Marker2D/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureMossClump/Marker2D2/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureMossClump/Marker2D3/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureMossClump/Marker2D4/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureMossClump/Marker2D5/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureStoneClump/Marker2D/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureStoneClump/Marker2D2/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureStoneClump/Marker2D3/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureStoneClump/Marker2D4/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="AzureStoneClump/Marker2D5/Area2D" to="." method="_on_area_2d_input_event"]

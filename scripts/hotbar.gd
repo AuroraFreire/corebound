@@ -10,6 +10,8 @@ var active_item
 var cooldown_left = 0.0
 var cooldown_overdrive = 0.0
 var overdrive_ready = false
+var white = Color("ffffff")
+var yellowish_orange = Color("ffb600")
 
 func _ready() -> void:
 	update_active_item_label()
@@ -38,6 +40,10 @@ func _process(delta):
 	if overdrive_ready:
 		$OverdriveCountdown.visible = true
 		$OverdriveCountdown.text = str(int(ceil($Timer.time_left)))
+		if int(ceil($Timer.time_left)) % 2 == 0:
+			$OverdriveCountdown.set("theme_override_colors/font_color", white)
+		else:
+			$OverdriveCountdown.set("theme_override_colors/font_color", yellowish_orange)
 	else:
 		$OverdriveCountdown.visible = false
 
@@ -68,13 +74,15 @@ func _input(event: InputEvent) -> void:
 func _on_timer_timeout() -> void:
 	overdrive_ready = false
 
-func start_cooldown():
+func start_cooldown(custom_cd = 0.0):
 	var active_item = slots[PlayerInventory.active_item_slot].item
 	if active_item == null:
 		return
 	var cd = 0.0
 	if overdrive_ready:
 		cd = 0.1
+	elif custom_cd > 0:
+		cd = custom_cd
 	else:
 		cd = float(JsonData.item_data[active_item.item_name].get("Cooldown", 0))
 	if slots[PlayerInventory.active_item_slot].item.item_name == "StarterDrill":
