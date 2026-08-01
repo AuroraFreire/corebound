@@ -27,6 +27,13 @@
         "Description": "A glowing crystal that stores natural energy.",
         "IconScale": 0.45
     },
+    "AzureCrystalShard": {
+        "ItemCategory": "Resource",
+        "StackSize": 999,
+        "Price": 0,
+        "Description": "A fragment of an Azure Crystal, rich with stored energy.",
+        "IconScale": 0.6
+    },
     "StarterDrill": {
         "ItemCategory": "Tool",
         "StackSize": 1,
