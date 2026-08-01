@@ -56,9 +56,14 @@ func _on_clump_pressed(clump, clump_name, spot):
 	active_item = slots[PlayerInventory.active_item_slot].item
 	if active_item != null and active_item.item_name == "StarterDrill":
 		var mining_time = float(JsonData.item_data[clump_name]["Duration"])
-		hotbar.start_cooldown(mining_time)
-		await get_tree().create_timer(mining_time).timeout
-		quantity = randi_range(1, 4)
+		if hotbar.overdrive_ready == true:
+			hotbar.start_cooldown(0.1)
+		else:
+			hotbar.start_cooldown(mining_time)
+		if hotbar.overdrive_ready == true:
+			await get_tree().create_timer(0.1).timeout
+		else:
+			await get_tree().create_timer(mining_time).timeout
 		$"../UserInterface/Inventory".add_item(clump_name.trim_suffix("Clump"), randi_range(20, 40))
 		clump.queue_free()
 		if spot.has_meta("clump"):
