@@ -39,7 +39,7 @@
 		"StackSize": 1,
 		"Price": 0,
 		"Description": "",
-		"Cooldown": 2.5,
+		"Cooldown": 0.1,
 		"IconScale": 2,
 		"IconOffset": [-21, 5]
 	},
@@ -89,5 +89,33 @@
 		"ItemCategory": "Node",
 		"IconScale": 2.25,
 		"Duration": 5
+	},
+	"CrystalCore": {
+		"ItemCategory": "Resource",
+		"StackSize": 999,
+		"Price": 25,
+		"Description": "A compressed crystal core with a stable energy output.",
+		"IconScale": 0.2
+	},
+	"CrystalHeart": {
+		"ItemCategory": "Resource",
+		"StackSize": 999,
+		"Price": 60,
+		"Description": "A pulsating crystal that radiates immense power.",
+		"IconScale": 0.45
+	},
+	"CrystalNexus": {
+		"ItemCategory": "Resource",
+		"StackSize": 999,
+		"Price": 120,
+		"Description": "An intricate network of crystal energy bound into one form.",
+		"IconScale": 0.3
+	},
+	"AzureSingularity": {
+		"ItemCategory": "Resource",
+		"StackSize": 999,
+		"Price": 300,
+		"Description": "A legendary crystal containing enough energy to awaken a Planet Core.",
+		"IconScale": 0.2
 	}
 }

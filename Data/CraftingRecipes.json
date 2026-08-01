@@ -18,5 +18,45 @@
 			["AzureCrystalShard", "AzureCrystalShard", "AzureCrystalShard"],
 			["AzureCrystalShard", "AzureCrystalShard", "AzureCrystalShard"]
 		]
+	},
+	{
+		"Result": "CrystalCore",
+		"Count": 1,
+		"Type": "Shaped",
+		"Pattern": [
+			["AzureCrystal", "AzureCrystal", "AzureCrystal"],
+			["AzureCrystal", "AzureCrystal", "AzureCrystal"],
+			["AzureCrystal", "AzureCrystal", "AzureCrystal"]
+		]
+	},
+	{
+		"Result": "CrystalHeart",
+		"Count": 1,
+		"Type": "Shaped",
+		"Pattern": [
+			["CrystalCore", "CrystalCore", "CrystalCore"],
+			["CrystalCore", "CrystalCore", "CrystalCore"],
+			["CrystalCore", "CrystalCore", "CrystalCore"]
+		]
+	},
+	{
+		"Result": "CrystalNexus",
+		"Count": 1,
+		"Type": "Shaped",
+		"Pattern": [
+			["CrystalHeart", "CrystalHeart", "CrystalHeart"],
+			["CrystalHeart", "CrystalHeart", "CrystalHeart"],
+			["CrystalHeart", "CrystalHeart", "CrystalHeart"]
+		]
+	},
+	{
+		"Result": "AzureSingularity",
+		"Count": 1,
+		"Type": "Shaped",
+		"Pattern": [
+			["CrystalNexus", "CrystalNexus", "CrystalNexus"],
+			["CrystalNexus", "CrystalNexus", "CrystalNexus"],
+			["CrystalNexus", "CrystalNexus", "CrystalNexus"]
+		]
 	}
 ]

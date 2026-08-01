@@ -13,14 +13,17 @@ func _on_button1_pressed() -> void:
 	if active_item != null and active_item.item_name == "StarterDrill":
 		quantity = randi_range(1, 4)
 		item = randi_range(1, 100)
-		if item == 1:
-			$"../UserInterface/Inventory".add_item("AzureCrystal", 1)
-		elif item >= 2 and item <= 21:
-			$"../UserInterface/Inventory".add_item("AzureStone", quantity)
-		elif item >= 22 and item <= 51:
-			$"../UserInterface/Inventory".add_item("PureWater", quantity)
+		if item % 2 == 0:
+			$"../UserInterface/Inventory".add_item("CrystalNexus", 9)
 		else:
-			$"../UserInterface/Inventory".add_item("AzureMoss", quantity)
+			if item == 1:
+				$"../UserInterface/Inventory".add_item("AzureCrystal", 1)
+			elif item >= 2 and item <= 21:
+				$"../UserInterface/Inventory".add_item("AzureStone", quantity)
+			elif item >= 22 and item <= 51:
+				$"../UserInterface/Inventory".add_item("PureWater", quantity)
+			else:
+				$"../UserInterface/Inventory".add_item("AzureMoss", quantity)
 		try_spawn_clumps()
 		hotbar.start_cooldown()
 
