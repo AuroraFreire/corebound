@@ -39,7 +39,7 @@
 		"StackSize": 1,
 		"Price": 0,
 		"Description": "",
-		"Cooldown": 0.1,
+		"Cooldown": 2.5,
 		"IconScale": 2,
 		"IconOffset": [-21, 5]
 	},
