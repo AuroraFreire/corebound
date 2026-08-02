@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dv0padinmy8ua"]
+
+[ext_resource type="Script" uid="uid://cjhql5qwwrpg8" path="res://scripts/floating_text.gd" id="1_45khh"]
+[ext_resource type="PackedScene" uid="uid://c7oucyhple2rc" path="res://scenes/floating_text_label.tscn" id="2_vqah5"]
+
+[node name="FloatingText" type="Node2D" unique_id=1736237592]
+position = Vector2(433, 118)
+script = ExtResource("1_45khh")
+text_label = ExtResource("2_vqah5")

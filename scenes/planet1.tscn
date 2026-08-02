@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dgu7t01pqtt1v" path="res://scripts/planet_1.gd" id="1_rghbl"]
 [ext_resource type="Texture2D" uid="uid://d0t1k3idvgcwn" path="res://assets/Planet1.png" id="2_3mkt7"]
+[ext_resource type="PackedScene" uid="uid://dv0padinmy8ua" path="res://scenes/floating_text.tscn" id="3_3mkt7"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1aa74"]
 load_path = "res://.godot/imported/Planet1.png-75e05112fd2206073b9c8764bd9ac4eb.ctex"
@@ -217,6 +218,9 @@ position = Vector2(0, 0.6828308)
 rotation = 3.1415927
 scale = Vector2(4.628689, -2.3453732)
 shape = SubResource("RectangleShape2D_wmc1n")
+
+[node name="FloatingText" parent="." unique_id=1736237592 instance=ExtResource("3_3mkt7")]
+unique_name_in_owner = true
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_button1_pressed"]
 [connection signal="input_event" from="PureWaterClump/Marker2D/Area2D" to="." method="_on_area_2d_input_event"]

@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var floating_text = %FloatingText
 @onready var slots = $"../UserInterface/Hotbar/GridContainer".get_children()
 @onready var hotbar = $"../UserInterface/Hotbar"
 var item
@@ -13,17 +14,26 @@ func _on_button1_pressed() -> void:
 	if active_item != null and active_item.item_name == "StarterDrill":
 		quantity = randi_range(1, 4)
 		item = randi_range(1, 100)
-		if item % 2 == 0:
-			$"../UserInterface/Inventory".add_item("CrystalNexus", 9)
+		if item == 1:
+			floating_text.set_text(str(1))
+			floating_text.set_icon(preload("res://item_icons/AzureCrystal.png"))
+			floating_text.emit_spawn_text.emit()
+			$"../UserInterface/Inventory".add_item("AzureCrystal", 1)
+		elif item >= 2 and item <= 21:
+			floating_text.set_text(str(quantity))
+			floating_text.set_icon(preload("res://item_icons/AzureStone.png"))
+			floating_text.emit_spawn_text.emit()
+			$"../UserInterface/Inventory".add_item("AzureStone", quantity)
+		elif item >= 22 and item <= 51:
+			floating_text.set_text(str(quantity))
+			floating_text.set_icon(preload("res://item_icons/PureWater.png"))
+			floating_text.emit_spawn_text.emit()
+			$"../UserInterface/Inventory".add_item("PureWater", quantity)
 		else:
-			if item == 1:
-				$"../UserInterface/Inventory".add_item("AzureCrystal", 1)
-			elif item >= 2 and item <= 21:
-				$"../UserInterface/Inventory".add_item("AzureStone", quantity)
-			elif item >= 22 and item <= 51:
-				$"../UserInterface/Inventory".add_item("PureWater", quantity)
-			else:
-				$"../UserInterface/Inventory".add_item("AzureMoss", quantity)
+			floating_text.set_text(str(quantity))
+			floating_text.set_icon(preload("res://item_icons/AzureMoss.png"))
+			floating_text.emit_spawn_text.emit()
+			$"../UserInterface/Inventory".add_item("AzureMoss", quantity)
 		try_spawn_clumps()
 		hotbar.start_cooldown()
 

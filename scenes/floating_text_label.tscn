@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c7oucyhple2rc"]
+
+[ext_resource type="Script" uid="uid://ipnhhry7guf7" path="res://scripts/floating_text_label.gd" id="1_86yfk"]
+[ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="1_jjf0c"]
+
+[node name="FloatingTextLabel" type="Label" unique_id=1909937979]
+offset_left = 46.0
+offset_right = 71.0
+offset_bottom = 42.875
+theme_override_fonts/font = ExtResource("1_jjf0c")
+theme_override_font_sizes/font_size = 42
+text = "3"
+script = ExtResource("1_86yfk")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1570605677]
+layout_mode = 0
+offset_left = -43.0
+offset_right = -3.0
+offset_bottom = 37.0
