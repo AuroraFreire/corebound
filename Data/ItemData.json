@@ -4,35 +4,40 @@
 		"StackSize": 999,
 		"Price": 2,
 		"Description": "A single drop of untained water, used in crafting.",
-		"Scale": 1
+		"Scale": 1,
+		"Rarity": "Common"
 	},
 	"AzureStone": {
 		"ItemCategory": "Resource",
 		"StackSize": 999,
 		"Price": 4,
 		"Description": "A sturdy blue stone used for crafting.",
-		"IconScale": 0.35
+		"IconScale": 0.35,
+		"Rarity": "Common"
 	},
 	"AzureMoss": {
 		"ItemCategory": "Resource",
 		"StackSize": 999,
 		"Price": 1,
 		"Description": "A bioluminescent moss used in crafting.",
-		"IconScale": 0.6
+		"IconScale": 0.6,
+		"Rarity": "Common"
 	},
 	"AzureCrystal": {
 		"ItemCategory": "Resource",
 		"StackSize": 999,
 		"Price": 10,
 		"Description": "A glowing crystal that stores natural energy.",
-		"IconScale": 0.45
+		"IconScale": 0.45,
+		"Rarity": "Uncommon"
 	},
 	"AzureCrystalShard": {
 		"ItemCategory": "Resource",
 		"StackSize": 999,
 		"Price": 0,
 		"Description": "A fragment of an Azure Crystal, rich with stored energy.",
-		"IconScale": 0.6
+		"IconScale": 0.6,
+		"Rarity": "Uncommon"
 	},
 	"StarterDrill": {
 		"ItemCategory": "Tool",
@@ -95,27 +100,31 @@
 		"StackSize": 999,
 		"Price": 25,
 		"Description": "A compressed crystal core with a stable energy output.",
-		"IconScale": 0.2
+		"IconScale": 0.2,
+		"Rarity": "Rare"
 	},
 	"CrystalHeart": {
 		"ItemCategory": "Resource",
 		"StackSize": 999,
 		"Price": 60,
 		"Description": "A pulsating crystal that radiates immense power.",
-		"IconScale": 0.45
+		"IconScale": 0.45,
+		"Rarity": "Epic"
 	},
 	"CrystalNexus": {
 		"ItemCategory": "Resource",
 		"StackSize": 999,
 		"Price": 120,
 		"Description": "An intricate network of crystal energy bound into one form.",
-		"IconScale": 0.3
+		"IconScale": 0.3,
+		"Rarity": "Legendary"
 	},
 	"AzureSingularity": {
 		"ItemCategory": "Resource",
 		"StackSize": 999,
 		"Price": 300,
 		"Description": "A legendary crystal containing enough energy to awaken a Planet Core.",
-		"IconScale": 0.2
+		"IconScale": 0.2,
+		"Rarity": "???"
 	}
 }

@@ -245,3 +245,7 @@ func delete_gui_input(event: InputEvent):
 		if holding_item != null:
 			holding_item.queue_free()
 			holding_item = null
+
+
+func _on_popup_mouse_entered() -> void:
+	pass # Replace with function body.

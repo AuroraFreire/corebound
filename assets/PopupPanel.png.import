@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wl7bmn5gfiy8"
-path="res://.godot/imported/layout.png-97a66c8c2c13f483985bb436fe576897.ctex"
+uid="uid://buvnr4l8lxqra"
+path="res://.godot/imported/PopupPanel.png-e5ac6f78d92f3dc5bc8bea03587ef1df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tests/layout.png"
-dest_files=["res://.godot/imported/layout.png-97a66c8c2c13f483985bb436fe576897.ctex"]
+source_file="res://assets/PopupPanel.png"
+dest_files=["res://.godot/imported/PopupPanel.png-e5ac6f78d92f3dc5bc8bea03587ef1df.ctex"]
 
 [params]
 

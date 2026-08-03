@@ -68,14 +68,19 @@ func put_into_slot(new_item):
 	add_child(item)
 	refresh_style()
 
-
 func _on_mouse_entered() -> void:
 	if self.name == "Delete":
 		add_theme_stylebox_override("panel", delete_opened_style)
 		self.scale = Vector2(1.05, 1.05)
 
-
 func _on_mouse_exited() -> void:
 	if self.name == "Delete":
 		add_theme_stylebox_override("panel", delete_closed_style)
 		self.scale = Vector2(1, 1)
+
+func _on_popup_mouse_entered() -> void:
+	if item != null:
+		Popups.item_poup(Rect2i(Vector2i(global_position), Vector2i(size)), item)
+
+func _on_popup_mouse_exited() -> void:
+	Popups.hide_item_popup()

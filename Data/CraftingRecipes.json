@@ -58,5 +58,15 @@
 			["CrystalNexus", "CrystalNexus", "CrystalNexus"],
 			["CrystalNexus", "CrystalNexus", "CrystalNexus"]
 		]
+	},
+	{
+		"Result": "CrystalNexus",
+		"Count": 1,
+		"Type": "Shaped",
+		"Pattern": [
+			["AzureMoss", "AzureMoss", "AzureMoss"],
+			["AzureMoss", "AzureMoss", "AzureMoss"],
+			["AzureMoss", "AzureMoss", "AzureMoss"]
+		]
 	}
 ]
