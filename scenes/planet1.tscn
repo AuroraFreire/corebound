@@ -4,9 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://d0t1k3idvgcwn" path="res://assets/Planet1.png" id="2_3mkt7"]
 [ext_resource type="PackedScene" uid="uid://dv0padinmy8ua" path="res://scenes/floating_text.tscn" id="3_3mkt7"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1aa74"]
-load_path = "res://.godot/imported/Planet1.png-75e05112fd2206073b9c8764bd9ac4eb.ctex"
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_pw07k"]
 radius = 14.165529
 
@@ -29,8 +26,8 @@ offset_right = 167.0
 offset_bottom = 211.0
 scale = Vector2(3.5, 3.5)
 texture_normal = ExtResource("2_3mkt7")
-texture_pressed = SubResource("CompressedTexture2D_1aa74")
-texture_hover = SubResource("CompressedTexture2D_1aa74")
+texture_pressed = ExtResource("2_3mkt7")
+texture_hover = ExtResource("2_3mkt7")
 metadata/_edit_use_anchors_ = true
 
 [node name="PureWaterClump" type="Node2D" parent="." unique_id=1110763153]

@@ -1,16 +1,68 @@
 [gd_scene format=3 uid="uid://oneuixjxr0kx"]
 
 [ext_resource type="Script" uid="uid://cqs0j1jsyu3kd" path="res://scripts/world1.gd" id="1_6u51x"]
-[ext_resource type="PackedScene" uid="uid://doimvcvg4bx6n" path="res://scenes/player.tscn" id="2_x368c"]
 [ext_resource type="PackedScene" uid="uid://ccxalu8ix4bst" path="res://scenes/planet1.tscn" id="3_gt337"]
 [ext_resource type="PackedScene" uid="uid://bc3knpexdaql6" path="res://scenes/inventory.tscn" id="4_o24d1"]
 [ext_resource type="Script" uid="uid://k1n102ul0i0c" path="res://scripts/user_interface.gd" id="4_x368c"]
 [ext_resource type="PackedScene" uid="uid://oja1cqpfer8m" path="res://scenes/hotbar.tscn" id="6_gt337"]
+[ext_resource type="PackedScene" uid="uid://dhnblsrybf3md" path="res://scenes/home_banner.tscn" id="6_o24d1"]
+
+[sub_resource type="Animation" id="Animation_gt337"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UserInterface/HomeBanner:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -138)]
+}
+
+[sub_resource type="Animation" id="Animation_o24d1"]
+resource_name = "home_banner_down"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UserInterface/HomeBanner:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -138), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rli88"]
+resource_name = "home_banner_up"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UserInterface/HomeBanner:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -138)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_62ogi"]
+_data = {
+&"RESET": SubResource("Animation_gt337"),
+&"home_banner_down": SubResource("Animation_o24d1"),
+&"home_banner_up": SubResource("Animation_rli88")
+}
 
 [node name="World1" type="Node2D" unique_id=456265745]
 script = ExtResource("1_6u51x")
-
-[node name="Player" parent="." unique_id=256974079 instance=ExtResource("2_x368c")]
 
 [node name="Planet" parent="." unique_id=218000153 instance=ExtResource("3_gt337")]
 
@@ -20,3 +72,9 @@ script = ExtResource("4_x368c")
 [node name="Inventory" parent="UserInterface" unique_id=1111874109 instance=ExtResource("4_o24d1")]
 
 [node name="Hotbar" parent="UserInterface" unique_id=9287926 instance=ExtResource("6_gt337")]
+
+[node name="HomeBanner" parent="UserInterface" unique_id=547835356 instance=ExtResource("6_o24d1")]
+position = Vector2(0, -138)
+
+[node name="HomeBannerAnim" type="AnimationPlayer" parent="." unique_id=1192955830]
+libraries/ = SubResource("AnimationLibrary_62ogi")
