@@ -16,3 +16,7 @@ got it?
 yup!
 
 AI was used for the crafting system, thank you claude my goat
+
+## credits
+
+@livingtheindie for the lab tilemap <3
