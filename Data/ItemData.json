@@ -1,7 +1,7 @@
 {
 	"PureWater": {
 		"ItemCategory": "Resource",
-		"StackSize": 999,
+		"StackSize": 9,
 		"Price": 2,
 		"Description": "A single drop of untained water, used in crafting.",
 		"Scale": 1,
@@ -9,7 +9,7 @@
 	},
 	"AzureStone": {
 		"ItemCategory": "Resource",
-		"StackSize": 999,
+		"StackSize": 9,
 		"Price": 4,
 		"Description": "A sturdy blue stone used for crafting.",
 		"IconScale": 0.35,
@@ -17,7 +17,7 @@
 	},
 	"AzureMoss": {
 		"ItemCategory": "Resource",
-		"StackSize": 999,
+		"StackSize": 9,
 		"Price": 1,
 		"Description": "A bioluminescent moss used in crafting.",
 		"IconScale": 0.6,
@@ -25,7 +25,7 @@
 	},
 	"AzureCrystal": {
 		"ItemCategory": "Resource",
-		"StackSize": 999,
+		"StackSize": 9,
 		"Price": 10,
 		"Description": "A glowing crystal that stores natural energy.",
 		"IconScale": 0.45,
@@ -33,7 +33,7 @@
 	},
 	"AzureCrystalShard": {
 		"ItemCategory": "Resource",
-		"StackSize": 999,
+		"StackSize": 9,
 		"Price": 0,
 		"Description": "A fragment of an Azure Crystal, rich with stored energy.",
 		"IconScale": 0.6,
@@ -97,7 +97,7 @@
 	},
 	"CrystalCore": {
 		"ItemCategory": "Resource",
-		"StackSize": 999,
+		"StackSize": 9,
 		"Price": 25,
 		"Description": "A compressed crystal core with a stable energy output.",
 		"IconScale": 0.2,
@@ -105,7 +105,7 @@
 	},
 	"CrystalHeart": {
 		"ItemCategory": "Resource",
-		"StackSize": 999,
+		"StackSize": 9,
 		"Price": 60,
 		"Description": "A pulsating crystal that radiates immense power.",
 		"IconScale": 0.45,
@@ -113,7 +113,7 @@
 	},
 	"CrystalNexus": {
 		"ItemCategory": "Resource",
-		"StackSize": 999,
+		"StackSize": 9,
 		"Price": 120,
 		"Description": "An intricate network of crystal energy bound into one form.",
 		"IconScale": 0.3,
@@ -121,7 +121,7 @@
 	},
 	"AzureSingularity": {
 		"ItemCategory": "Resource",
-		"StackSize": 999,
+		"StackSize": 9,
 		"Price": 300,
 		"Description": "A legendary crystal containing enough energy to awaken a Planet Core.",
 		"IconScale": 0.2,

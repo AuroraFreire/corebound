@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://c4bv63pnormt0"]
+
+[ext_resource type="PackedScene" uid="uid://bxkcrshbp2ufd" path="res://skill_button.tscn" id="1_003p6"]
+[ext_resource type="Texture2D" uid="uid://bqc6ctwf3o4u5" path="res://assets/skill_tree_icons/drill_skill1.png" id="2_hwd2a"]
+[ext_resource type="Script" uid="uid://b6ibnr5mlgt38" path="res://skill_button.gd" id="3_urm3n"]
+[ext_resource type="Texture2D" uid="uid://c4cipgirk2htc" path="res://assets/skill_tree_icons/drill_skill2.png" id="4_dvtuv"]
+[ext_resource type="Texture2D" uid="uid://cvw6totdja3cv" path="res://assets/skill_tree_icons/drill_skill3.png" id="5_bfm8x"]
+[ext_resource type="Texture2D" uid="uid://dms8xw01cjwfm" path="res://assets/skill_tree_icons/drill_skill4.png" id="6_rh3y1"]
+[ext_resource type="Texture2D" uid="uid://bchp1grnyu4yy" path="res://assets/skill_tree_icons/drill_skill51.png" id="7_n0rm1"]
+[ext_resource type="Texture2D" uid="uid://cl7eeeqjs8x3l" path="res://assets/skill_tree_icons/drill_skill52.png" id="8_p21vy"]
+
+[node name="SkillTree" type="Node2D" unique_id=221361619]
+scale = Vector2(1.75, 1.75)
+
+[node name="SkillButton" parent="." unique_id=467967856 instance=ExtResource("1_003p6")]
+offset_left = 247.42857
+offset_top = 282.85712
+offset_right = 289.4286
+offset_bottom = 324.85712
+scale = Vector2(1, 1)
+texture_normal = ExtResource("2_hwd2a")
+texture_pressed = ExtResource("2_hwd2a")
+texture_hover = ExtResource("2_hwd2a")
+script = ExtResource("3_urm3n")
+
+[node name="SkillButton2" parent="SkillButton" unique_id=958737338 instance=ExtResource("1_003p6")]
+layout_mode = 0
+offset_left = -49.714283
+offset_top = -55.428547
+offset_right = -7.714283
+offset_bottom = -13.428547
+scale = Vector2(1, 1)
+texture_normal = ExtResource("4_dvtuv")
+texture_pressed = ExtResource("4_dvtuv")
+texture_hover = ExtResource("4_dvtuv")
+script = ExtResource("3_urm3n")
+
+[node name="SkillButton3" parent="SkillButton/SkillButton2" unique_id=1349224467 instance=ExtResource("1_003p6")]
+layout_mode = 0
+offset_left = 90.85714
+offset_top = -44.000004
+offset_right = 132.85715
+offset_bottom = -2.0000038
+scale = Vector2(1, 1)
+texture_normal = ExtResource("5_bfm8x")
+texture_pressed = ExtResource("5_bfm8x")
+texture_hover = ExtResource("5_bfm8x")
+script = ExtResource("3_urm3n")
+
+[node name="SkillButton4" parent="SkillButton/SkillButton2/SkillButton3" unique_id=2019876332 instance=ExtResource("1_003p6")]
+layout_mode = 0
+offset_left = -89.14285
+offset_top = -47.42857
+offset_right = -47.142853
+offset_bottom = -5.42857
+scale = Vector2(1, 1)
+texture_normal = ExtResource("6_rh3y1")
+texture_pressed = ExtResource("6_rh3y1")
+texture_hover = ExtResource("6_rh3y1")
+script = ExtResource("3_urm3n")
+
+[node name="SkillButton5" parent="SkillButton/SkillButton2/SkillButton3/SkillButton4" unique_id=22940017 instance=ExtResource("1_003p6")]
+layout_mode = 0
+offset_left = -100.57141
+offset_top = -54.285717
+offset_right = -58.57141
+offset_bottom = -12.285717
+scale = Vector2(1, 1)
+texture_normal = ExtResource("7_n0rm1")
+texture_pressed = ExtResource("7_n0rm1")
+texture_hover = ExtResource("7_n0rm1")
+script = ExtResource("3_urm3n")
+
+[node name="SkillButton6" parent="SkillButton/SkillButton2/SkillButton3/SkillButton4" unique_id=1927275968 instance=ExtResource("1_003p6")]
+layout_mode = 0
+offset_left = 133.7143
+offset_top = -56.57143
+offset_right = 175.7143
+offset_bottom = -14.57143
+scale = Vector2(1, 1)
+texture_normal = ExtResource("8_p21vy")
+texture_pressed = ExtResource("8_p21vy")
+texture_hover = ExtResource("8_p21vy")
+script = ExtResource("3_urm3n")
