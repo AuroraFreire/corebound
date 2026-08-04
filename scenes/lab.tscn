@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://cqqm14xh5rdjb" path="res://scenes/character_body_2d.gd" id="2_hflkp"]
 [ext_resource type="Texture2D" uid="uid://bm423vjv1wxck" path="res://spacex_astronaut_spritesheet_by_gogoat1_dfsectu.png" id="3_hflkp"]
 [ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="4_f680m"]
+[ext_resource type="Script" uid="uid://ctqhkgdgvig8l" path="res://scenes/lab_ui.gd" id="5_064jp"]
+[ext_resource type="PackedScene" uid="uid://bc3knpexdaql6" path="res://scenes/inventory.tscn" id="6_gipex"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uw7jv"]
 texture = ExtResource("1_hem3r")
@@ -315,24 +317,6 @@ position = Vector2(40, 3)
 zoom = Vector2(3.8, 3.8)
 position_smoothing_enabled = true
 
-[node name="DoorInteract" type="Label" parent="." unique_id=1114902885]
-offset_left = -106.0
-offset_top = 8.0
-offset_right = -70.0
-offset_bottom = 18.208332
-theme_override_fonts/font = ExtResource("4_f680m")
-theme_override_font_sizes/font_size = 10
-text = "Exit [E]"
-
-[node name="TreeInteract" type="Label" parent="." unique_id=1115511579]
-offset_left = 80.0
-offset_top = -76.0
-offset_right = 144.0
-offset_bottom = -65.791664
-theme_override_fonts/font = ExtResource("4_f680m")
-theme_override_font_sizes/font_size = 10
-text = "Research [E]"
-
 [node name="Area2D" type="Area2D" parent="." unique_id=1833994608]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1025554786]
@@ -344,6 +328,29 @@ shape = SubResource("RectangleShape2D_tup4i")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2" unique_id=2093262616]
 position = Vector2(121, -34.75)
 shape = SubResource("RectangleShape2D_tup4i")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2109162255]
+script = ExtResource("5_064jp")
+
+[node name="Inventory" parent="UI" unique_id=1111874109 instance=ExtResource("6_gipex")]
+
+[node name="TreeInteract" type="Label" parent="." unique_id=1115511579]
+offset_left = 80.0
+offset_top = -76.0
+offset_right = 144.0
+offset_bottom = -65.791664
+theme_override_fonts/font = ExtResource("4_f680m")
+theme_override_font_sizes/font_size = 10
+text = "Research [E]"
+
+[node name="DoorInteract" type="Label" parent="." unique_id=1114902885]
+offset_left = -106.0
+offset_top = 8.0
+offset_right = -70.0
+offset_bottom = 18.208332
+theme_override_fonts/font = ExtResource("4_f680m")
+theme_override_font_sizes/font_size = 10
+text = "Exit [E]"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

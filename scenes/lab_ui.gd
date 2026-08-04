@@ -6,11 +6,9 @@ func _ready() -> void:
 	if inv_toggle % 2 == 0:
 		$Inventory.visible = false
 	$".".process_mode = Node.PROCESS_MODE_ALWAYS
-	$"../HomeBannerAnim".process_mode = Node.PROCESS_MODE_ALWAYS
 
 func _input(event: InputEvent) -> void:
 	toggle_inventory(event)
-	scroll_hotbar(event)
 	close_game(event)
 
 func close_game(event: InputEvent) -> void:
@@ -18,6 +16,7 @@ func close_game(event: InputEvent) -> void:
 		get_tree().quit()
 
 func toggle_inventory(event: InputEvent) -> void:
+	await get_tree().create_timer(0.1).timeout
 	if event.is_action_pressed("Open Close Inventory"):
 		inv_toggle += 1
 		if inv_toggle % 2 != 0:
@@ -26,9 +25,3 @@ func toggle_inventory(event: InputEvent) -> void:
 		else:
 			$Inventory.visible = false
 			get_tree().paused = false
-
-func scroll_hotbar(event: InputEvent) -> void:
-	if event.is_action_pressed("scroll_up"):
-		PlayerInventory.active_item_scroll_up()
-	elif event.is_action_pressed("scroll_down"):
-		PlayerInventory.active_item_scroll_down()
