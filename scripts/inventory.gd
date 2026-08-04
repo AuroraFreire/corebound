@@ -3,6 +3,7 @@ extends Node2D
 const SLOT_CLASS = preload("res://scripts/slot.gd")
 const ItemClass = preload("res://scenes/item.tscn")
 const HELD_SCALE = Vector2(6.8, 6.8)
+const SAVE_LOCATION = "user://SaveFile.json"
 
 @onready var inventory_slots = $GridContainer
 @onready var crafting_slots = $CraftingGrid
@@ -10,6 +11,7 @@ const HELD_SCALE = Vector2(6.8, 6.8)
 @onready var delete_slot = $Delete
 var holding_item = null
 var active_recipe = null
+
 
 func _ready() -> void:
 	for inv_slot in inventory_slots.get_children():
@@ -21,6 +23,7 @@ func _ready() -> void:
 	output_slot.gui_input.connect(slot_gui_input.bind(output_slot))
 	output_slot.slot_type = SLOT_CLASS.SlotType.CRAFTING_OUTPUT
 	delete_slot.gui_input.connect(delete_gui_input)
+	load_data()
 
 func slot_gui_input(event: InputEvent, slot: SLOT_CLASS):
 	if event is InputEventMouseButton and event.pressed:
@@ -114,6 +117,7 @@ func add_item(item_name, quantity):
 			var n = min(stack, quantity)
 			slot.add_item(item_name, n)
 			quantity -= n
+	save_data()
 
 func take_from_output():
 	if output_slot.item == null:
@@ -245,7 +249,39 @@ func delete_gui_input(event: InputEvent):
 		if holding_item != null:
 			holding_item.queue_free()
 			holding_item = null
+	save_data()
 
+func save_data():
+	var save_data = []
+	for slot in inventory_slots.get_children():
+		if slot.item:
+			save_data.append({
+				"item_name": slot.item.item_name,
+				"quantity": slot.item.item_quantity
+			})
+		else:
+			save_data.append(null)
+	var file = FileAccess.open(SAVE_LOCATION, FileAccess.WRITE)
+	file.store_string(JSON.stringify(save_data))
+	file.close()
 
-func _on_popup_mouse_entered() -> void:
-	pass # Replace with function body.
+func load_data():
+	if !FileAccess.file_exists(SAVE_LOCATION):
+		return
+	var file = FileAccess.open(SAVE_LOCATION, FileAccess.READ)
+	var text = file.get_as_text()
+	file.close()
+	var data = JSON.parse_string(text)
+	if data == null:
+		return
+	var slots = inventory_slots.get_children()
+	for i in range(min(slots.size(), data.size())):
+		var slot = slots[i]
+		if slot.item:
+			slot.item.queue_free()
+			slot.item = null
+		if data[i] != null:
+			slot.add_item(
+				data[i]["item_name"],
+				int(data[i]["quantity"])
+			)
