@@ -6,7 +6,12 @@ extends Node2D
 @export var drag_speed = 1.5
 @onready var camera = $Camera2D
 var isPressed = false
+var isAvailable
+var isPurchased
 var e = Vector2.ZERO
+
+func _ready() -> void:
+	pass
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and isPressed:

@@ -20,7 +20,6 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		$DoorInteract.visible = false
 
-
 func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		$TreeInteract.visible = true
@@ -28,6 +27,14 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 func _on_area_2d_2_body_exited(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		$TreeInteract.visible = false
+
+func _on_area_2d_3_body_entered(body: Node2D) -> void:
+	if body.name == "CharacterBody2D":
+		$SellInteract.visible = true
+
+func _on_area_2d_3_body_exited(body: Node2D) -> void:
+	if body.name == "CharacterBody2D":
+		$SellInteract.visible = false
 
 func interact(event: InputEvent):
 	if event.is_action_pressed("interact") and $DoorInteract.visible:

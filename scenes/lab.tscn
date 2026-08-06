@@ -267,7 +267,10 @@ animations = [{
 size = Vector2(21, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tup4i"]
-size = Vector2(50, 33.25)
+size = Vector2(43, 33.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ffxw"]
+size = Vector2(29, 27)
 
 [node name="Lab" type="Node2D" unique_id=352898344]
 script = ExtResource("1_064jp")
@@ -326,8 +329,14 @@ shape = SubResource("RectangleShape2D_tup4i")
 [node name="Area2D2" type="Area2D" parent="." unique_id=580210085]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2" unique_id=2093262616]
-position = Vector2(121, -34.75)
+position = Vector2(117.5, -34.75)
 shape = SubResource("RectangleShape2D_tup4i")
+
+[node name="Area2D3" type="Area2D" parent="." unique_id=243481830]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=1626733036]
+position = Vector2(174.5, -26.5)
+shape = SubResource("RectangleShape2D_8ffxw")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=2109162255]
 script = ExtResource("5_jy24p")
@@ -354,7 +363,19 @@ theme_override_fonts/font = ExtResource("4_f680m")
 theme_override_font_sizes/font_size = 10
 text = "Exit [E]"
 
+[node name="SellInteract" type="Label" parent="." unique_id=163223524]
+visible = false
+offset_left = 158.0
+offset_top = -39.0
+offset_right = 194.0
+offset_bottom = -28.791656
+theme_override_fonts/font = ExtResource("4_f680m")
+theme_override_font_sizes/font_size = 10
+text = "Sell [E]"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
 [connection signal="body_exited" from="Area2D2" to="." method="_on_area_2d_2_body_exited"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]
+[connection signal="body_exited" from="Area2D3" to="." method="_on_area_2d_3_body_exited"]
