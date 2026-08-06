@@ -3,6 +3,7 @@ extends Node2D
 @onready var label_name = $UI/ItemPopup/Control/RichTextLabel2
 @onready var label_description = $UI/ItemPopup/Control/RichTextLabel
 @onready var label_rarity = $UI/ItemPopup/Control/RichTextLabel3
+@onready var label_price = $UI/ItemPopup/Control/RichTextLabel4
 
 func item_poup(slot: Rect2i, item):
 	if item == null:
@@ -11,6 +12,7 @@ func item_poup(slot: Rect2i, item):
 	var rarity = str(JsonData.item_data[item.item_name].get("Rarity", ""))
 	label_name.text = item.item_name.capitalize()
 	label_description.text = str(data.get("Description", ""))
+	label_price.text = "Price: " + str(int(data.get("Price", "")))
 	if rarity == "Common":
 		label_rarity.text = rarity
 		label_rarity.set("theme_override_colors/default_color", Color(1.0, 1.0, 1.0, 1.0))

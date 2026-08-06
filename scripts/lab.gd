@@ -43,3 +43,7 @@ func interact(event: InputEvent):
 		saved_position = $CharacterBody2D.global_position
 		has_saved_position = true
 		get_tree().change_scene_to_file("res://scenes/skill_tree.tscn")
+	elif event.is_action_pressed("interact") and $SellInteract.visible:
+		saved_position = $CharacterBody2D.global_position
+		has_saved_position = true
+		get_tree().change_scene_to_file("res://scenes/sell.tscn")
