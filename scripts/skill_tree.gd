@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var zoom_speed = 0.05
-@export var min_zoom = 0.1
+@export var min_zoom = 0.3
 @export var max_zoom = 2.0
 @export var drag_speed = 1.5
 @onready var camera = $Camera2D
@@ -19,3 +19,5 @@ func _input(event: InputEvent) -> void:
 			camera.zoom = Vector2.ONE * min(max_zoom, camera.zoom.x + zoom_speed)
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			camera.zoom = Vector2.ONE * max(min_zoom, camera.zoom.x - zoom_speed)
+	if event.is_action_pressed("close_tree"):
+		get_tree().change_scene_to_file("res://scenes/lab.tscn")

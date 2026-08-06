@@ -1,25 +1,35 @@
 extends CharacterBody2D
 
+const MAX_SPEED = 66.6
+const ACCEL = 250
+const FRICTION = 400
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+@onready var player = $AnimatedSprite2D
 
+var input = Vector2.ZERO
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	player_movement(delta)
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+func get_input():
+	input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
+	input.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+	return input.normalized()
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
+func player_movement(delta):
+	input = get_input()
+	if input == Vector2.ZERO:
+		if velocity.length() > (FRICTION * delta):
+			player.play("running_right")
+			velocity -= velocity.normalized() * (FRICTION * delta)
+		else:
+			velocity = Vector2.ZERO
+			player.play("idle")
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		velocity += (input * ACCEL * delta)
+		velocity = velocity.limit_length(MAX_SPEED)
+		player.play("running_right")
+		if input.x != 0:
+			player.flip_h = input.x < 0
 	move_and_slide()
+	
