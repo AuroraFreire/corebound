@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cp7iiccf5tmdc" path="res://assets/EmptySlotBG.png" id="3_ff1eb"]
 [ext_resource type="Script" uid="uid://btfa0o18ru1vq" path="res://scripts/slot.gd" id="4_t5e8v"]
 [ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="5_ff1eb"]
+[ext_resource type="Texture2D" uid="uid://fpjpasuemo48" path="res://assets/Coin.png" id="6_t5e8v"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ghknv"]
 texture = ExtResource("3_ff1eb")
@@ -138,7 +139,7 @@ offset_bottom = 347.0
 scale = Vector2(10, 10)
 script = ExtResource("4_t5e8v")
 
-[node name="Label" type="Label" parent="." unique_id=314721176]
+[node name="Price" type="Label" parent="." unique_id=314721176]
 offset_left = 303.0
 offset_top = 293.0
 offset_right = 633.0
@@ -146,9 +147,18 @@ offset_bottom = 334.85416
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("5_ff1eb")
 theme_override_font_sizes/font_size = 41
+
+[node name="Wallet" type="Label" parent="." unique_id=305799798]
+offset_left = 198.0
+offset_top = 136.0
+offset_right = 528.0
+offset_bottom = 177.85417
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("5_ff1eb")
+theme_override_font_sizes/font_size = 41
 text = "0"
 
-[node name="Button" type="Button" parent="." unique_id=1875032339]
+[node name="Sell" type="Button" parent="." unique_id=1875032339]
 offset_left = 265.0
 offset_top = 447.0
 offset_right = 375.0
@@ -162,6 +172,16 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_wmc1n")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pw07k")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cvsdi")
 text = "Sell"
+
+[node name="Coin" type="Sprite2D" parent="." unique_id=1503138966]
+position = Vector2(277, 311)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_t5e8v")
+
+[node name="Coin2" type="Sprite2D" parent="." unique_id=1301445885]
+position = Vector2(177, 154)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_t5e8v")
 
 [connection signal="mouse_entered" from="GridContainer/Slot1" to="GridContainer/Slot1" method="_on_popup_mouse_entered"]
 [connection signal="mouse_exited" from="GridContainer/Slot1" to="GridContainer/Slot1" method="_on_popup_mouse_exited"]
@@ -187,4 +207,4 @@ text = "Sell"
 [connection signal="mouse_exited" from="GridContainer/Slot11" to="GridContainer/Slot11" method="_on_popup_mouse_exited"]
 [connection signal="mouse_entered" from="GridContainer/Slot12" to="GridContainer/Slot12" method="_on_popup_mouse_entered"]
 [connection signal="mouse_exited" from="GridContainer/Slot12" to="GridContainer/Slot12" method="_on_popup_mouse_exited"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Sell" to="." method="_on_button_pressed"]

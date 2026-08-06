@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://424spte00jhw" path="res://assets/InvBG.png" id="2_yyk2a"]
 [ext_resource type="Script" uid="uid://btfa0o18ru1vq" path="res://scripts/slot.gd" id="3_53g1v"]
 [ext_resource type="Texture2D" uid="uid://d1i46mcs0qi4x" path="res://assets/DeletedClosed.png" id="5_yyk2a"]
+[ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="6_s887n"]
+[ext_resource type="Texture2D" uid="uid://fpjpasuemo48" path="res://assets/Coin.png" id="7_g71ie"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pw07k"]
 texture = ExtResource("2_53g1v")
@@ -206,6 +208,22 @@ offset_bottom = 204.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_53g1v")
 script = ExtResource("3_53g1v")
+
+[node name="Wallet" type="Label" parent="." unique_id=607351247]
+offset_left = 321.0
+offset_top = 168.0
+offset_right = 651.0
+offset_bottom = 209.85417
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("6_s887n")
+theme_override_font_sizes/font_size = 41
+text = "0"
+
+[node name="Coin2" type="Sprite2D" parent="." unique_id=666339579]
+position = Vector2(300, 182)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_g71ie")
 
 [connection signal="mouse_entered" from="GridContainer/Slot1" to="GridContainer/Slot1" method="_on_popup_mouse_entered"]
 [connection signal="mouse_exited" from="GridContainer/Slot1" to="GridContainer/Slot1" method="_on_popup_mouse_exited"]

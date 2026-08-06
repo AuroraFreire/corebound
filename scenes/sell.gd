@@ -8,6 +8,10 @@ const SAVE_LOCATION = "user://SaveFile.json"
 @onready var inventory_slots = $GridContainer
 @onready var sell_slot = $SellSlot
 var holding_item = null
+var price
+var quantity
+var total
+var wallet = 0
 
 func _ready() -> void:
 	for inv_slot in inventory_slots.get_children():
@@ -15,6 +19,7 @@ func _ready() -> void:
 		inv_slot.slot_type = SLOT_CLASS.SlotType.INVENTORY
 	sell_slot.gui_input.connect(slot_gui_input.bind(sell_slot))
 	sell_slot.slot_type = SLOT_CLASS.SlotType.INVENTORY
+	$Wallet.text = str(wallet)
 	sell()
 	load_data()
 
@@ -94,22 +99,24 @@ func drop_one_from_hand():
 		holding_item.queue_free()
 		holding_item = null
 
-func _input(event):
+func _input(event: InputEvent):
+	if event.is_action_pressed("close_game"):
+		get_tree().change_scene_to_file("res://scenes/lab.tscn")
 	if holding_item:
 		holding_item.global_position = get_global_mouse_position()
-
+		
 func save_data():
-	var save_data = []
+	var slots_data = []
 	for slot in inventory_slots.get_children():
 		if slot.item:
-			save_data.append({
+			slots_data.append({
 				"item_name": slot.item.item_name,
 				"quantity": slot.item.item_quantity
 			})
 		else:
-			save_data.append(null)
+			slots_data.append(null)
 	var file = FileAccess.open(SAVE_LOCATION, FileAccess.WRITE)
-	file.store_string(JSON.stringify(save_data))
+	file.store_string(JSON.stringify({"wallet": wallet, "slots": slots_data}))
 	file.close()
 
 func load_data():
@@ -119,36 +126,45 @@ func load_data():
 	var text = file.get_as_text()
 	file.close()
 	var data = JSON.parse_string(text)
-	if data == null:
+	if data == null or not data is Dictionary:
 		return
+	wallet = int(data.get("wallet", 0))
+	$Wallet.text = str(wallet)
 	var slots = inventory_slots.get_children()
-	for i in range(min(slots.size(), data.size())):
+	var slots_data = data.get("slots", [])
+	for i in range(min(slots.size(), slots_data.size())):
 		var slot = slots[i]
 		if slot.item:
 			slot.item.queue_free()
 			slot.item = null
-		if data[i] != null:
+		if slots_data[i] != null:
 			slot.add_item(
-				data[i]["item_name"],
-				int(data[i]["quantity"])
+				slots_data[i]["item_name"],
+				int(slots_data[i]["quantity"])
 			)
 
 func sell():
 	if sell_slot.item != null:
-		var price = int(JsonData.item_data[sell_slot.item.item_name]["Price"])
-		var quantity = int(sell_slot.item.item_quantity)
-		$Label.text = str(price * quantity)
-		$Button.set("theme_override_colors/font_color", Color(1.0, 1.0, 0.0, 1.0))
-		$Button.set("theme_override_colors/font_hover_color", Color(1.0, 0.875, 0.0, 1.0))
-		$Button.set("theme_override_colors/font_pressed_color", Color(1.0, 0.71, 0.0, 1.0))
+		price = int(JsonData.item_data[sell_slot.item.item_name]["Price"])
+		quantity = int(sell_slot.item.item_quantity)
+		total = price * quantity
+		$Price.text = str(total)
+		$Sell.set("theme_override_colors/font_color", Color(1.0, 1.0, 0.0, 1.0))
+		$Sell.set("theme_override_colors/font_hover_color", Color(1.0, 0.875, 0.0, 1.0))
+		$Sell.set("theme_override_colors/font_pressed_color", Color(1.0, 0.71, 0.0, 1.0))
 	else:
-		$Label.text = "0"
-		$Button.set("theme_override_colors/font_color", "424242")
-		$Button.set("theme_override_colors/font_hover_color", "424242")
-		$Button.set("theme_override_colors/font_pressed_color", "424242")
+		$Price.text = "0"
+		$Sell.set("theme_override_colors/font_color", "424242")
+		$Sell.set("theme_override_colors/font_hover_color", "424242")
+		$Sell.set("theme_override_colors/font_pressed_color", "424242")
 		
 func _on_button_pressed() -> void:
 	sell_slot.item.queue_free()
 	sell_slot.item = null
+	add_coin()
 	sell()
 	save_data()
+
+func add_coin():
+	wallet += total
+	$Wallet.text = str(wallet)

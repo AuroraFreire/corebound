@@ -11,7 +11,7 @@ const SAVE_LOCATION = "user://SaveFile.json"
 @onready var delete_slot = $Delete
 var holding_item = null
 var active_recipe = null
-
+var wallet = 0
 
 func _ready() -> void:
 	for inv_slot in inventory_slots.get_children():
@@ -252,17 +252,17 @@ func delete_gui_input(event: InputEvent):
 	save_data()
 
 func save_data():
-	var save_data = []
+	var slots_data = []
 	for slot in inventory_slots.get_children():
 		if slot.item:
-			save_data.append({
+			slots_data.append({
 				"item_name": slot.item.item_name,
 				"quantity": slot.item.item_quantity
 			})
 		else:
-			save_data.append(null)
+			slots_data.append(null)
 	var file = FileAccess.open(SAVE_LOCATION, FileAccess.WRITE)
-	file.store_string(JSON.stringify(save_data))
+	file.store_string(JSON.stringify({"wallet": wallet, "slots": slots_data}))
 	file.close()
 
 func load_data():
@@ -272,16 +272,19 @@ func load_data():
 	var text = file.get_as_text()
 	file.close()
 	var data = JSON.parse_string(text)
-	if data == null:
+	if data == null or not data is Dictionary:
 		return
+	wallet = int(data.get("wallet", 0))
+	$Wallet.text = str(wallet)
 	var slots = inventory_slots.get_children()
-	for i in range(min(slots.size(), data.size())):
+	var slots_data = data.get("slots", [])
+	for i in range(min(slots.size(), slots_data.size())):
 		var slot = slots[i]
 		if slot.item:
 			slot.item.queue_free()
 			slot.item = null
-		if data[i] != null:
+		if slots_data[i] != null:
 			slot.add_item(
-				data[i]["item_name"],
-				int(data[i]["quantity"])
+				slots_data[i]["item_name"],
+				int(slots_data[i]["quantity"])
 			)
