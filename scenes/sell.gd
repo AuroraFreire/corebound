@@ -159,11 +159,14 @@ func sell():
 		$Sell.set("theme_override_colors/font_pressed_color", "424242")
 		
 func _on_button_pressed() -> void:
-	sell_slot.item.queue_free()
-	sell_slot.item = null
-	add_coin()
-	sell()
-	save_data()
+	if sell_slot.item != null:
+		sell_slot.item.queue_free()
+		sell_slot.item = null
+		add_coin()
+		sell()
+		save_data()
+	else:
+		return
 
 func add_coin():
 	wallet += total

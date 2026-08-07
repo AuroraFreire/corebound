@@ -1,0 +1,142 @@
+{
+	"MiningI": {
+		"Name": "Mining I",
+		"Cost": 100,
+		"Requirements": [],
+		"Effect": "mining_speed",
+		"Value": 0.8
+	},
+	"MiningII": {
+		"Name": "Mining II",
+		"Cost": 1700,
+		"Requirements": ["MiningI"],
+		"Effect": "mining_speed",
+		"Value": 0.6
+	},
+	"MiningIII": {
+		"Name": "Mining III",
+		"Cost": 4500,
+		"Requirements": ["MiningII"],
+		"Effect": "mining_speed",
+		"Value": 0.4
+	},
+	"MiningIV": {
+		"Name": "Mining IV",
+		"Cost": 13000,
+		"Requirements": ["MiningIII"],
+		"Effect": "mining_speed",
+		"Value": 0.2
+	},
+	"MiningV1": {
+		"Name": "Mining V1",
+		"Cost": 40000,
+		"Requirements": ["MiningIV"],
+		"Effect": "mining_speed",
+		"Value": 0
+	},
+	"MiningV2": {
+		"Name": "Mining V2",
+		"Cost": 40000,
+		"Requirements": ["MiningIV"],
+		"Effect": "resource_boost",
+		"Value": 15
+	},
+	"StorageI": {
+		"Name": "Storage I",
+		"Cost": 300,
+		"Requirements": [],
+		"Effect": "storage",
+		"Value": 99
+	},
+	"StorageII": {
+		"Name": "Storage II",
+		"Cost": 3000,
+		"Requirements": ["Storage I"],
+		"Effect": "storage",
+		"Value": 999
+	},
+	"StorageIII": {
+		"Name": "Storage III",
+		"Cost": 10000,
+		"Requirements": ["Storage II"],
+		"Effect": "add_slots",
+		"Value": 6
+	},
+	"StorageIV": {
+		"Name": "Storage IV",
+		"Cost": 20000,
+		"Requirements": ["Storage III"],
+		"Effect": "add_slots",
+		"Value": 6
+	},
+	"OverdriveI": {
+		"Name": "Overdrive I",
+		"Cost": 200,
+		"Requirements": [],
+		"Effect": "overdrive_time",
+		"Value": 3
+	},
+	"OverdriveII": {
+		"Name": "Overdrive II",
+		"Cost": 500,
+		"Requirements": ["OverdriveI"],
+		"Effect": "overdrive_time",
+		"Value": 3
+	},
+	"OverdriveIII": {
+		"Name": "Overdrive III",
+		"Cost": 2500,
+		"Requirements": ["OverdriveII"],
+		"Effect": "overdrive_time",
+		"Value": 4
+	},
+	"OverdriveIV1": {
+		"Name": "Overdrive IV1",
+		"Cost": 2500,
+		"Requirements": ["OverdriveIII"],
+		"Effect": "overdrive_cooldown",
+		"Value": 90
+	},
+	"OverdriveV1": {
+		"Name": "Overdrive V1",
+		"Cost": 7000,
+		"Requirements": ["OverdriveIV1"],
+		"Effect": "overdrive_cooldown",
+		"Value": 60
+	},
+	"OverdriveIV2": {
+		"Name": "Overdrive IV2",
+		"Cost": 2500,
+		"Requirements": ["OverdriveIII"],
+		"Effect": "overdrive_speed",
+		"Value": 0.05
+	},
+	"OverdriveV2": {
+		"Name": "Overdrive V2",
+		"Cost": 8000,
+		"Requirements": ["OverdriveIV2"],
+		"Effect": "overdrive_speed",
+		"Value": 0.0
+	},
+	"PlanetI": {
+		"Name": "Planet I",
+		"Cost": 700,
+		"Requirements": [],
+		"Effect": "resource_boost",
+		"Value": 5 
+	},
+	"PlanetII": {
+		"Name": "Planet II",
+		"Cost": 2400,
+		"Requirements": ["PlanetI"],
+		"Effect": "resource_boost",
+		"Value": 5 
+	},
+	"PlanetIII": {
+		"Name": "Planet III",
+		"Cost": 10000,
+		"Requirements": ["PlanetII"],
+		"Effect": "resource_boost",
+		"Value": 20
+	}
+}

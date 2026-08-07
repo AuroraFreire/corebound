@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5dpf5sc2gdlj" path="res://scripts/lab.gd" id="1_064jp"]
 [ext_resource type="Texture2D" uid="uid://cb0uqulvv63f7" path="res://assets/pixel-cyberpunk-interior.png" id="1_hem3r"]
-[ext_resource type="Script" uid="uid://cqqm14xh5rdjb" path="res://scripts/character_body_2d.gd" id="3_4kvtl"]
+[ext_resource type="Script" uid="uid://crr8a11pmh08h" path="res://scripts/character_body_2d.gd" id="3_064jp"]
 [ext_resource type="Texture2D" uid="uid://bm423vjv1wxck" path="res://assets/spacex_astronaut_spritesheet_by_gogoat1_dfsectu.png" id="4_f1r8i"]
 [ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="4_f680m"]
 [ext_resource type="Script" uid="uid://ctqhkgdgvig8l" path="res://scripts/lab_ui.gd" id="5_jy24p"]
@@ -303,7 +303,7 @@ tile_set = SubResource("TileSet_6kv01")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2146185703]
 position = Vector2(-128, 57)
-script = ExtResource("3_4kvtl")
+script = ExtResource("3_064jp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1817612982]
 position = Vector2(40, 1)

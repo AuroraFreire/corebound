@@ -52,18 +52,26 @@ func add_item(item_name, item_quantity) -> void:
 	refresh_style()
 
 func pick_from_slot():
+	var inventory_node
 	remove_child(item)
-	var inventory_node = find_parent("Sell")
+	if get_tree().current_scene.name == "Sell":
+		inventory_node = find_parent("Sell")
+	else:
+		inventory_node = find_parent("Inventory")
 	inventory_node.add_child(item)
 	item.scale = get_parent().scale
 	item = null
 	refresh_style()
 
 func put_into_slot(new_item):
+	var inventory_node
 	item = new_item
 	item.scale = Vector2.ONE
 	item.position = Vector2.ZERO
-	var inventory_node = find_parent("Sell")
+	if get_tree().current_scene.name == "Sell":
+		inventory_node = find_parent("Sell")
+	else:
+		inventory_node = find_parent("Inventory")
 	inventory_node.remove_child(item)
 	add_child(item)
 	refresh_style()
