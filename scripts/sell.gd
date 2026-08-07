@@ -11,7 +11,7 @@ var holding_item = null
 var price
 var quantity
 var total
-var wallet = 0
+
 
 func _ready() -> void:
 	for inv_slot in inventory_slots.get_children():
@@ -19,7 +19,7 @@ func _ready() -> void:
 		inv_slot.slot_type = SLOT_CLASS.SlotType.INVENTORY
 	sell_slot.gui_input.connect(slot_gui_input.bind(sell_slot))
 	sell_slot.slot_type = SLOT_CLASS.SlotType.INVENTORY
-	$Wallet.text = str(wallet)
+	$Wallet.text = str(Skills.wallet)
 	sell()
 	load_data()
 
@@ -116,7 +116,7 @@ func save_data():
 		else:
 			slots_data.append(null)
 	var file = FileAccess.open(SAVE_LOCATION, FileAccess.WRITE)
-	file.store_string(JSON.stringify({"wallet": wallet, "slots": slots_data}))
+	file.store_string(JSON.stringify({"wallet": Skills.wallet, "slots": slots_data}))
 	file.close()
 
 func load_data():
@@ -128,8 +128,8 @@ func load_data():
 	var data = JSON.parse_string(text)
 	if data == null or not data is Dictionary:
 		return
-	wallet = int(data.get("wallet", 0))
-	$Wallet.text = str(wallet)
+	Skills.wallet = int(data.get("wallet", 0))
+	$Wallet.text = str(Skills.wallet)
 	var slots = inventory_slots.get_children()
 	var slots_data = data.get("slots", [])
 	for i in range(min(slots.size(), slots_data.size())):
@@ -169,5 +169,5 @@ func _on_button_pressed() -> void:
 		return
 
 func add_coin():
-	wallet += total
-	$Wallet.text = str(wallet)
+	Skills.wallet += total
+	$Wallet.text = str(Skills.wallet)
