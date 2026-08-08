@@ -1,141 +1,141 @@
 {
-	"MiningI": {
+	"SkillButton": {
 		"Name": "Mining I",
-		"Cost": 100,
+		"Cost": 10,
 		"Requirements": [],
 		"Effect": "mining_speed",
 		"Value": 0.8
 	},
-	"MiningII": {
+	"SkillButton2": {
 		"Name": "Mining II",
-		"Cost": 1700,
-		"Requirements": ["MiningI"],
+		"Cost": 20,
+		"Requirements": ["SkillButton"],
 		"Effect": "mining_speed",
 		"Value": 0.6
 	},
-	"MiningIII": {
+	"SkillButton3": {
 		"Name": "Mining III",
 		"Cost": 4500,
-		"Requirements": ["MiningII"],
+		"Requirements": ["SkillButton2"],
 		"Effect": "mining_speed",
 		"Value": 0.4
 	},
-	"MiningIV": {
+	"SkillButton4": {
 		"Name": "Mining IV",
 		"Cost": 13000,
-		"Requirements": ["MiningIII"],
+		"Requirements": ["SkillButton3"],
 		"Effect": "mining_speed",
 		"Value": 0.2
 	},
-	"MiningV1": {
+	"SkillButton5": {
 		"Name": "Mining V1",
 		"Cost": 40000,
-		"Requirements": ["MiningIV"],
+		"Requirements": ["SkillButton4"],
 		"Effect": "mining_speed",
 		"Value": 0
 	},
-	"MiningV2": {
+	"SkillButton6": {
 		"Name": "Mining V2",
 		"Cost": 40000,
-		"Requirements": ["MiningIV"],
+		"Requirements": ["SkillButton4"],
 		"Effect": "resource_boost",
 		"Value": 15
 	},
-	"StorageI": {
+	"SkillButton7": {
 		"Name": "Storage I",
 		"Cost": 300,
 		"Requirements": [],
 		"Effect": "storage",
 		"Value": 99
 	},
-	"StorageII": {
+	"SkillButton8": {
 		"Name": "Storage II",
 		"Cost": 3000,
-		"Requirements": ["Storage I"],
+		"Requirements": ["SkillButton7"],
 		"Effect": "storage",
 		"Value": 999
 	},
-	"StorageIII": {
+	"SkillButton9": {
 		"Name": "Storage III",
 		"Cost": 10000,
-		"Requirements": ["Storage II"],
+		"Requirements": ["SkillButton8"],
 		"Effect": "add_slots",
 		"Value": 6
 	},
-	"StorageIV": {
+	"SkillButton10": {
 		"Name": "Storage IV",
 		"Cost": 20000,
-		"Requirements": ["Storage III"],
+		"Requirements": ["SkillButton9"],
 		"Effect": "add_slots",
 		"Value": 6
 	},
-	"OverdriveI": {
+	"SkillButton11": {
 		"Name": "Overdrive I",
 		"Cost": 200,
 		"Requirements": [],
 		"Effect": "overdrive_time",
 		"Value": 3
 	},
-	"OverdriveII": {
+	"SkillButton12": {
 		"Name": "Overdrive II",
 		"Cost": 500,
-		"Requirements": ["OverdriveI"],
+		"Requirements": ["SkillButton11"],
 		"Effect": "overdrive_time",
 		"Value": 3
 	},
-	"OverdriveIII": {
+	"SkillButton13": {
 		"Name": "Overdrive III",
 		"Cost": 2500,
-		"Requirements": ["OverdriveII"],
+		"Requirements": ["SkillButton12"],
 		"Effect": "overdrive_time",
 		"Value": 4
 	},
-	"OverdriveIV1": {
+	"SkillButton14": {
 		"Name": "Overdrive IV1",
 		"Cost": 2500,
-		"Requirements": ["OverdriveIII"],
+		"Requirements": ["SkillButton13"],
 		"Effect": "overdrive_cooldown",
 		"Value": 90
 	},
-	"OverdriveV1": {
+	"SkillButton15": {
 		"Name": "Overdrive V1",
 		"Cost": 7000,
-		"Requirements": ["OverdriveIV1"],
+		"Requirements": ["SkillButton14"],
 		"Effect": "overdrive_cooldown",
 		"Value": 60
 	},
-	"OverdriveIV2": {
+	"SkillButton16": {
 		"Name": "Overdrive IV2",
 		"Cost": 2500,
-		"Requirements": ["OverdriveIII"],
+		"Requirements": ["SkillButton13"],
 		"Effect": "overdrive_speed",
 		"Value": 0.05
 	},
-	"OverdriveV2": {
+	"SkillButton17": {
 		"Name": "Overdrive V2",
 		"Cost": 8000,
-		"Requirements": ["OverdriveIV2"],
+		"Requirements": ["SkillButton16"],
 		"Effect": "overdrive_speed",
 		"Value": 0.0
 	},
-	"PlanetI": {
+	"SkillButton18": {
 		"Name": "Planet I",
 		"Cost": 700,
 		"Requirements": [],
 		"Effect": "resource_boost",
 		"Value": 5 
 	},
-	"PlanetII": {
+	"SkillButton19": {
 		"Name": "Planet II",
 		"Cost": 2400,
-		"Requirements": ["PlanetI"],
+		"Requirements": ["SkillButton18"],
 		"Effect": "resource_boost",
 		"Value": 5 
 	},
-	"PlanetIII": {
+	"SkillButton20": {
 		"Name": "Planet III",
 		"Cost": 10000,
-		"Requirements": ["PlanetII"],
+		"Requirements": ["SkillButton19"],
 		"Effect": "resource_boost",
 		"Value": 20
 	}

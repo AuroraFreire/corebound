@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5dpf5sc2gdlj" path="res://scripts/lab.gd" id="1_064jp"]
 [ext_resource type="Texture2D" uid="uid://cb0uqulvv63f7" path="res://assets/pixel-cyberpunk-interior.png" id="1_hem3r"]
-[ext_resource type="Script" uid="uid://crr8a11pmh08h" path="res://scripts/character_body_2d.gd" id="3_064jp"]
+[ext_resource type="Script" uid="uid://cqqm14xh5rdjb" path="res://scripts/character_body_2d.gd" id="3_064jp"]
 [ext_resource type="Texture2D" uid="uid://bm423vjv1wxck" path="res://assets/spacex_astronaut_spritesheet_by_gogoat1_dfsectu.png" id="4_f1r8i"]
 [ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="4_f680m"]
 [ext_resource type="Script" uid="uid://ctqhkgdgvig8l" path="res://scripts/lab_ui.gd" id="5_jy24p"]

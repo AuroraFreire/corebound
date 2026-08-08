@@ -21,7 +21,9 @@ func toggle_inventory(event: InputEvent) -> void:
 		inv_toggle += 1
 		if inv_toggle % 2 != 0:
 			$Inventory.visible = true
+			$Inventory/Wallet.text = str(Skills.wallet)
 			get_tree().paused = true
 		else:
 			$Inventory.visible = false
+			$Inventory/Wallet.text = str(Skills.wallet)
 			get_tree().paused = false

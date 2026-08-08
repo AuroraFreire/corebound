@@ -128,7 +128,6 @@ func load_data():
 	var data = JSON.parse_string(text)
 	if data == null or not data is Dictionary:
 		return
-	Skills.wallet = int(data.get("wallet", 0))
 	$Wallet.text = str(Skills.wallet)
 	var slots = inventory_slots.get_children()
 	var slots_data = data.get("slots", [])
