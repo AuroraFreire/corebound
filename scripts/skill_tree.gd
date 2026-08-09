@@ -7,9 +7,12 @@ extends Node2D
 @onready var camera = $Camera2D
 var isPressed = false
 var e = Vector2.ZERO
+var count = 0
 
 func _ready() -> void:
-	pass
+	if count == 0:
+		Skills.test()
+		count += 1
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and isPressed:

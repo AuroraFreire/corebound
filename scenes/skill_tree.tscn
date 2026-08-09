@@ -38,7 +38,6 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	Skills.buy(self.name)
-	
 "
 
 [node name="SkillTree" type="Node2D" unique_id=221361619]
