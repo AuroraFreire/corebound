@@ -38,6 +38,14 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	Skills.buy(self.name)
+
+func _on_mouse_entered() -> void:
+	var camera = get_viewport().get_camera_2d()
+	var screen_pos = get_viewport().get_canvas_transform() * global_position
+	SkillPopup.skill_poup(Rect2i(Vector2i(screen_pos), Vector2i(size)), self.name, camera.zoom.x)
+
+func _on_mouse_exited() -> void:
+	SkillPopup.hide_skill_popup()
 "
 
 [node name="SkillTree" type="Node2D" unique_id=221361619]
@@ -320,5 +328,63 @@ limit_top = -1430
 limit_right = 2515
 limit_bottom = 730
 
+[connection signal="mouse_entered" from="SkillButton" to="SkillButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton" to="SkillButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="SkillButton" to="SkillButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton/SkillButton2" to="SkillButton/SkillButton2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton/SkillButton2" to="SkillButton/SkillButton2" method="_on_mouse_exited"]
 [connection signal="pressed" from="SkillButton/SkillButton2" to="SkillButton/SkillButton2" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton/SkillButton2/SkillButton3" to="SkillButton/SkillButton2/SkillButton3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton/SkillButton2/SkillButton3" to="SkillButton/SkillButton2/SkillButton3" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton/SkillButton2/SkillButton3" to="SkillButton/SkillButton2/SkillButton3" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton/SkillButton2/SkillButton3/SkillButton4" to="SkillButton/SkillButton2/SkillButton3/SkillButton4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton/SkillButton2/SkillButton3/SkillButton4" to="SkillButton/SkillButton2/SkillButton3/SkillButton4" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton/SkillButton2/SkillButton3/SkillButton4" to="SkillButton/SkillButton2/SkillButton3/SkillButton4" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton/SkillButton2/SkillButton3/SkillButton4/SkillButton5" to="SkillButton/SkillButton2/SkillButton3/SkillButton4/SkillButton5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton/SkillButton2/SkillButton3/SkillButton4/SkillButton5" to="SkillButton/SkillButton2/SkillButton3/SkillButton4/SkillButton5" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton/SkillButton2/SkillButton3/SkillButton4/SkillButton5" to="SkillButton/SkillButton2/SkillButton3/SkillButton4/SkillButton5" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton/SkillButton2/SkillButton3/SkillButton4/SkillButton6" to="SkillButton/SkillButton2/SkillButton3/SkillButton4/SkillButton6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton/SkillButton2/SkillButton3/SkillButton4/SkillButton6" to="SkillButton/SkillButton2/SkillButton3/SkillButton4/SkillButton6" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton/SkillButton2/SkillButton3/SkillButton4/SkillButton6" to="SkillButton/SkillButton2/SkillButton3/SkillButton4/SkillButton6" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton7" to="SkillButton7" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton7" to="SkillButton7" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton7" to="SkillButton7" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton7/SkillButton8" to="SkillButton7/SkillButton8" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton7/SkillButton8" to="SkillButton7/SkillButton8" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton7/SkillButton8" to="SkillButton7/SkillButton8" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton7/SkillButton8/SkillButton9" to="SkillButton7/SkillButton8/SkillButton9" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton7/SkillButton8/SkillButton9" to="SkillButton7/SkillButton8/SkillButton9" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton7/SkillButton8/SkillButton9" to="SkillButton7/SkillButton8/SkillButton9" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton7/SkillButton8/SkillButton9/SkillButton10" to="SkillButton7/SkillButton8/SkillButton9/SkillButton10" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton7/SkillButton8/SkillButton9/SkillButton10" to="SkillButton7/SkillButton8/SkillButton9/SkillButton10" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton7/SkillButton8/SkillButton9/SkillButton10" to="SkillButton7/SkillButton8/SkillButton9/SkillButton10" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton11" to="SkillButton11" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton11" to="SkillButton11" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton11" to="SkillButton11" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton11/SkillButton12" to="SkillButton11/SkillButton12" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton11/SkillButton12" to="SkillButton11/SkillButton12" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton11/SkillButton12" to="SkillButton11/SkillButton12" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton11/SkillButton12/SkillButton13" to="SkillButton11/SkillButton12/SkillButton13" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton11/SkillButton12/SkillButton13" to="SkillButton11/SkillButton12/SkillButton13" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton11/SkillButton12/SkillButton13" to="SkillButton11/SkillButton12/SkillButton13" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton11/SkillButton12/SkillButton13/SkillButton14" to="SkillButton11/SkillButton12/SkillButton13/SkillButton14" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton11/SkillButton12/SkillButton13/SkillButton14" to="SkillButton11/SkillButton12/SkillButton13/SkillButton14" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton11/SkillButton12/SkillButton13/SkillButton14" to="SkillButton11/SkillButton12/SkillButton13/SkillButton14" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton11/SkillButton12/SkillButton13/SkillButton14/SkillButton15" to="SkillButton11/SkillButton12/SkillButton13/SkillButton14/SkillButton15" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton11/SkillButton12/SkillButton13/SkillButton14/SkillButton15" to="SkillButton11/SkillButton12/SkillButton13/SkillButton14/SkillButton15" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton11/SkillButton12/SkillButton13/SkillButton14/SkillButton15" to="SkillButton11/SkillButton12/SkillButton13/SkillButton14/SkillButton15" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton11/SkillButton12/SkillButton13/SkillButton16" to="SkillButton11/SkillButton12/SkillButton13/SkillButton16" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton11/SkillButton12/SkillButton13/SkillButton16" to="SkillButton11/SkillButton12/SkillButton13/SkillButton16" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton11/SkillButton12/SkillButton13/SkillButton16" to="SkillButton11/SkillButton12/SkillButton13/SkillButton16" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton11/SkillButton12/SkillButton13/SkillButton16/SkillButton17" to="SkillButton11/SkillButton12/SkillButton13/SkillButton16/SkillButton17" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton11/SkillButton12/SkillButton13/SkillButton16/SkillButton17" to="SkillButton11/SkillButton12/SkillButton13/SkillButton16/SkillButton17" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton11/SkillButton12/SkillButton13/SkillButton16/SkillButton17" to="SkillButton11/SkillButton12/SkillButton13/SkillButton16/SkillButton17" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton18" to="SkillButton18" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton18" to="SkillButton18" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton18" to="SkillButton18" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton18/SkillButton19" to="SkillButton18/SkillButton19" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton18/SkillButton19" to="SkillButton18/SkillButton19" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton18/SkillButton19" to="SkillButton18/SkillButton19" method="_on_pressed"]
+[connection signal="mouse_entered" from="SkillButton18/SkillButton19/SkillButton20" to="SkillButton18/SkillButton19/SkillButton20" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton18/SkillButton19/SkillButton20" to="SkillButton18/SkillButton19/SkillButton20" method="_on_mouse_exited"]
+[connection signal="pressed" from="SkillButton18/SkillButton19/SkillButton20" to="SkillButton18/SkillButton19/SkillButton20" method="_on_pressed"]

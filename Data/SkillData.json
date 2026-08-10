@@ -1,142 +1,162 @@
 {
 	"SkillButton": {
-		"Name": "Mining I",
-		"Cost": 10,
+		"Name": "Amateur Drill",
+		"Cost": 0,
 		"Requirements": [],
 		"Effect": "mining_speed",
-		"Value": 0.8
+		"Value": 0.8,
+		"Description": "Mining Cooldown: 2s"
 	},
 	"SkillButton2": {
-		"Name": "Mining II",
-		"Cost": 20,
+		"Name": "Professional Drill",
+		"Cost": 700,
 		"Requirements": ["SkillButton"],
 		"Effect": "mining_speed",
-		"Value": 0.6
+		"Value": 0.6,
+		"Description": "Mining Cooldown: 1.5s"
 	},
 	"SkillButton3": {
-		"Name": "Mining III",
-		"Cost": 4500,
+		"Name": "Expert Drill",
+		"Cost": 8000,
 		"Requirements": ["SkillButton2"],
 		"Effect": "mining_speed",
-		"Value": 0.4
+		"Value": 0.4,
+		"Description": "Mining Cooldown: 1s"
 	},
 	"SkillButton4": {
-		"Name": "Mining IV",
+		"Name": "Master's Drill",
 		"Cost": 13000,
 		"Requirements": ["SkillButton3"],
 		"Effect": "mining_speed",
-		"Value": 0.2
+		"Value": 0.2,
+		"Description": "Mining Cooldown: 0.5s"
 	},
 	"SkillButton5": {
-		"Name": "Mining V1",
+		"Name": "Void Drill",
 		"Cost": 40000,
 		"Requirements": ["SkillButton4"],
 		"Effect": "mining_speed",
-		"Value": 0
+		"Value": 0,
+		"Description": "Mining Cooldown: 0s"
 	},
 	"SkillButton6": {
-		"Name": "Mining V2",
+		"Name": "Plasma Drill",
 		"Cost": 40000,
 		"Requirements": ["SkillButton4"],
 		"Effect": "resource_boost",
-		"Value": 15
+		"Value": 3,
+		"Description": "Resource Boost: +3"
 	},
 	"SkillButton7": {
-		"Name": "Storage I",
+		"Name": "Ample Pockets",
 		"Cost": 300,
 		"Requirements": [],
 		"Effect": "storage",
-		"Value": 99
+		"Value": 99,
+		"Description": "Slot Capacity: 99"
 	},
 	"SkillButton8": {
-		"Name": "Storage II",
+		"Name": "Expanded Capacity",
 		"Cost": 3000,
 		"Requirements": ["SkillButton7"],
 		"Effect": "storage",
-		"Value": 999
+		"Value": 999,
+		"Description": "Slot Capacity: 999"
 	},
 	"SkillButton9": {
-		"Name": "Storage III",
+		"Name": "Superior Storage",
 		"Cost": 10000,
 		"Requirements": ["SkillButton8"],
 		"Effect": "add_slots",
-		"Value": 6
+		"Value": 6,
+		"Description": "More Slots: 6"
 	},
 	"SkillButton10": {
-		"Name": "Storage IV",
+		"Name": "Inventory Master",
 		"Cost": 20000,
 		"Requirements": ["SkillButton9"],
 		"Effect": "add_slots",
-		"Value": 6
+		"Value": 6,
+		"Description": "More Slots: 6"
 	},
 	"SkillButton11": {
-		"Name": "Overdrive I",
+		"Name": "Power Surge",
 		"Cost": 200,
 		"Requirements": [],
 		"Effect": "overdrive_time",
-		"Value": 3
+		"Value": 3,
+		"Description": "Overdrive Time: 13s"
 	},
 	"SkillButton12": {
-		"Name": "Overdrive II",
+		"Name": "Voltage Boost",
 		"Cost": 500,
 		"Requirements": ["SkillButton11"],
 		"Effect": "overdrive_time",
-		"Value": 3
+		"Value": 3,
+		"Description": "Overdrive Time: 16s"
 	},
 	"SkillButton13": {
-		"Name": "Overdrive III",
+		"Name": "Overclocked",
 		"Cost": 2500,
 		"Requirements": ["SkillButton12"],
 		"Effect": "overdrive_time",
-		"Value": 4
+		"Value": 4,
+		"Description": "Overdrive Time: 20s"
 	},
 	"SkillButton14": {
-		"Name": "Overdrive IV1",
+		"Name": "Rebound",
 		"Cost": 2500,
 		"Requirements": ["SkillButton13"],
 		"Effect": "overdrive_cooldown",
-		"Value": 90
+		"Value": 90,
+		"Description": "Overdrive Cooldown: 90s"
 	},
 	"SkillButton15": {
-		"Name": "Overdrive V1",
+		"Name": "Catalyst",
 		"Cost": 7000,
 		"Requirements": ["SkillButton14"],
 		"Effect": "overdrive_cooldown",
-		"Value": 60
+		"Value": 60,
+		"Description": "Overdrive Cooldown: 60s"
 	},
 	"SkillButton16": {
-		"Name": "Overdrive IV2",
+		"Name": "Hyperdrive",
 		"Cost": 2500,
 		"Requirements": ["SkillButton13"],
 		"Effect": "overdrive_speed",
-		"Value": 0.05
+		"Value": 0.05,
+		"Description": "Mining Speed: 0.05s"
 	},
 	"SkillButton17": {
-		"Name": "Overdrive V2",
+		"Name": "Superconductor",
 		"Cost": 8000,
 		"Requirements": ["SkillButton16"],
 		"Effect": "overdrive_speed",
-		"Value": 0.0
+		"Value": 0.0,
+		"Description": "Mining Speed: 0s"
 	},
 	"SkillButton18": {
-		"Name": "Planet I",
+		"Name": "Extract",
 		"Cost": 700,
 		"Requirements": [],
 		"Effect": "resource_boost",
-		"Value": 5 
+		"Value": 2,
+		"Description": "Resource Boost: +2/click"
 	},
 	"SkillButton19": {
-		"Name": "Planet II",
+		"Name": "Output",
 		"Cost": 2400,
 		"Requirements": ["SkillButton18"],
 		"Effect": "resource_boost",
-		"Value": 5 
+		"Value": 5,
+		"Description": "Resource Boost: +5/click" 
 	},
 	"SkillButton20": {
-		"Name": "Planet III",
+		"Name": "Harvest",
 		"Cost": 10000,
 		"Requirements": ["SkillButton19"],
 		"Effect": "resource_boost",
-		"Value": 20
+		"Value": 20,
+		"Description": "Resource Boost: +20/click"
 	}
 }
