@@ -12,7 +12,7 @@ func _ready() -> void:
 	skill_data = JSON.parse_string(file.get_as_text())
 	file.close()
 
-func test():
+func i_dont_even_know_what_to_name_this():
 	for skill in skill_data:
 		if is_available(skill):
 			scene = get_tree().current_scene
@@ -83,4 +83,4 @@ func buy_color(id):
 	if found_button != null:
 		button = found_button as TextureButton
 		button.modulate = Color(1.0, 1.0, 1.0)
-	test()
+	i_dont_even_know_what_to_name_this()
