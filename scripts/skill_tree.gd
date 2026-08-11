@@ -11,7 +11,7 @@ var count = 0
 
 func _ready() -> void:
 	if count == 0:
-		Skills.test()
+		Skills.i_dont_even_know_what_to_name_this()
 		count += 1
 
 func _input(event: InputEvent) -> void:

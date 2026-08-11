@@ -23,6 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://d0eg42xbbe5cl" path="res://assets/skill_tree_icons/planet_skill_2.png" id="22_5cnif"]
 [ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="23_5cnif"]
 [ext_resource type="Texture2D" uid="uid://ce0e1bty4wymy" path="res://assets/skill_tree_icons/planet_skill_3.png" id="23_vnw36"]
+[ext_resource type="Texture2D" uid="uid://dx1hatg62j5nb" path="res://assets/scroll_mouse.png" id="24_6c6mu"]
+[ext_resource type="Texture2D" uid="uid://bb0evyy022mev" path="res://assets/pan_mouse.png" id="25_bqncm"]
 
 [sub_resource type="GDScript" id="GDScript_66wtt"]
 script/source = "extends TextureButton
@@ -370,6 +372,36 @@ theme_override_font_sizes/font_size = 45
 text = "Overdrive"
 
 [node name="Sections" type="CanvasLayer" parent="." unique_id=1686806784]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=476739344]
+
+[node name="PanMouse" type="Sprite2D" parent="CanvasLayer" unique_id=1582627440]
+position = Vector2(39.000004, 608.9999)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("24_6c6mu")
+
+[node name="ScrollMouse" type="Sprite2D" parent="CanvasLayer" unique_id=998248279]
+position = Vector2(39, 532.0001)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("25_bqncm")
+
+[node name="Label5" type="Label" parent="CanvasLayer" unique_id=1065851204]
+offset_left = 58.00002
+offset_top = 604.0
+offset_right = 129.00002
+offset_bottom = 614.2084
+theme_override_fonts/font = ExtResource("23_5cnif")
+theme_override_font_sizes/font_size = 16
+text = "to zoom in/out"
+
+[node name="Label6" type="Label" parent="CanvasLayer" unique_id=1077531680]
+offset_left = 58.00002
+offset_top = 526.99994
+offset_right = 129.00002
+offset_bottom = 537.20825
+theme_override_fonts/font = ExtResource("23_5cnif")
+theme_override_font_sizes/font_size = 16
+text = "to pan around"
 
 [connection signal="mouse_entered" from="SkillButton" to="SkillButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SkillButton" to="SkillButton" method="_on_mouse_exited"]
