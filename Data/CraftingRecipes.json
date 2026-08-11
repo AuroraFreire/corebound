@@ -20,23 +20,13 @@
 		]
 	},
 	{
-		"Result": "CrystalCore",
+		"Result": "CrystalHeart",
 		"Count": 1,
 		"Type": "Shaped",
 		"Pattern": [
 			["AzureCrystal", "AzureCrystal", "AzureCrystal"],
 			["AzureCrystal", "AzureCrystal", "AzureCrystal"],
 			["AzureCrystal", "AzureCrystal", "AzureCrystal"]
-		]
-	},
-	{
-		"Result": "CrystalHeart",
-		"Count": 1,
-		"Type": "Shaped",
-		"Pattern": [
-			["CrystalCore", "CrystalCore", "CrystalCore"],
-			["CrystalCore", "CrystalCore", "CrystalCore"],
-			["CrystalCore", "CrystalCore", "CrystalCore"]
 		]
 	},
 	{

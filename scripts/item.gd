@@ -12,7 +12,13 @@ func initialize(n, q):
 	$TextureRect.position += Vector2(off[0], off[1])
 	$Label.visible = int(JsonData.item_data[item_name]["StackSize"]) > 1
 	$Label.text = str(item_quantity)
-	
+	if $TextureRect.material:
+		$TextureRect.material = $TextureRect.material.duplicate()
+		if item_name == "AzureCrystal" or item_name == "":
+			$TextureRect.material.set_shader_parameter("is_active", true)
+		else:
+			$TextureRect.material.set_shader_parameter("is_active", false)
+
 func add_item_quantity(amount_to_add):
 	item_quantity += amount_to_add
 	$Label.text = str(item_quantity)

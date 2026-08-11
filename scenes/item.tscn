@@ -1,14 +1,28 @@
 [gd_scene format=3 uid="uid://onvuqq0t70sy"]
 
 [ext_resource type="Script" uid="uid://ceyn5cc35ymvx" path="res://scripts/item.gd" id="1_6muww"]
+[ext_resource type="Shader" uid="uid://caf2pmsigmktu" path="res://scripts/color_band.gdshader" id="2_ro5b8"]
 [ext_resource type="Texture2D" uid="uid://bpa4kuxg5180f" path="res://item_icons/PureWater.png" id="2_vljjh"]
 [ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="4_vljjh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5cnif"]
+shader = ExtResource("2_ro5b8")
+shader_parameter/is_active = true
+shader_parameter/band_color = Color(0.51, 0.51, 0.51, 1)
+shader_parameter/band_thickness = 0.2
+shader_parameter/band_intensity = 1.0
+shader_parameter/speed = 0.59999999031436
+shader_parameter/direction = 0
+shader_parameter/offset = 0.0
+shader_parameter/blend_mode = 0
+shader_parameter/edge_softness = 0.20000000298023
 
 [node name="Item" type="Node2D" unique_id=1364359043]
 z_index = 1
 script = ExtResource("1_6muww")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1970051913]
+material = SubResource("ShaderMaterial_5cnif")
 offset_left = 1.0
 offset_top = 1.0
 offset_right = 8.0
