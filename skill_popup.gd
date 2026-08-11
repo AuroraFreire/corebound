@@ -16,9 +16,20 @@ func skill_poup(skill: Rect2i, id, zoom: float = 1.0):
 	var name = skill_data[id]["Name"]
 	var description = skill_data[id]["Description"]
 	var cost = int(skill_data[id]["Cost"])
-	label_name.text = name
-	label_description.text = description
-	label_cost.text = "Cost: " + str(cost)
+	if Skills.is_available(id):
+		label_name.text = name
+		label_description.text = description
+		label_cost.text = "Cost: " + str(cost)
+		label_cost.set("theme_override_colors/default_color", Color(1.0, 1.0, 1.0, 1.0))
+	elif Skills.is_bought(id):
+		label_name.text = name
+		label_description.text = description
+		label_cost.text = "Bought"
+		label_cost.set("theme_override_colors/default_color", Color(0.0, 0.812, 0.0, 1.0))
+	else:
+		label_name.text = "???"
+		label_description.text = "Locked"
+		label_cost.text = ""
 	var min_popup_zoom = 0.7
 	var popup_zoom = max(zoom, min_popup_zoom)
 	var inner = $UI/ItemPopup/Control

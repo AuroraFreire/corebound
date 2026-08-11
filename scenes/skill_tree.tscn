@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://ba2hijoqxi4sq" path="res://assets/skill_tree_icons/overdrive_skill_52.png" id="20_bqncm"]
 [ext_resource type="Texture2D" uid="uid://bhtlehbo6jupo" path="res://assets/skill_tree_icons/planet_skill_1.png" id="21_mxcng"]
 [ext_resource type="Texture2D" uid="uid://d0eg42xbbe5cl" path="res://assets/skill_tree_icons/planet_skill_2.png" id="22_5cnif"]
+[ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="23_5cnif"]
 [ext_resource type="Texture2D" uid="uid://ce0e1bty4wymy" path="res://assets/skill_tree_icons/planet_skill_3.png" id="23_vnw36"]
 
 [sub_resource type="GDScript" id="GDScript_66wtt"]
@@ -135,9 +136,9 @@ script = SubResource("GDScript_66wtt")
 metadata/_edit_use_anchors_ = true
 
 [node name="SkillButton7" parent="." unique_id=1407619316 instance=ExtResource("1_003p6")]
-offset_left = -133.14285
+offset_left = -204.57141
 offset_top = -239.42856
-offset_right = -91.14285
+offset_right = -162.57141
 offset_bottom = -197.42856
 scale = Vector2(1.7, 1.7)
 texture_normal = ExtResource("10_rh3y1")
@@ -275,10 +276,10 @@ script = SubResource("GDScript_66wtt")
 metadata/_edit_use_anchors_ = true
 
 [node name="SkillButton18" parent="." unique_id=622458655 instance=ExtResource("1_003p6")]
-offset_left = 623.4286
-offset_top = -239.42857
-offset_right = 665.4286
-offset_bottom = -197.42857
+offset_left = 705.14276
+offset_top = -239.42856
+offset_right = 747.14276
+offset_bottom = -197.42856
 scale = Vector2(1.7, 1.7)
 texture_normal = ExtResource("21_mxcng")
 texture_pressed = ExtResource("21_mxcng")
@@ -324,9 +325,51 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(329.14285, 185.14288)
 scale = Vector2(0.99999994, 0.99999994)
 limit_left = -1325
-limit_top = -1430
+limit_top = -1549
 limit_right = 2515
-limit_bottom = 730
+limit_bottom = 790
+
+[node name="Label" type="Label" parent="." unique_id=18864159]
+offset_left = -144.57144
+offset_top = -307.42853
+offset_right = 41.42856
+offset_bottom = -261.49103
+theme_override_colors/font_color = Color(0.7529412, 0.7529412, 0.4, 1)
+theme_override_fonts/font = ExtResource("23_5cnif")
+theme_override_font_sizes/font_size = 45
+text = "Storage"
+
+[node name="Label4" type="Label" parent="." unique_id=623281154]
+offset_left = 594.57166
+offset_top = -307.42853
+offset_right = 746.57166
+offset_bottom = -261.49103
+theme_override_colors/font_color = Color(0.003921569, 1, 0.627451, 1)
+theme_override_fonts/font = ExtResource("23_5cnif")
+theme_override_font_sizes/font_size = 45
+text = "Planet"
+
+[node name="Label2" type="Label" parent="." unique_id=30311416]
+offset_left = 270.2857
+offset_top = 392.5714
+offset_right = 391.2857
+offset_bottom = 438.5089
+theme_override_colors/font_color = Color(0.32941177, 0.46666667, 0.65882355, 1)
+theme_override_fonts/font = ExtResource("23_5cnif")
+theme_override_font_sizes/font_size = 45
+text = "Mining"
+
+[node name="Label3" type="Label" parent="." unique_id=1866870026]
+offset_left = 222.2857
+offset_top = -858.2857
+offset_right = 439.2857
+offset_bottom = -812.3482
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("23_5cnif")
+theme_override_font_sizes/font_size = 45
+text = "Overdrive"
+
+[node name="Sections" type="CanvasLayer" parent="." unique_id=1686806784]
 
 [connection signal="mouse_entered" from="SkillButton" to="SkillButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SkillButton" to="SkillButton" method="_on_mouse_exited"]

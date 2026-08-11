@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var zoom_speed = 0.05
-@export var min_zoom = 0.3
+@export var min_zoom = 0.25
 @export var max_zoom = 2.0
 @export var drag_speed = 1.5
 @onready var camera = $Camera2D
