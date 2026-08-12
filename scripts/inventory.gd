@@ -11,7 +11,7 @@ const SAVE_LOCATION = "user://SaveFile.json"
 @onready var delete_slot = $Delete
 var holding_item = null
 var active_recipe = null
-var wallet = 0
+var wallet = Skills.wallet
 
 func _ready() -> void:
 	for inv_slot in inventory_slots.get_children():
@@ -274,8 +274,8 @@ func load_data():
 	var data = JSON.parse_string(text)
 	if data == null or not data is Dictionary:
 		return
-	wallet = int(data.get("wallet", 0))
-	$Wallet.text = str(wallet)
+	Skills.wallet = int(data.get("wallet", 0))
+	$Wallet.text = str(Skills.wallet)
 	var slots = inventory_slots.get_children()
 	var slots_data = data.get("slots", [])
 	for i in range(min(slots.size(), slots_data.size())):
