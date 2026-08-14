@@ -13,6 +13,7 @@ func _ready() -> void:
 	if count == 0:
 		Skills.i_dont_even_know_what_to_name_this()
 		count += 1
+	Skills.load_data()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and isPressed:

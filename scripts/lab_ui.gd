@@ -2,7 +2,6 @@ extends CanvasLayer
 
 var inv_toggle = 0
 
-
 func _ready() -> void:
 	if inv_toggle % 2 == 0:
 		$Inventory.visible = false

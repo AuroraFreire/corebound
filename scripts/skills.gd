@@ -1,6 +1,7 @@
 extends Node
 
 const SAVE_LOCATION = "user://SaveFile.json"
+const SAVE_LOCATION_SKILLS = "user://SkillSaveFile.json"
 var wallet = 0
 var skill_data = {}
 var unlocked = []
@@ -11,6 +12,18 @@ func _ready() -> void:
 	var file = FileAccess.open("res://Data/SkillData.json", FileAccess.READ)
 	skill_data = JSON.parse_string(file.get_as_text())
 	file.close()
+	if FileAccess.file_exists(SAVE_LOCATION_SKILLS):
+		var check_file = FileAccess.open(SAVE_LOCATION_SKILLS, FileAccess.READ)
+		if check_file and check_file.get_length() > 0:
+			check_file.close()
+			load_data()
+			return
+		if check_file:
+			check_file.close()
+	save_data()
+	scene = get_tree().current_scene
+	if scene:
+		update_colors_recursive(scene)
 
 func i_dont_even_know_what_to_name_this():
 	for skill in skill_data:
@@ -64,6 +77,7 @@ func buy(id):
 	wallet -= cost
 	unlocked.append(id)
 	buy_color(id)
+	save_data()
 	return true
 
 func load_wallet():
@@ -84,3 +98,37 @@ func buy_color(id):
 		button = found_button as TextureButton
 		button.modulate = Color(1.0, 1.0, 1.0)
 	i_dont_even_know_what_to_name_this()
+
+func save_data():
+	var skill_data_dict = []
+	for skill in skill_data:
+			skill_data_dict.append({
+				"skill_name": skill,
+				"is_bought": is_bought(skill),
+				"is_available": is_available(skill)
+			})
+	var file = FileAccess.open(SAVE_LOCATION_SKILLS, FileAccess.WRITE)
+	file.store_string(JSON.stringify({"skills": skill_data_dict}))
+	file.close()
+
+func load_data():
+	print(unlocked)
+	if !FileAccess.file_exists(SAVE_LOCATION_SKILLS):
+		return
+	var file = FileAccess.open(SAVE_LOCATION_SKILLS, FileAccess.READ)
+	if file == null:
+		return
+	var text = file.get_as_text()
+	file.close()
+	if file == null:
+		return
+	var data = JSON.parse_string(text)
+	if data == null or not data.has("skills"):
+		return
+	scene = get_tree().current_scene
+	unlocked.clear()
+	for skill_info in data["skills"]:
+		var skill_name = skill_info["skill_name"]
+		if skill_info["is_bought"]:
+			unlocked.append(skill_name)
+	update_colors_recursive(scene)
