@@ -69,6 +69,10 @@ func _input(event: InputEvent) -> void:
 		if active_item != null and active_item.item_name == "Overdrive" and cooldown_overdrive <= 0:
 			start_cooldown()
 			overdrive_ready = true
+			if int(Skills.get_multiplier("overdrive_time")) != 1:
+				$Timer.wait_time = Skills.get_multiplier("overdrive_time")
+			else:
+				$Timer.wait_time = 10
 			$Timer.start()
 
 func _on_timer_timeout() -> void:
@@ -79,19 +83,28 @@ func start_cooldown(custom_cd = 0.0):
 	if active_item == null:
 		return
 	var cd = 0.0
+	var overdrive_cd = 0.0
 	if overdrive_ready:
-		cd = 0.1
+		if int(Skills.get_multiplier("overdrive_speed")) == 1:
+			cd = 0.1
+		else:
+			cd = int(Skills.get_multiplier("overdrive_speed"))
 	elif custom_cd > 0:
 		cd = custom_cd
+		overdrive_cd = custom_cd
 	else:
-		cd = float(JsonData.item_data[active_item.item_name].get("Cooldown", 0))
+		cd = float(JsonData.item_data[active_item.item_name].get("Cooldown", 0)) * Skills.get_multiplier("mining_speed")
+		if Skills.get_multiplier("overdrive_cooldown") == 1.0:
+			overdrive_cd = float(JsonData.item_data[active_item.item_name].get("Cooldown", 0))
+		else:
+			overdrive_cd = Skills.get_multiplier("overdrive_cooldown")
 	if slots[PlayerInventory.active_item_slot].item.item_name == "StarterDrill":
 		cooldown_left = cd
 		$CooldownDrill.visible = true
 		$CooldownDrill.max_value = cd
 		$CooldownDrill.value = cd
 	elif slots[PlayerInventory.active_item_slot].item.item_name == "Overdrive":
-		cooldown_overdrive = cd
+		cooldown_overdrive = overdrive_cd
 		$CooldownOverdrive.visible = true
-		$CooldownOverdrive.max_value = cd
-		$CooldownOverdrive.value = cd
+		$CooldownOverdrive.max_value = overdrive_cd
+		$CooldownOverdrive.value = overdrive_cd

@@ -112,7 +112,6 @@ func save_data():
 	file.close()
 
 func load_data():
-	print(unlocked)
 	if !FileAccess.file_exists(SAVE_LOCATION_SKILLS):
 		return
 	var file = FileAccess.open(SAVE_LOCATION_SKILLS, FileAccess.READ)
@@ -132,3 +131,10 @@ func load_data():
 		if skill_info["is_bought"]:
 			unlocked.append(skill_name)
 	update_colors_recursive(scene)
+
+func get_multiplier(effect_name):
+	var value = 1.0
+	for id in unlocked:
+		if skill_data[id]["Effect"] == effect_name: 
+			value = float(skill_data[id]["Value"])
+	return value

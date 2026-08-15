@@ -6,13 +6,18 @@ extends Node2D
 var item
 var quantity
 var active_item
+var multiplier
 
 func _on_button1_pressed() -> void:
 	if hotbar.cooldown_left > 0:
 		return
 	active_item = slots[PlayerInventory.active_item_slot].item
 	if active_item != null and active_item.item_name == "StarterDrill":
-		quantity = randi_range(1, 4)
+		multiplier = int(Skills.get_multiplier("resource_boost"))
+		if multiplier == 1:
+			quantity = randi_range(1, 4)
+		else:
+			quantity = randi_range(1, 4) + multiplier
 		item = randi_range(1, 100)
 		if item == 1:
 			floating_text.set_text(str(1))

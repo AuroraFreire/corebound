@@ -10,7 +10,6 @@ func initialize(n, q):
 	$TextureRect.scale = Vector2.ONE * float(JsonData.item_data[item_name].get("IconScale", 1))
 	var off = JsonData.item_data[item_name].get("IconOffset", [0, 0])
 	$TextureRect.position += Vector2(off[0], off[1])
-	$Label.visible = int(JsonData.item_data[item_name]["StackSize"]) > 1
 	$Label.text = str(item_quantity)
 	if $TextureRect.material:
 		$TextureRect.material = $TextureRect.material.duplicate()

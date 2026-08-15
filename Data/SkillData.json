@@ -45,7 +45,7 @@
 		"Requirements": ["SkillButton4"],
 		"Effect": "resource_boost",
 		"Value": 3,
-		"Description": "Resource Boost: +3"
+		"Description": "Resource Boost: +3/click"
 	},
 	"SkillButton7": {
 		"Name": "Ample Pockets",
@@ -67,24 +67,24 @@
 		"Name": "Superior Storage",
 		"Cost": 10000,
 		"Requirements": ["SkillButton8"],
-		"Effect": "add_slots",
-		"Value": 6,
-		"Description": "More Slots: 6"
+		"Effect": "storage",
+		"Value": 9999,
+		"Description": "Slot Capacity: 9999"
 	},
 	"SkillButton10": {
 		"Name": "Inventory Master",
-		"Cost": 20000,
+		"Cost": 40000,
 		"Requirements": ["SkillButton9"],
-		"Effect": "add_slots",
-		"Value": 6,
-		"Description": "More Slots: 6"
+		"Effect": "storage",
+		"Value": 2147483647,
+		"Description": "Slot Capacity: ∞"
 	},
 	"SkillButton11": {
 		"Name": "Power Surge",
 		"Cost": 200,
 		"Requirements": [],
 		"Effect": "overdrive_time",
-		"Value": 3,
+		"Value": 13,
 		"Description": "Overdrive Time: 13s"
 	},
 	"SkillButton12": {
@@ -92,7 +92,7 @@
 		"Cost": 500,
 		"Requirements": ["SkillButton11"],
 		"Effect": "overdrive_time",
-		"Value": 3,
+		"Value": 16,
 		"Description": "Overdrive Time: 16s"
 	},
 	"SkillButton13": {
@@ -100,7 +100,7 @@
 		"Cost": 2500,
 		"Requirements": ["SkillButton12"],
 		"Effect": "overdrive_time",
-		"Value": 4,
+		"Value": 20,
 		"Description": "Overdrive Time: 20s"
 	},
 	"SkillButton14": {
@@ -132,7 +132,7 @@
 		"Cost": 8000,
 		"Requirements": ["SkillButton16"],
 		"Effect": "overdrive_speed",
-		"Value": 0.0,
+		"Value": 0,
 		"Description": "Mining Speed: 0s"
 	},
 	"SkillButton18": {

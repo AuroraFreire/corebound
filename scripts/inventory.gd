@@ -12,8 +12,12 @@ const SAVE_LOCATION = "user://SaveFile.json"
 var holding_item = null
 var active_recipe = null
 var wallet = Skills.wallet
+var stack_size
 
 func _ready() -> void:
+	stack_size = Skills.get_multiplier("storage")
+	if stack_size == 1.0:
+		stack_size = 9
 	for inv_slot in inventory_slots.get_children():
 		inv_slot.gui_input.connect(slot_gui_input.bind(inv_slot))
 		inv_slot.slot_type = SLOT_CLASS.SlotType.INVENTORY
@@ -49,7 +53,6 @@ func left_click_slot(event, slot):
 				slot.put_into_slot(holding_item)
 				holding_item = temp_item
 			else:
-				var stack_size = int(JsonData.item_data[slot.item.item_name]["StackSize"])
 				var able_to_add = stack_size - slot.item.item_quantity
 				if able_to_add >= holding_item.item_quantity:
 					slot.item.add_item_quantity(holding_item.item_quantity)
@@ -74,7 +77,6 @@ func right_click_slot(slot):
 			slot.add_item(holding_item.item_name, 1)
 			drop_one_from_hand()
 		elif slot.item.item_name == holding_item.item_name:
-			var stack_size = int(JsonData.item_data[slot.item.item_name]["StackSize"])
 			if slot.item.item_quantity < stack_size:
 				slot.item.add_item_quantity(1)
 				drop_one_from_hand()
@@ -106,15 +108,14 @@ func _input(event):
 		holding_item.global_position = get_global_mouse_position()
 
 func add_item(item_name, quantity):
-	var stack = int(JsonData.item_data[item_name]["StackSize"])
 	for slot in inventory_slots.get_children():
 		if quantity > 0 and slot.item and slot.item.item_name == item_name:
-			var n = min(stack - slot.item.item_quantity, quantity)
+			var n = min(stack_size - slot.item.item_quantity, quantity)
 			slot.item.add_item_quantity(n)
 			quantity -= n
 	for slot in inventory_slots.get_children():
 		if quantity > 0 and not slot.item:
-			var n = min(stack, quantity)
+			var n = min(stack_size, quantity)
 			slot.add_item(item_name, n)
 			quantity -= n
 	save_data()
@@ -130,7 +131,6 @@ func take_from_output():
 		consume_crafting_ingredients()
 		update_crafting_output()
 	elif holding_item.item_name == output_slot.item.item_name:
-		var stack_size = int(JsonData.item_data[holding_item.item_name]["StackSize"])
 		if holding_item.item_quantity + output_slot.item.item_quantity <= stack_size:
 			holding_item.add_item_quantity(output_slot.item.item_quantity)
 			consume_crafting_ingredients()
