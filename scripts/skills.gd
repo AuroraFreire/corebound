@@ -5,6 +5,7 @@ const SAVE_LOCATION_SKILLS = "user://SkillSaveFile.json"
 var wallet = 0
 var skill_data = {}
 var unlocked = []
+var blocked_skills = []
 var scene
 var button
 
@@ -61,7 +62,7 @@ func is_bought(id):
 	return id in unlocked
 
 func is_available(id):
-	if is_bought(id):
+	if is_bought(id) or id in blocked_skills:
 		return false
 	for req in skill_data[id]["Requirements"]:
 		if req == null:
@@ -71,6 +72,15 @@ func is_available(id):
 	return true
 
 func buy(id):
+	if id == "SkillButton5" or id == "SkillButton6" or id == "SkillButton14" or id == "SkillButton16":
+		scene = get_tree().current_scene
+		var found_button = find_node_by_name(scene, str(id))
+		if found_button != null:
+			var parent = found_button.get_parent()
+			var children = parent.get_children()
+			for child in children:
+				if child.name != id:
+					blocked_skills.append(child.name)
 	var cost = int(skill_data[id]["Cost"])
 	if !is_available(id) or wallet < cost:
 		return false
@@ -107,8 +117,12 @@ func save_data():
 				"is_bought": is_bought(skill),
 				"is_available": is_available(skill)
 			})
+	var save_dict = {
+		"skills": skill_data_dict,
+		"blocked_skills": blocked_skills
+	}
 	var file = FileAccess.open(SAVE_LOCATION_SKILLS, FileAccess.WRITE)
-	file.store_string(JSON.stringify({"skills": skill_data_dict}))
+	file.store_string(JSON.stringify(save_dict))
 	file.close()
 
 func load_data():
@@ -122,14 +136,18 @@ func load_data():
 	if file == null:
 		return
 	var data = JSON.parse_string(text)
-	if data == null or not data.has("skills"):
+	if data == null or not data is Dictionary:
 		return
 	scene = get_tree().current_scene
 	unlocked.clear()
-	for skill_info in data["skills"]:
-		var skill_name = skill_info["skill_name"]
-		if skill_info["is_bought"]:
-			unlocked.append(skill_name)
+	blocked_skills.clear()
+	if data.has("skills"):
+		for skill_info in data["skills"]:
+			var skill_name = skill_info["skill_name"]
+			if skill_info["is_bought"]:
+				unlocked.append(skill_name)
+	if data.has("blocked_skills"):
+		blocked_skills = data["blocked_skills"]
 	update_colors_recursive(scene)
 
 func get_multiplier(effect_name):
