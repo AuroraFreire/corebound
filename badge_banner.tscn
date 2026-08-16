@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://biolhnn4xfkag"]
+
+[ext_resource type="Script" uid="uid://ditrh4ydo2js5" path="res://badge_banner.gd" id="1_g4qat"]
+[ext_resource type="Texture2D" uid="uid://bn52j5i8tfrln" path="res://assets/BadgeBanner.png" id="1_wtswd"]
+
+[node name="BadgeBanner" type="Node2D" unique_id=2028946450]
+script = ExtResource("1_g4qat")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=376480299]
+offset_left = 988.0
+offset_right = 1007.0
+offset_bottom = 35.0
+scale = Vector2(6.3, 6.3)
+texture_normal = ExtResource("1_wtswd")
+texture_pressed = ExtResource("1_wtswd")
+texture_hover = ExtResource("1_wtswd")
+
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton" to="." method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

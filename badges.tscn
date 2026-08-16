@@ -1,0 +1,270 @@
+[gd_scene format=3 uid="uid://cnfkowl0cqqpn"]
+
+[ext_resource type="Texture2D" uid="uid://buvnr4l8lxqra" path="res://assets/PopupPanel.png" id="1_u3urm"]
+[ext_resource type="Script" uid="uid://bwirl3lg548s7" path="res://badges.gd" id="1_y3xbc"]
+[ext_resource type="Texture2D" uid="uid://ogvi8sup57jx" path="res://icon.svg" id="2_jcjf3"]
+[ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="3_0wqav"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ffxw"]
+texture = ExtResource("1_u3urm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pw07k"]
+texture = ExtResource("2_jcjf3")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvsdi"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tw6pl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hv1wy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Badges" type="Node2D" unique_id=913370888]
+script = ExtResource("1_y3xbc")
+
+[node name="Panel" type="Panel" parent="." unique_id=1744555801]
+offset_left = 244.0
+offset_top = 124.0
+offset_right = 909.0
+offset_bottom = 524.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8ffxw")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel" unique_id=1586238045]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.5
+offset_top = -166.0
+offset_right = 300.5
+offset_bottom = 166.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Panel/ScrollContainer" unique_id=177756531]
+layout_mode = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 16
+
+[node name="Panel" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=700479350]
+custom_minimum_size = Vector2(89, 89)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel" unique_id=1554013277]
+layout_mode = 0
+offset_left = 101.0
+offset_right = 517.0
+offset_bottom = 89.0
+theme_override_fonts/bold_font = ExtResource("3_0wqav")
+theme_override_font_sizes/bold_font_size = 42
+bbcode_enabled = true
+text = "[b]First Craft[b]"
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel/RichTextLabel" unique_id=801888379]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 315.0
+offset_bottom = 68.541664
+theme_override_fonts/font = ExtResource("3_0wqav")
+theme_override_font_sizes/font_size = 26
+text = "Make your first craft."
+
+[node name="Panel2" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=859223993]
+custom_minimum_size = Vector2(89, 89)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel2" unique_id=846592420]
+layout_mode = 0
+offset_left = 101.0
+offset_right = 517.0
+offset_bottom = 89.0
+theme_override_fonts/bold_font = ExtResource("3_0wqav")
+theme_override_font_sizes/bold_font_size = 42
+bbcode_enabled = true
+text = "[b]First Discovery[b]"
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel2/RichTextLabel" unique_id=951833572]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 315.0
+offset_bottom = 68.541664
+theme_override_fonts/font = ExtResource("3_0wqav")
+theme_override_font_sizes/font_size = 26
+text = "Buy your first skill."
+
+[node name="Panel3" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=1044093635]
+custom_minimum_size = Vector2(89, 89)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel3" unique_id=109680279]
+layout_mode = 0
+offset_left = 101.0
+offset_right = 517.0
+offset_bottom = 89.0
+theme_override_fonts/bold_font = ExtResource("3_0wqav")
+theme_override_font_sizes/bold_font_size = 42
+bbcode_enabled = true
+text = "[b]Mastermind[b]"
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel3/RichTextLabel" unique_id=1065025815]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 315.0
+offset_bottom = 68.541664
+theme_override_fonts/font = ExtResource("3_0wqav")
+theme_override_font_sizes/font_size = 26
+text = "Complete the skill tree."
+
+[node name="Panel4" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=749596231]
+custom_minimum_size = Vector2(89, 89)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel4" unique_id=1991534824]
+layout_mode = 0
+offset_left = 101.0
+offset_right = 517.0
+offset_bottom = 89.0
+theme_override_fonts/bold_font = ExtResource("3_0wqav")
+theme_override_font_sizes/bold_font_size = 42
+bbcode_enabled = true
+text = "[b]First Dig[b]"
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel4/RichTextLabel" unique_id=627069366]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 315.0
+offset_bottom = 68.541664
+theme_override_fonts/font = ExtResource("3_0wqav")
+theme_override_font_sizes/font_size = 26
+text = "Mine your first resource."
+
+[node name="Panel5" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=57354570]
+custom_minimum_size = Vector2(89, 89)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel5" unique_id=1500618133]
+layout_mode = 0
+offset_left = 101.0
+offset_right = 517.0
+offset_bottom = 89.0
+theme_override_fonts/bold_font = ExtResource("3_0wqav")
+theme_override_font_sizes/bold_font_size = 42
+bbcode_enabled = true
+text = "[b]Corebound[b]"
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel5/RichTextLabel" unique_id=1472925016]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 315.0
+offset_bottom = 68.541664
+theme_override_fonts/font = ExtResource("3_0wqav")
+theme_override_font_sizes/font_size = 26
+text = "Unlock a new planet."
+
+[node name="Panel6" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=119397087]
+custom_minimum_size = Vector2(89, 89)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel6" unique_id=1381378608]
+layout_mode = 0
+offset_left = 101.0
+offset_right = 541.0
+offset_bottom = 89.0
+theme_override_fonts/bold_font = ExtResource("3_0wqav")
+theme_override_font_sizes/bold_font_size = 42
+bbcode_enabled = true
+text = "[b]Packed[b]"
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel6/RichTextLabel" unique_id=385941971]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 315.0
+offset_bottom = 68.541664
+theme_override_fonts/font = ExtResource("3_0wqav")
+theme_override_font_sizes/font_size = 26
+text = "Fill every slot in your inventory."
+
+[node name="Panel7" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=518076440]
+custom_minimum_size = Vector2(89, 89)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel7" unique_id=1418506881]
+layout_mode = 0
+offset_left = 101.0
+offset_right = 517.0
+offset_bottom = 89.0
+theme_override_fonts/bold_font = ExtResource("3_0wqav")
+theme_override_font_sizes/bold_font_size = 42
+bbcode_enabled = true
+text = "[b]Singularity[b]"
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel7/RichTextLabel" unique_id=1097303391]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 315.0
+offset_bottom = 68.541664
+theme_override_fonts/font = ExtResource("3_0wqav")
+theme_override_font_sizes/font_size = 26
+text = "Craft an Azure Sigularity."
+
+[node name="Panel8" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=639750186]
+custom_minimum_size = Vector2(89, 89)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel8" unique_id=279653702]
+layout_mode = 0
+offset_left = 101.0
+offset_right = 531.0
+offset_bottom = 89.0
+theme_override_fonts/bold_font = ExtResource("3_0wqav")
+theme_override_font_sizes/bold_font_size = 42
+bbcode_enabled = true
+text = "[b]What Does This Do?"
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel8/RichTextLabel" unique_id=1125553808]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 315.0
+offset_bottom = 68.541664
+theme_override_fonts/font = ExtResource("3_0wqav")
+theme_override_font_sizes/font_size = 26
+text = "Use Overdrive for the first time"
+
+[node name="Button" type="Button" parent="Panel" unique_id=70083541]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 16.0
+offset_right = 618.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(0.91764706, 0, 0.37254903, 1)
+theme_override_colors/font_focus_color = Color(0.91764706, 0, 0.37254903, 1)
+theme_override_colors/font_pressed_color = Color(0.91764706, 0, 0.37254903, 1)
+theme_override_colors/font_hover_color = Color(0.91764706, 0, 0.37254903, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.91764706, 0, 0.37254903, 1)
+theme_override_fonts/font = ExtResource("3_0wqav")
+theme_override_font_sizes/font_size = 53
+theme_override_styles/normal = SubResource("StyleBoxFlat_cvsdi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tw6pl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hv1wy")
+text = "x"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
