@@ -10,3 +10,6 @@ func _on_texture_button_mouse_exited() -> void:
 
 func _on_texture_button_pressed() -> void:
 	$"../Badges".visible = true
+	$"..".process_mode = Node.PROCESS_MODE_PAUSABLE
+	$"../Badges".process_mode = Node.PROCESS_MODE_ALWAYS
+	get_tree().paused = true

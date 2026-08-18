@@ -96,38 +96,12 @@ texture_under = ExtResource("6_wceku")
 texture_over = ExtResource("7_iapdy")
 texture_progress = ExtResource("8_i62wn")
 
-[node name="CooldownMedkit" type="TextureProgressBar" parent="." unique_id=1860104669]
+[node name="CooldownOverdrive" type="TextureProgressBar" parent="." unique_id=1642918092]
 visible = false
 z_index = 2
 offset_left = 437.0
 offset_top = 602.0
 offset_right = 469.0
-offset_bottom = 610.0
-scale = Vector2(2, 2)
-step = 0.01
-texture_under = ExtResource("6_wceku")
-texture_over = ExtResource("7_iapdy")
-texture_progress = ExtResource("8_i62wn")
-
-[node name="CooldownOxygen" type="TextureProgressBar" parent="." unique_id=248137614]
-visible = false
-z_index = 2
-offset_left = 510.0
-offset_top = 602.0
-offset_right = 542.0
-offset_bottom = 610.0
-scale = Vector2(2, 2)
-step = 0.01
-texture_under = ExtResource("6_wceku")
-texture_over = ExtResource("7_iapdy")
-texture_progress = ExtResource("8_i62wn")
-
-[node name="CooldownOverdrive" type="TextureProgressBar" parent="." unique_id=1642918092]
-visible = false
-z_index = 2
-offset_left = 583.0
-offset_top = 602.0
-offset_right = 615.0
 offset_bottom = 610.0
 scale = Vector2(2, 2)
 step = 0.01

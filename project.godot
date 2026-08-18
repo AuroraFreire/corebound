@@ -24,6 +24,7 @@ PhantomCameraManager="*uid://duq6jhf6unyis"
 Skills="*uid://buom7dl6okb3a"
 SkillPopup="*uid://dees3r2hingfc"
 CursorManager="*uid://c5cawxmyf7mfv"
+BadgesManager="*uid://cqymvk1ehuiey"
 
 [display]
 

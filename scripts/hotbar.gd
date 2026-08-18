@@ -3,7 +3,7 @@ extends Node2D
 @onready var slots = $GridContainer.get_children()
 
 const SLOT_CLASS = preload("res://scripts/slot.gd")
-const STARTNG_ITEMS = ["StarterDrill", "Medkit", "OxygenTank", "Overdrive"]
+const STARTNG_ITEMS = ["StarterDrill", "Overdrive"]
 
 var count = 0
 var active_item
@@ -30,8 +30,6 @@ func _process(delta):
 		$CooldownDrill.value = max(cooldown_left, 0)
 	if cooldown_left <= 0:
 		$CooldownDrill.visible = false
-		$CooldownMedkit.visible = false
-		$CooldownOxygen.visible = false
 	if cooldown_overdrive > 0:
 		cooldown_overdrive -= delta
 		$CooldownOverdrive.value = max(cooldown_overdrive, 0)
@@ -51,10 +49,6 @@ func update_active_item_label():
 	if slots[PlayerInventory.active_item_slot].item != null:
 		if slots[PlayerInventory.active_item_slot].item.item_name == "StarterDrill":
 			$ActiveItemLabel.text = "Starter Drill"
-		elif slots[PlayerInventory.active_item_slot].item.item_name == "Medkit":
-			$ActiveItemLabel.text = "Medkit"
-		elif slots[PlayerInventory.active_item_slot].item.item_name == "OxygenTank":
-			$ActiveItemLabel.text = "Oxygen Tank"
 		elif slots[PlayerInventory.active_item_slot].item.item_name == "Overdrive":
 			$ActiveItemLabel.text = "Overdrive"
 	elif count == 0:

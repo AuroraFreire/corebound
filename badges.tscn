@@ -2,14 +2,42 @@
 
 [ext_resource type="Texture2D" uid="uid://buvnr4l8lxqra" path="res://assets/PopupPanel.png" id="1_u3urm"]
 [ext_resource type="Script" uid="uid://bwirl3lg548s7" path="res://badges.gd" id="1_y3xbc"]
-[ext_resource type="Texture2D" uid="uid://ogvi8sup57jx" path="res://icon.svg" id="2_jcjf3"]
 [ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="3_0wqav"]
+[ext_resource type="Texture2D" uid="uid://bfdrvhh7pbjc1" path="res://assets/badges/FirstCraftBadge.png" id="3_lrhxb"]
+[ext_resource type="Texture2D" uid="uid://lg4674bixq0w" path="res://assets/badges/FirstDiscoveryBadge.png" id="5_0vnd7"]
+[ext_resource type="Texture2D" uid="uid://c2xkd07rxivha" path="res://assets/badges/MastermindBadge.png" id="6_e6vsb"]
+[ext_resource type="Texture2D" uid="uid://ddlrjqurfc7v8" path="res://assets/badges/FirstMineBadge.png" id="7_xkqjt"]
+[ext_resource type="Texture2D" uid="uid://caxa2vpclhsng" path="res://assets/badges/CoreboundBadge.png" id="8_schus"]
+[ext_resource type="Texture2D" uid="uid://dc6gx0bfaf27a" path="res://assets/badges/PackedBadge.png" id="9_ltgbr"]
+[ext_resource type="Texture2D" uid="uid://jmwxoco2gcsr" path="res://assets/badges/SingularityBadge.png" id="10_833fc"]
+[ext_resource type="Texture2D" uid="uid://bweuphfx6cl28" path="res://assets/badges/OverdriveBadge.png" id="11_uwojv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ffxw"]
 texture = ExtResource("1_u3urm")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_atl66"]
+texture = ExtResource("3_lrhxb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ay6i6"]
+texture = ExtResource("5_0vnd7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vfetd"]
+texture = ExtResource("6_e6vsb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vxnqn"]
+texture = ExtResource("7_xkqjt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_88l0r"]
+texture = ExtResource("8_schus")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h1ujx"]
+texture = ExtResource("9_ltgbr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_chptu"]
+texture = ExtResource("10_833fc")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pw07k"]
-texture = ExtResource("2_jcjf3")
+texture = ExtResource("11_uwojv")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvsdi"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -52,7 +80,7 @@ theme_override_constants/v_separation = 16
 [node name="Panel" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=700479350]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+theme_override_styles/panel = SubResource("StyleBoxTexture_atl66")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel" unique_id=1554013277]
 layout_mode = 0
@@ -77,7 +105,7 @@ text = "Make your first craft."
 [node name="Panel2" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=859223993]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+theme_override_styles/panel = SubResource("StyleBoxTexture_ay6i6")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel2" unique_id=846592420]
 layout_mode = 0
@@ -102,7 +130,7 @@ text = "Buy your first skill."
 [node name="Panel3" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=1044093635]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+theme_override_styles/panel = SubResource("StyleBoxTexture_vfetd")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel3" unique_id=109680279]
 layout_mode = 0
@@ -127,7 +155,7 @@ text = "Complete the skill tree."
 [node name="Panel4" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=749596231]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+theme_override_styles/panel = SubResource("StyleBoxTexture_vxnqn")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel4" unique_id=1991534824]
 layout_mode = 0
@@ -152,7 +180,7 @@ text = "Mine your first resource."
 [node name="Panel5" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=57354570]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+theme_override_styles/panel = SubResource("StyleBoxTexture_88l0r")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel5" unique_id=1500618133]
 layout_mode = 0
@@ -177,7 +205,7 @@ text = "Unlock a new planet."
 [node name="Panel6" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=119397087]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+theme_override_styles/panel = SubResource("StyleBoxTexture_h1ujx")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel6" unique_id=1381378608]
 layout_mode = 0
@@ -202,7 +230,7 @@ text = "Fill every slot in your inventory."
 [node name="Panel7" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=518076440]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
+theme_override_styles/panel = SubResource("StyleBoxTexture_chptu")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel7" unique_id=1418506881]
 layout_mode = 0
