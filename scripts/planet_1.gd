@@ -9,7 +9,8 @@ var active_item
 var multiplier
 
 func _on_button1_pressed() -> void:
-	BadgesManager.unlock_badge("Panel4")
+	if !BadgesManager.unlocked_badges.has("First Dig"):
+		BadgesManager.unlock_badge("First Dig")
 	if hotbar.cooldown_left > 0:
 		return
 	active_item = slots[PlayerInventory.active_item_slot].item

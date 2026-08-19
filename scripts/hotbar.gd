@@ -61,6 +61,8 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("overdrive"):
 		var active_item = slots[PlayerInventory.active_item_slot].item
 		if active_item != null and active_item.item_name == "Overdrive" and cooldown_overdrive <= 0:
+			if !BadgesManager.unlocked_badges.has("What Does This Do?"):
+				BadgesManager.unlock_badge("What Does This Do?")
 			start_cooldown()
 			overdrive_ready = true
 			if int(Skills.get_multiplier("overdrive_time")) != 1:

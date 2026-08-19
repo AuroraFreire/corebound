@@ -77,12 +77,12 @@ layout_mode = 2
 theme_override_constants/h_separation = 12
 theme_override_constants/v_separation = 16
 
-[node name="Panel" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=700479350]
+[node name="First Craft" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=700479350]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_atl66")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel" unique_id=1554013277]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/First Craft" unique_id=1554013277]
 layout_mode = 0
 offset_left = 101.0
 offset_right = 517.0
@@ -92,7 +92,7 @@ theme_override_font_sizes/bold_font_size = 42
 bbcode_enabled = true
 text = "[b]First Craft[b]"
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel/RichTextLabel" unique_id=801888379]
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/First Craft/RichTextLabel" unique_id=801888379]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 42.0
@@ -102,12 +102,12 @@ theme_override_fonts/font = ExtResource("3_0wqav")
 theme_override_font_sizes/font_size = 26
 text = "Make your first craft."
 
-[node name="Panel2" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=859223993]
+[node name="First Discovery" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=859223993]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ay6i6")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel2" unique_id=846592420]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/First Discovery" unique_id=846592420]
 layout_mode = 0
 offset_left = 101.0
 offset_right = 517.0
@@ -117,7 +117,7 @@ theme_override_font_sizes/bold_font_size = 42
 bbcode_enabled = true
 text = "[b]First Discovery[b]"
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel2/RichTextLabel" unique_id=951833572]
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/First Discovery/RichTextLabel" unique_id=951833572]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 42.0
@@ -127,12 +127,12 @@ theme_override_fonts/font = ExtResource("3_0wqav")
 theme_override_font_sizes/font_size = 26
 text = "Buy your first skill."
 
-[node name="Panel3" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=1044093635]
+[node name="Mastermind" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=1044093635]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_vfetd")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel3" unique_id=109680279]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Mastermind" unique_id=109680279]
 layout_mode = 0
 offset_left = 101.0
 offset_right = 517.0
@@ -142,7 +142,7 @@ theme_override_font_sizes/bold_font_size = 42
 bbcode_enabled = true
 text = "[b]Mastermind[b]"
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel3/RichTextLabel" unique_id=1065025815]
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Mastermind/RichTextLabel" unique_id=1065025815]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 42.0
@@ -152,12 +152,12 @@ theme_override_fonts/font = ExtResource("3_0wqav")
 theme_override_font_sizes/font_size = 26
 text = "Complete the skill tree."
 
-[node name="Panel4" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=749596231]
+[node name="First Dig" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=749596231]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_vxnqn")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel4" unique_id=1991534824]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/First Dig" unique_id=1991534824]
 layout_mode = 0
 offset_left = 101.0
 offset_right = 517.0
@@ -167,7 +167,7 @@ theme_override_font_sizes/bold_font_size = 42
 bbcode_enabled = true
 text = "[b]First Dig[b]"
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel4/RichTextLabel" unique_id=627069366]
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/First Dig/RichTextLabel" unique_id=627069366]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 42.0
@@ -177,12 +177,12 @@ theme_override_fonts/font = ExtResource("3_0wqav")
 theme_override_font_sizes/font_size = 26
 text = "Mine your first resource."
 
-[node name="Panel5" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=57354570]
+[node name="Corebound" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=57354570]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_88l0r")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel5" unique_id=1500618133]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Corebound" unique_id=1500618133]
 layout_mode = 0
 offset_left = 101.0
 offset_right = 517.0
@@ -192,7 +192,7 @@ theme_override_font_sizes/bold_font_size = 42
 bbcode_enabled = true
 text = "[b]Corebound[b]"
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel5/RichTextLabel" unique_id=1472925016]
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Corebound/RichTextLabel" unique_id=1472925016]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 42.0
@@ -202,12 +202,12 @@ theme_override_fonts/font = ExtResource("3_0wqav")
 theme_override_font_sizes/font_size = 26
 text = "Unlock a new planet."
 
-[node name="Panel6" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=119397087]
+[node name="Packed" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=119397087]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_h1ujx")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel6" unique_id=1381378608]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Packed" unique_id=1381378608]
 layout_mode = 0
 offset_left = 101.0
 offset_right = 541.0
@@ -217,7 +217,7 @@ theme_override_font_sizes/bold_font_size = 42
 bbcode_enabled = true
 text = "[b]Packed[b]"
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel6/RichTextLabel" unique_id=385941971]
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Packed/RichTextLabel" unique_id=385941971]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 42.0
@@ -227,12 +227,12 @@ theme_override_fonts/font = ExtResource("3_0wqav")
 theme_override_font_sizes/font_size = 26
 text = "Fill every slot in your inventory."
 
-[node name="Panel7" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=518076440]
+[node name="Singularity" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=518076440]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_chptu")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel7" unique_id=1418506881]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Singularity" unique_id=1418506881]
 layout_mode = 0
 offset_left = 101.0
 offset_right = 517.0
@@ -242,7 +242,7 @@ theme_override_font_sizes/bold_font_size = 42
 bbcode_enabled = true
 text = "[b]Singularity[b]"
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel7/RichTextLabel" unique_id=1097303391]
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Singularity/RichTextLabel" unique_id=1097303391]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 42.0
@@ -252,12 +252,12 @@ theme_override_fonts/font = ExtResource("3_0wqav")
 theme_override_font_sizes/font_size = 26
 text = "Craft an Azure Sigularity."
 
-[node name="Panel8" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=639750186]
+[node name="What Does This Do?" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=639750186]
 custom_minimum_size = Vector2(89, 89)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_pw07k")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/Panel8" unique_id=279653702]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/GridContainer/What Does This Do?" unique_id=279653702]
 layout_mode = 0
 offset_left = 101.0
 offset_right = 531.0
@@ -267,7 +267,7 @@ theme_override_font_sizes/bold_font_size = 42
 bbcode_enabled = true
 text = "[b]What Does This Do?"
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/Panel8/RichTextLabel" unique_id=1125553808]
+[node name="Label" type="Label" parent="Panel/ScrollContainer/GridContainer/What Does This Do?/RichTextLabel" unique_id=1125553808]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 42.0

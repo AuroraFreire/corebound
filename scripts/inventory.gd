@@ -13,6 +13,7 @@ var holding_item = null
 var active_recipe = null
 var wallet = Skills.wallet
 var stack_size
+var badge_slot_count = 0
 
 func _ready() -> void:
 	stack_size = Skills.get_multiplier("storage")
@@ -28,6 +29,16 @@ func _ready() -> void:
 	output_slot.slot_type = SLOT_CLASS.SlotType.CRAFTING_OUTPUT
 	delete_slot.gui_input.connect(delete_gui_input)
 	load_data()
+
+func _process(delta: float) -> void:
+	var is_full = true 
+	for slot in inventory_slots.get_children():
+		if slot.item == null:
+			is_full = false
+			break
+	if is_full:
+		BadgesManager.unlock_badge("Packed")
+		set_process(false)
 
 func slot_gui_input(event: InputEvent, slot: SLOT_CLASS):
 	if event is InputEventMouseButton and event.pressed:
@@ -123,6 +134,8 @@ func add_item(item_name, quantity):
 func take_from_output():
 	if output_slot.item == null:
 		return
+	if !BadgesManager.unlocked_badges.has("First Craft"):
+		BadgesManager.unlock_badge("First Craft")
 	if holding_item == null:
 		holding_item = output_slot.item
 		output_slot.pick_from_slot()
@@ -169,6 +182,9 @@ func update_crafting_output():
 		output_slot.refresh_style()
 	active_recipe = find_matching_recipe()
 	if active_recipe != null:
+		if active_recipe["Result"] == "AzureSingularity":
+			if !BadgesManager.unlocked_badges.has("Singularity"):
+				BadgesManager.unlock_badge("Singularity")
 		output_slot.add_item(active_recipe["Result"], int(active_recipe.get("Count", 1)))
 
 func find_matching_recipe():

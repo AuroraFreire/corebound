@@ -88,6 +88,15 @@ func buy(id):
 	unlocked.append(id)
 	buy_color(id)
 	save_data()
+	var any_available = false
+	for skill_id in skill_data:
+		if is_available(skill_id):
+			any_available = true
+			if !BadgesManager.unlocked_badges.has("First Discovery"):
+				BadgesManager.unlock_badge("First Discovery")
+	if !any_available:
+		if !BadgesManager.unlocked_badges.has("Mastermind"):
+			BadgesManager.unlock_badge("Mastermind")
 	return true
 
 func load_wallet():

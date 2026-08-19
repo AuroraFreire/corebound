@@ -371,8 +371,6 @@ theme_override_fonts/font = ExtResource("23_5cnif")
 theme_override_font_sizes/font_size = 45
 text = "Overdrive"
 
-[node name="Sections" type="CanvasLayer" parent="." unique_id=1686806784]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=476739344]
 
 [node name="PanMouse" type="Sprite2D" parent="CanvasLayer" unique_id=1582627440]
