@@ -120,44 +120,6 @@ _data = {
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ffxw"]
 bg_color = Color(0.8627451, 0.9019608, 0.9019608, 0)
 
-[sub_resource type="Animation" id="Animation_62ogi"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.8627451, 0.9019608, 0.9019608, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_wnwuj"]
-resource_name = "flash"
-length = 0.8
-capture_included = true
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.16666667, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 2,
-"values": [Color(0.8627451, 0.9019608, 0.9019608, 0), Color(0.8627451, 0.9019608, 0.9019608, 1), Color(0.8627451, 0.9019608, 0.9019608, 1), Color(0.8627451, 0.9019608, 0.9019608, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_bu1hf"]
-_data = {
-&"RESET": SubResource("Animation_62ogi"),
-&"flash": SubResource("Animation_wnwuj")
-}
-
 [node name="World1" type="Node2D" unique_id=456265745]
 script = ExtResource("1_6u51x")
 
@@ -189,12 +151,7 @@ libraries/ = SubResource("AnimationLibrary_wnwuj")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=407648465]
 position = Vector2(576, 324)
 
-[node name="Flash" type="Panel" parent="." unique_id=1849805165]
+[node name="Panel" type="Panel" parent="." unique_id=1849805165]
 offset_right = 1152.0
 offset_bottom = 648.0
-mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8ffxw")
-
-[node name="FlashAnimation" type="AnimationPlayer" parent="." unique_id=1813554473]
-root_node = NodePath("../Flash")
-libraries/ = SubResource("AnimationLibrary_bu1hf")

@@ -5,15 +5,22 @@ const ItemClass = preload("res://scenes/item.tscn")
 const HELD_SCALE = Vector2(6.8, 6.8)
 const SAVE_LOCATION = "user://SaveFile.json"
 
+@export var singularity_shake_duration = 2.0
 @onready var inventory_slots = $GridContainer
 @onready var crafting_slots = $CraftingGrid
 @onready var output_slot = $OutputSlot
 @onready var delete_slot = $Delete
+@onready var camera = $"../../Camera2D"
+@onready var noise = FastNoiseLite.new()
 var holding_item = null
 var active_recipe = null
 var wallet = Skills.wallet
 var stack_size
 var badge_slot_count = 0
+var noise_i = 0.0
+var shake_strength = 0.0
+var shake_timer = 0.0
+var is_singularity = false
 
 func _ready() -> void:
 	stack_size = Skills.get_multiplier("storage")
@@ -29,6 +36,9 @@ func _ready() -> void:
 	output_slot.slot_type = SLOT_CLASS.SlotType.CRAFTING_OUTPUT
 	delete_slot.gui_input.connect(delete_gui_input)
 	load_data()
+	noise.seed = randi()
+	noise.noise_type = FastNoiseLite.TYPE_SIMPLEX
+	noise.frequency = 0.5
 
 func _process(delta: float) -> void:
 	var is_full = true 
@@ -36,9 +46,18 @@ func _process(delta: float) -> void:
 		if slot.item == null:
 			is_full = false
 			break
-	if is_full:
+	if is_full and !BadgesManager.unlocked_badges.has("Packed"):
 		BadgesManager.unlock_badge("Packed")
-		set_process(false)
+	if shake_timer > 0.0:
+		shake_timer -= delta
+		var time_passed = singularity_shake_duration - shake_timer
+		var progress = time_passed / singularity_shake_duration
+		shake_strength = progress * 40.0
+		camera.offset = get_noise_offset(delta)
+		if shake_timer <= 0.0:
+			shake_strength = 0.0
+			camera.offset = Vector2.ZERO
+
 
 func slot_gui_input(event: InputEvent, slot: SLOT_CLASS):
 	if event is InputEventMouseButton and event.pressed:
@@ -132,18 +151,27 @@ func add_item(item_name, quantity):
 	save_data()
 
 func take_from_output():
+	is_singularity = false
 	if output_slot.item == null:
 		return
 	if !BadgesManager.unlocked_badges.has("First Craft"):
 		BadgesManager.unlock_badge("First Craft")
+	if active_recipe["Result"] == "AzureSingularity":
+		if !BadgesManager.unlocked_badges.has("Singularity"):
+			BadgesManager.unlock_badge("Singularity")
+		is_singularity = true
 	if holding_item == null:
 		holding_item = output_slot.item
 		output_slot.pick_from_slot()
+		if holding_item.item_name == "AzureSingularity":
+			shake()
 		holding_item.scale = HELD_SCALE
 		holding_item.global_position = get_global_mouse_position()
 		consume_crafting_ingredients()
 		update_crafting_output()
 	elif holding_item.item_name == output_slot.item.item_name:
+		if holding_item.item_name == "AzureSingularity":
+			shake()
 		if holding_item.item_quantity + output_slot.item.item_quantity <= stack_size:
 			holding_item.add_item_quantity(output_slot.item.item_quantity)
 			consume_crafting_ingredients()
@@ -182,11 +210,8 @@ func update_crafting_output():
 		output_slot.refresh_style()
 	active_recipe = find_matching_recipe()
 	if active_recipe != null:
-		if active_recipe["Result"] == "AzureSingularity":
-			if !BadgesManager.unlocked_badges.has("Singularity"):
-				BadgesManager.unlock_badge("Singularity")
 		output_slot.add_item(active_recipe["Result"], int(active_recipe.get("Count", 1)))
-
+		
 func find_matching_recipe():
 	var grid = []
 	var totals = {}
@@ -304,3 +329,28 @@ func load_data():
 				slots_data[i]["item_name"],
 				int(slots_data[i]["quantity"])
 			)
+
+func shake() -> void:
+	shake_strength = 40.0
+	shake_timer = singularity_shake_duration
+	$"..".inv_toggle += 1
+	flash()
+	var planet_texture = $"../../Planet".get_node("TextureButton")
+	await get_tree().create_timer(5.1).timeout
+	planet_texture.texture_normal = preload("res://assets/Planet1Core.png")
+	planet_texture.texture_hover = preload("res://assets/Planet1Core.png")
+	planet_texture.texture_pressed = preload("res://assets/Planet1Core.png")
+	planet_texture.material.set_shader_parameter("is_active", true)
+	if !BadgesManager.unlocked_badges.has("Corebound"):
+		BadgesManager.unlock_badge("Corebound")
+
+func get_noise_offset(delta: float) -> Vector2:
+	noise_i += delta * 30.0
+	return Vector2(
+		noise.get_noise_2d(1.0, noise_i) * shake_strength,
+		noise.get_noise_2d(100.0, noise_i) * shake_strength
+	)
+
+func flash():
+	await get_tree().create_timer(5.0).timeout
+	$"../../FlashAnimation".play("flash")

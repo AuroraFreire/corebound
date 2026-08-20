@@ -2,7 +2,20 @@
 
 [ext_resource type="Script" uid="uid://dgu7t01pqtt1v" path="res://scripts/planet_1.gd" id="1_rghbl"]
 [ext_resource type="Texture2D" uid="uid://d0t1k3idvgcwn" path="res://assets/Planet1.png" id="2_3mkt7"]
+[ext_resource type="Shader" uid="uid://caf2pmsigmktu" path="res://scripts/color_band.gdshader" id="2_chng0"]
 [ext_resource type="PackedScene" uid="uid://dv0padinmy8ua" path="res://scenes/floating_text.tscn" id="3_3mkt7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_62ogi"]
+shader = ExtResource("2_chng0")
+shader_parameter/is_active = false
+shader_parameter/band_color = Color(0, 0.7254902, 0.84313726, 1)
+shader_parameter/band_thickness = 0.2
+shader_parameter/band_intensity = 0.5999999865888
+shader_parameter/speed = 0.49999999254951
+shader_parameter/direction = 0
+shader_parameter/offset = 0.0
+shader_parameter/blend_mode = 0
+shader_parameter/edge_softness = 0.20000000298023
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pw07k"]
 radius = 14.165529
@@ -20,6 +33,7 @@ size = Vector2(20, 37.791138)
 script = ExtResource("1_rghbl")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1218103896]
+material = SubResource("ShaderMaterial_62ogi")
 offset_left = 39.000004
 offset_top = 83.00001
 offset_right = 167.0

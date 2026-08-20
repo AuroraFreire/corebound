@@ -200,7 +200,7 @@ offset_right = 315.0
 offset_bottom = 68.541664
 theme_override_fonts/font = ExtResource("3_0wqav")
 theme_override_font_sizes/font_size = 26
-text = "Unlock a new planet."
+text = "Unlock a planet's core."
 
 [node name="Packed" type="Panel" parent="Panel/ScrollContainer/GridContainer" unique_id=119397087]
 custom_minimum_size = Vector2(89, 89)

@@ -13,6 +13,16 @@ func _input(event: InputEvent) -> void:
 	scroll_hotbar(event)
 	close_game(event)
 
+func _process(delta: float) -> void:
+	if inv_toggle % 2 != 0:
+			$Inventory.visible = true
+			$Inventory/Wallet.text = str(Skills.wallet)
+			get_tree().paused = true
+	else:
+		$Inventory.visible = false
+		$Inventory/Wallet.text = str(Skills.wallet)
+		get_tree().paused = false
+
 func close_game(event: InputEvent) -> void:
 	if event.is_action_pressed("close_game"):
 		get_tree().quit()
@@ -20,14 +30,7 @@ func close_game(event: InputEvent) -> void:
 func toggle_inventory(event: InputEvent) -> void:
 	if event.is_action_pressed("Open Close Inventory"):
 		inv_toggle += 1
-		if inv_toggle % 2 != 0:
-			$Inventory.visible = true
-			$Inventory/Wallet.text = str(Skills.wallet)
-			get_tree().paused = true
-		else:
-			$Inventory.visible = false
-			$Inventory/Wallet.text = str(Skills.wallet)
-			get_tree().paused = false
+
 
 func scroll_hotbar(event: InputEvent) -> void:
 	if event.is_action_pressed("scroll_up"):

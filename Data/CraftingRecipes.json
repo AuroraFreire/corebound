@@ -10,6 +10,16 @@
 		]
 	},
 	{
+		"Result": "AzureSingularity",
+		"Count": 1,
+		"Type": "Shaped",
+		"Pattern": [
+			["", "", ""],
+			["", "PureWater", ""],
+			["", "", ""]
+		]
+	},
+	{
 		"Result": "AzureCrystal",
 		"Count": 1,
 		"Type": "Shaped",
