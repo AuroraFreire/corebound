@@ -2,6 +2,10 @@
 
 the most amazing game you're ever going to play (trust me)
 
+## demo link
+
+https://auroraaaFreire.itch.io/corebound
+
 ## what is it about?
 
 you basically click on planets, get items, craft more stuff to click on even more planets even faster and craft even more stuff to click on even more planets even fasterjhehefwinw AAAHHHHHH
