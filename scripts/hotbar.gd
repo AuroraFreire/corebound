@@ -3,7 +3,7 @@ extends Node2D
 @onready var slots = $GridContainer.get_children()
 
 const SLOT_CLASS = preload("res://scripts/slot.gd")
-const STARTNG_ITEMS = ["StarterDrill", "Overdrive"]
+const STARTNG_ITEMS = ["Drill", "Overdrive"]
 
 var count = 0
 var active_item
@@ -47,12 +47,12 @@ func _process(delta):
 
 func update_active_item_label():
 	if slots[PlayerInventory.active_item_slot].item != null:
-		if slots[PlayerInventory.active_item_slot].item.item_name == "StarterDrill":
-			$ActiveItemLabel.text = "Starter Drill"
+		if slots[PlayerInventory.active_item_slot].item.item_name == "Drill":
+			$ActiveItemLabel.text = "Drill"
 		elif slots[PlayerInventory.active_item_slot].item.item_name == "Overdrive":
 			$ActiveItemLabel.text = "Overdrive"
 	elif count == 0:
-		$ActiveItemLabel.text = "Starter Drill"
+		$ActiveItemLabel.text = "Drill"
 		count += 1
 	else:
 		$ActiveItemLabel.text = ""
@@ -94,7 +94,7 @@ func start_cooldown(custom_cd = 0.0):
 			overdrive_cd = float(JsonData.item_data[active_item.item_name].get("Cooldown", 0))
 		else:
 			overdrive_cd = Skills.get_multiplier("overdrive_cooldown")
-	if slots[PlayerInventory.active_item_slot].item.item_name == "StarterDrill":
+	if slots[PlayerInventory.active_item_slot].item.item_name == "Drill":
 		cooldown_left = cd
 		$CooldownDrill.visible = true
 		$CooldownDrill.max_value = cd

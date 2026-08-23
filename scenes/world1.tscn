@@ -6,8 +6,8 @@
 [ext_resource type="Script" uid="uid://k1n102ul0i0c" path="res://scripts/user_interface.gd" id="4_x368c"]
 [ext_resource type="PackedScene" uid="uid://oja1cqpfer8m" path="res://scenes/hotbar.tscn" id="6_gt337"]
 [ext_resource type="PackedScene" uid="uid://dhnblsrybf3md" path="res://scenes/home_banner.tscn" id="6_o24d1"]
-[ext_resource type="PackedScene" uid="uid://biolhnn4xfkag" path="res://badge_banner.tscn" id="7_rli88"]
-[ext_resource type="PackedScene" uid="uid://cnfkowl0cqqpn" path="res://badges.tscn" id="8_rli88"]
+[ext_resource type="PackedScene" uid="uid://biolhnn4xfkag" path="res://scenes/badge_banner.tscn" id="7_rli88"]
+[ext_resource type="PackedScene" uid="uid://cnfkowl0cqqpn" path="res://scenes/badges.tscn" id="8_rli88"]
 
 [sub_resource type="Animation" id="Animation_gt337"]
 length = 0.001

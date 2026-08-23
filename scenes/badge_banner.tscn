@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://biolhnn4xfkag"]
 
-[ext_resource type="Script" uid="uid://ditrh4ydo2js5" path="res://badge_banner.gd" id="1_g4qat"]
+[ext_resource type="Script" uid="uid://ditrh4ydo2js5" path="res://scripts/badge_banner.gd" id="1_g4qat"]
 [ext_resource type="Texture2D" uid="uid://bn52j5i8tfrln" path="res://assets/BadgeBanner.png" id="1_wtswd"]
 
 [node name="BadgeBanner" type="Node2D" unique_id=2028946450]

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://plwic4wwiefp"]
 
-[ext_resource type="Script" uid="uid://dpygqhtlue1v0" path="res://badge_popup.gd" id="1_1mx7p"]
-[ext_resource type="Texture2D" uid="uid://4nitmoa6kmmy" path="res://assets/BadgesPopup.png" id="1_82pu0"]
-[ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="2_1mx7p"]
+[ext_resource type="Script" uid="uid://dpygqhtlue1v0" path="res://scripts/badge_popup.gd" id="1_6lavo"]
+[ext_resource type="Texture2D" uid="uid://4nitmoa6kmmy" path="res://assets/BadgesPopup.png" id="2_apgfp"]
+[ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="3_78le0"]
 
 [sub_resource type="Animation" id="Animation_1mx7p"]
 length = 0.001
@@ -43,14 +43,14 @@ _data = {
 
 [node name="BadgePopup" type="Node2D" unique_id=897726711]
 scale = Vector2(0.87, 0.87)
-script = ExtResource("1_1mx7p")
+script = ExtResource("1_6lavo")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=130450271]
 offset_left = 1332.6014
 offset_top = 238.0
 offset_right = 1626.602
 offset_bottom = 338.0
-texture = ExtResource("1_82pu0")
+texture = ExtResource("2_apgfp")
 
 [node name="BadgeName" type="Label" parent="TextureRect" unique_id=248130428]
 layout_mode = 0
@@ -58,7 +58,7 @@ offset_left = 82.44824
 offset_top = 42.0
 offset_right = 287.44824
 offset_bottom = 63.4375
-theme_override_fonts/font = ExtResource("2_1mx7p")
+theme_override_fonts/font = ExtResource("3_78le0")
 theme_override_font_sizes/font_size = 21
 text = "Badge Name"
 
@@ -68,7 +68,7 @@ offset_left = 65.89787
 offset_top = 10.275875
 offset_right = 285.81876
 offset_bottom = 39.011517
-theme_override_fonts/normal_font = ExtResource("2_1mx7p")
+theme_override_fonts/normal_font = ExtResource("3_78le0")
 theme_override_font_sizes/normal_font_size = 27
 bbcode_enabled = true
 text = "[pulse freq=3.0 color=#ffff00]Badge Unlocked[/pulse]"

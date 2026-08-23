@@ -39,7 +39,7 @@
 		"IconScale": 0.6,
 		"Rarity": "Uncommon"
 	},
-	"StarterDrill": {
+	"Drill": {
 		"ItemCategory": "Tool",
 		"StackSize": 1,
 		"Price": 0,

@@ -2,7 +2,7 @@ extends Node
 
 signal badge_updated
 
-@onready var badge_popup = preload("res://badge_popup.tscn")
+@onready var badge_popup = preload("res://scenes/badge_popup.tscn")
 var unlocked_badges = []
 
 func _ready() -> void:

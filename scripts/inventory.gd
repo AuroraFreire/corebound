@@ -343,6 +343,8 @@ func shake() -> void:
 	planet_texture.material.set_shader_parameter("is_active", true)
 	if !BadgesManager.unlocked_badges.has("Corebound"):
 		BadgesManager.unlock_badge("Corebound")
+	await get_tree().create_timer(3).timeout
+	get_tree().change_scene_to_file("res://scenes/cutscene.tscn")
 
 func get_noise_offset(delta: float) -> Vector2:
 	noise_i += delta * 30.0

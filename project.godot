@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="corebound"
-run/main_scene="uid://oneuixjxr0kx"
+run/main_scene="uid://fbwfk7jl8s6x"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -25,6 +25,7 @@ Skills="*uid://buom7dl6okb3a"
 SkillPopup="*uid://dees3r2hingfc"
 CursorManager="*uid://c5cawxmyf7mfv"
 BadgesManager="*uid://cqymvk1ehuiey"
+IsFinished="*uid://cvw74bl7kjsvn"
 
 [display]
 

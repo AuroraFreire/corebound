@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cnfkowl0cqqpn"]
 
 [ext_resource type="Texture2D" uid="uid://buvnr4l8lxqra" path="res://assets/PopupPanel.png" id="1_u3urm"]
-[ext_resource type="Script" uid="uid://bwirl3lg548s7" path="res://badges.gd" id="1_y3xbc"]
+[ext_resource type="Script" uid="uid://bwirl3lg548s7" path="res://scripts/badges.gd" id="1_y3xbc"]
 [ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="3_0wqav"]
 [ext_resource type="Texture2D" uid="uid://bfdrvhh7pbjc1" path="res://assets/badges/FirstCraftBadge.png" id="3_lrhxb"]
 [ext_resource type="Texture2D" uid="uid://lg4674bixq0w" path="res://assets/badges/FirstDiscoveryBadge.png" id="5_0vnd7"]

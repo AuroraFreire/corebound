@@ -1,0 +1,256 @@
+[gd_scene format=3 uid="uid://bxtrpabtrhn3f"]
+
+[ext_resource type="Script" uid="uid://bocifqasipmes" path="res://scripts/cutscene.gd" id="1_a320b"]
+[ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="2_0sipp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ffxw"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_bl24s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_u4yv4"]
+resource_name = "text goes texty"
+length = 4.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p30sb"]
+_data = {
+&"RESET": SubResource("Animation_bl24s"),
+&"text goes texty": SubResource("Animation_u4yv4")
+}
+
+[sub_resource type="Animation" id="Animation_53jq0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Panel/RichTextLabel2:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_3q24f"]
+resource_name = "text goes texty 2"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Panel/RichTextLabel2:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8ye5a"]
+_data = {
+&"RESET": SubResource("Animation_53jq0"),
+&"text goes texty 2": SubResource("Animation_3q24f")
+}
+
+[sub_resource type="Animation" id="Animation_qcoa3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/RichTextLabel3:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_pvbl2"]
+resource_name = "text goes texty 3"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/RichTextLabel3:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vi1t0"]
+_data = {
+&"RESET": SubResource("Animation_qcoa3"),
+&"text goes texty 3": SubResource("Animation_pvbl2")
+}
+
+[sub_resource type="Animation" id="Animation_1titf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/RichTextLabel4:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_ed5nn"]
+resource_name = "text goes texty 4"
+length = 2.5000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/RichTextLabel4:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5gysb"]
+_data = {
+&"RESET": SubResource("Animation_1titf"),
+&"text goes texty 4": SubResource("Animation_ed5nn")
+}
+
+[node name="Cutscene" type="Node2D" unique_id=1955994642]
+script = ExtResource("1_a320b")
+
+[node name="Panel" type="Panel" parent="." unique_id=2026774998]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ffxw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=223982157]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -505.5
+offset_top = -30.5
+offset_right = 505.5
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_0sipp")
+theme_override_font_sizes/normal_font_size = 45
+text = "You can see a tiny bit of the core."
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel" unique_id=310868464]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -505.5
+offset_top = -30.5
+offset_right = 505.5
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_0sipp")
+theme_override_font_sizes/normal_font_size = 45
+text = "You may now explore a brand new planet."
+horizontal_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Panel" unique_id=1994282351]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -505.5
+offset_top = -30.5
+offset_right = 505.5
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_0sipp")
+theme_override_font_sizes/normal_font_size = 45
+text = "Full of new resources for you to mine."
+horizontal_alignment = 1
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Panel" unique_id=250475505]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -505.5
+offset_top = -30.5
+offset_right = 505.5
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_0sipp")
+theme_override_font_sizes/normal_font_size = 45
+text = "Have fun, explorer."
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1487977072]
+libraries/ = SubResource("AnimationLibrary_p30sb")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." unique_id=240248561]
+root_node = NodePath("../AnimationPlayer")
+libraries/ = SubResource("AnimationLibrary_8ye5a")
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="." unique_id=1818417602]
+libraries/ = SubResource("AnimationLibrary_vi1t0")
+
+[node name="AnimationPlayer4" type="AnimationPlayer" parent="." unique_id=202571404]
+libraries/ = SubResource("AnimationLibrary_5gysb")

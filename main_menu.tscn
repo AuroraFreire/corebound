@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://fbwfk7jl8s6x"]
+
+[ext_resource type="Texture2D" uid="uid://crdsl5xwovl3f" path="res://assets/Space Background.png" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://dlc0uu16yc4op" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="FontFile" uid="uid://0rvquv18rodr" path="res://fonts/lower-pixel.regular.otf" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://buvnr4l8lxqra" path="res://assets/PopupPanel.png" id="4_jix8l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pw07k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ffxw"]
+texture = ExtResource("4_jix8l")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlkkf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Node2D" type="Node2D" unique_id=43169928]
+script = ExtResource("1_fu7sn")
+
+[node name="SpaceBackground" type="Sprite2D" parent="." unique_id=1851999812]
+position = Vector2(580, 382)
+scale = Vector2(5.855, 5.855)
+texture = ExtResource("1_06t4h")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=901702469]
+offset_left = 50.0
+offset_top = 98.0
+offset_right = 507.0
+offset_bottom = 191.0
+theme_override_colors/default_color = Color(0.74509805, 0.8627451, 0.49803922, 1)
+theme_override_fonts/normal_font = ExtResource("2_7vrkn")
+theme_override_font_sizes/normal_font_size = 83
+bbcode_enabled = true
+text = "[wave][color=#edffcc]C[/color][color=#e1f6b9]o[/color][color=#d6eea6]r[/color][color=#cae592]e[/color][color=#bedc7f ]b[/color][color=#96b369]o[/color][color=#6e8a54]u[/color][color=#45623e]n[/color][color=#284d37]d[/color]"
+
+[node name="Play" type="Button" parent="." unique_id=786425054]
+offset_left = 117.0
+offset_top = 367.0
+offset_right = 274.0
+offset_bottom = 444.0
+theme_override_colors/font_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_colors/font_focus_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_colors/font_pressed_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_colors/font_hover_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 67
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pw07k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pw07k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_pw07k")
+text = "Play"
+
+[node name="Settings" type="Button" parent="." unique_id=204748524]
+offset_left = 165.0
+offset_top = 444.0
+offset_right = 457.0
+offset_bottom = 521.0
+theme_override_colors/font_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_colors/font_focus_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_colors/font_pressed_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_colors/font_hover_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 67
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pw07k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pw07k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_pw07k")
+text = "Settings"
+
+[node name="Exit" type="Button" parent="." unique_id=18521670]
+offset_left = 117.0
+offset_top = 521.0
+offset_right = 254.0
+offset_bottom = 598.0
+theme_override_colors/font_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_colors/font_focus_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_colors/font_pressed_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_colors/font_hover_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.7921569, 0.8980392, 0.57254905, 1)
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 67
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pw07k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pw07k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_pw07k")
+text = "Exit"
+
+[node name="Label2" type="Label" parent="." unique_id=787222182]
+visible = false
+offset_left = 12.0
+offset_top = 327.0
+offset_right = 472.0
+offset_bottom = 359.66666
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 32
+text = "you already beat the game :3"
+
+[node name="Panel" type="Panel" parent="." unique_id=424252788]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 172.5
+offset_top = 125.0
+offset_right = 979.5
+offset_bottom = 523.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8ffxw")
+
+[node name="Button" type="Button" parent="Panel" unique_id=912958419]
+layout_mode = 0
+offset_left = 736.5
+offset_top = 13.0
+offset_right = 775.5
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.91764706, 0, 0.37254903, 1)
+theme_override_colors/font_focus_color = Color(0.91764706, 0, 0.37254903, 1)
+theme_override_colors/font_pressed_color = Color(0.91764706, 0, 0.37254903, 1)
+theme_override_colors/font_hover_color = Color(0.91764706, 0, 0.37254903, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.91764706, 0, 0.37254903, 1)
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 53
+theme_override_styles/normal = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_glbon")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nlkkf")
+text = "x"
+
+[node name="Label" type="Label" parent="Panel" unique_id=1678942878]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -333.0
+offset_top = -34.708332
+offset_right = 333.0
+offset_bottom = 34.708332
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 68
+text = "nothing to see here!"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

@@ -14,7 +14,7 @@ func _on_button1_pressed() -> void:
 	if hotbar.cooldown_left > 0:
 		return
 	active_item = slots[PlayerInventory.active_item_slot].item
-	if active_item != null and active_item.item_name == "StarterDrill":
+	if active_item != null and active_item.item_name == "Drill":
 		multiplier = int(Skills.get_multiplier("resource_boost"))
 		if multiplier == 1:
 			quantity = randi_range(1, 4)
@@ -74,7 +74,7 @@ func _on_clump_pressed(clump, clump_name, spot):
 	if hotbar.cooldown_left > 0:
 		return
 	active_item = slots[PlayerInventory.active_item_slot].item
-	if active_item != null and active_item.item_name == "StarterDrill":
+	if active_item != null and active_item.item_name == "Drill":
 		var mining_time = float(JsonData.item_data[clump_name]["Duration"])
 		if hotbar.overdrive_ready == true:
 			hotbar.start_cooldown(0.1)

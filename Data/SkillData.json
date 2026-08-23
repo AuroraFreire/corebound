@@ -9,7 +9,7 @@
 	},
 	"SkillButton2": {
 		"Name": "Professional Drill",
-		"Cost": 700,
+		"Cost": 300,
 		"Requirements": ["SkillButton"],
 		"Effect": "mining_speed",
 		"Value": 0.6,
@@ -17,7 +17,7 @@
 	},
 	"SkillButton3": {
 		"Name": "Expert Drill",
-		"Cost": 8000,
+		"Cost": 500,
 		"Requirements": ["SkillButton2"],
 		"Effect": "mining_speed",
 		"Value": 0.4,
@@ -25,7 +25,7 @@
 	},
 	"SkillButton4": {
 		"Name": "Master's Drill",
-		"Cost": 13000,
+		"Cost": 1000,
 		"Requirements": ["SkillButton3"],
 		"Effect": "mining_speed",
 		"Value": 0.2,
@@ -33,7 +33,7 @@
 	},
 	"SkillButton5": {
 		"Name": "Void Drill",
-		"Cost": 40000,
+		"Cost": 3000,
 		"Requirements": ["SkillButton4"],
 		"Effect": "mining_speed",
 		"Value": 0,
@@ -41,7 +41,7 @@
 	},
 	"SkillButton6": {
 		"Name": "Plasma Drill",
-		"Cost": 40000,
+		"Cost": 3000,
 		"Requirements": ["SkillButton4"],
 		"Effect": "resource_boost",
 		"Value": 3,
@@ -49,7 +49,7 @@
 	},
 	"SkillButton7": {
 		"Name": "Ample Pockets",
-		"Cost": 300,
+		"Cost": 200,
 		"Requirements": [],
 		"Effect": "storage",
 		"Value": 99,
@@ -57,7 +57,7 @@
 	},
 	"SkillButton8": {
 		"Name": "Expanded Capacity",
-		"Cost": 3000,
+		"Cost": 600,
 		"Requirements": ["SkillButton7"],
 		"Effect": "storage",
 		"Value": 999,
@@ -65,7 +65,7 @@
 	},
 	"SkillButton9": {
 		"Name": "Superior Storage",
-		"Cost": 10000,
+		"Cost": 1200,
 		"Requirements": ["SkillButton8"],
 		"Effect": "storage",
 		"Value": 9999,
@@ -73,7 +73,7 @@
 	},
 	"SkillButton10": {
 		"Name": "Inventory Master",
-		"Cost": 40000,
+		"Cost": 2000,
 		"Requirements": ["SkillButton9"],
 		"Effect": "storage",
 		"Value": 2147483647,
@@ -81,7 +81,7 @@
 	},
 	"SkillButton11": {
 		"Name": "Power Surge",
-		"Cost": 200,
+		"Cost": 100,
 		"Requirements": [],
 		"Effect": "overdrive_time",
 		"Value": 13,
@@ -89,7 +89,7 @@
 	},
 	"SkillButton12": {
 		"Name": "Voltage Boost",
-		"Cost": 500,
+		"Cost": 400,
 		"Requirements": ["SkillButton11"],
 		"Effect": "overdrive_time",
 		"Value": 16,
@@ -97,7 +97,7 @@
 	},
 	"SkillButton13": {
 		"Name": "Overclocked",
-		"Cost": 2500,
+		"Cost": 650,
 		"Requirements": ["SkillButton12"],
 		"Effect": "overdrive_time",
 		"Value": 20,
@@ -105,7 +105,7 @@
 	},
 	"SkillButton14": {
 		"Name": "Rebound",
-		"Cost": 2500,
+		"Cost": 1300,
 		"Requirements": ["SkillButton13"],
 		"Effect": "overdrive_cooldown",
 		"Value": 90,
@@ -113,7 +113,7 @@
 	},
 	"SkillButton15": {
 		"Name": "Catalyst",
-		"Cost": 7000,
+		"Cost": 2500,
 		"Requirements": ["SkillButton14"],
 		"Effect": "overdrive_cooldown",
 		"Value": 60,
@@ -121,7 +121,7 @@
 	},
 	"SkillButton16": {
 		"Name": "Hyperdrive",
-		"Cost": 2500,
+		"Cost": 1300,
 		"Requirements": ["SkillButton13"],
 		"Effect": "overdrive_speed",
 		"Value": 0.05,
@@ -129,7 +129,7 @@
 	},
 	"SkillButton17": {
 		"Name": "Superconductor",
-		"Cost": 8000,
+		"Cost": 2500,
 		"Requirements": ["SkillButton16"],
 		"Effect": "overdrive_speed",
 		"Value": 0,
@@ -137,7 +137,7 @@
 	},
 	"SkillButton18": {
 		"Name": "Extract",
-		"Cost": 700,
+		"Cost": 300,
 		"Requirements": [],
 		"Effect": "resource_boost",
 		"Value": 2,
@@ -145,7 +145,7 @@
 	},
 	"SkillButton19": {
 		"Name": "Output",
-		"Cost": 2400,
+		"Cost": 700,
 		"Requirements": ["SkillButton18"],
 		"Effect": "resource_boost",
 		"Value": 5,
@@ -153,7 +153,7 @@
 	},
 	"SkillButton20": {
 		"Name": "Harvest",
-		"Cost": 10000,
+		"Cost": 240,
 		"Requirements": ["SkillButton19"],
 		"Effect": "resource_boost",
 		"Value": 20,
